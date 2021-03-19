@@ -1,10 +1,40 @@
 package szkeleton.game;
 
+import java.util.Scanner;
+
 import szkeleton.test.Print;
+import szkeleton.test.*;
 
 public class Main {
 
 	public static final Print printer = null;
 	
-	
+	public static void main(String[] args) {
+		int input = printer.menu();
+		switch(input) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+			uregesfuras uf = new uregesfuras();
+			uf.init();
+			uf.exec();
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		}
+		
+	}
 }

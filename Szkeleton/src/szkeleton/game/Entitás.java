@@ -10,8 +10,7 @@ package szkeleton.game;
 //
 //
 
-
-
+import java.util.Scanner;
 
 public abstract class Entitás {
 	private Aszteroidaöv jatekosok;
@@ -19,6 +18,20 @@ public abstract class Entitás {
 	public abstract void Mozgas(Szomszéd a);
 	
 	public void Furas() {
+		Main.printer.print("[" + this + ".Furas()]" );
+		Main.printer.inc();
+		Main.printer.print(">Ureges az aszteroida? ('i' = igaz, 'h' = hamis)");
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
+		Main.printer.print(">Ertek:" + answer);
+		if (answer.equals("i")) {
+			Main.printer.print(">Milyen vastag a kereg?");
+			int num = in.nextInt();
+			Main.printer.print(">Ertek:" + num);
+			Main.printer.inc();
+			aszteroida.KeregCsokken();
+			Main.printer.dec();
+		}
 		
 	}
 	

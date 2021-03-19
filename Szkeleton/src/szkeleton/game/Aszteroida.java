@@ -2,6 +2,7 @@ package szkeleton.game;
 
 import java.util.List;
 import java.util.Random;
+import szkeleton.game.Main;
 
 //
 //
@@ -71,6 +72,11 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void KeregCsokken() {
+		Main.printer.print("[" + this + ".KeregCsokken()]");
+		kopenyVastagsag--;
+		if(kopenyVastagsag == 0) {
+			Main.printer.print(">Nem lehet tovabb furni");
+		}
 	}
 	
 	public void Robban() {
