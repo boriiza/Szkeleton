@@ -1,7 +1,15 @@
 package szkeleton.test;
 
-public class robotmozog implements teszt{
+import szkeleton.game.Aszteroida;
+import szkeleton.game.Robot;
+import szkeleton.game.Teleportkapu;
 
+public class robotmozog implements teszt{
+	Aszteroida aszteroidaA;
+	Aszteroida aszteroidaB;
+	Robot robot;
+	Teleportkapu kapu;
+	
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
