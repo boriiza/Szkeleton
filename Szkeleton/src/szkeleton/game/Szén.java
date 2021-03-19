@@ -10,17 +10,13 @@ package szkeleton.game;
 //
 //
 
-
-
+import java.util.Scanner;
 
 public class Szén extends Nyersanyag {
-	public void Betolt(Telepes a) {
-	}
 	
-	public void Napkozel() {
-	}
-	
-	public boolean Kompatibilis(Nyersanyag ny) {
+	public Szén() {
+		Main.printer.print("[" + this + ".Szen()]");
+		Main.printer.dec();
 	}
 	
 	public void Betolt(Telepes a) {
@@ -30,5 +26,17 @@ public class Szén extends Nyersanyag {
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
+		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
+		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis");
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
+		if(answer.equals("i")) {
+			Main.printer.dec();
+			return true;
+		}
+		else {
+			Main.printer.dec();
+			return false;
+		}
 	}
 }

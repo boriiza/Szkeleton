@@ -1,5 +1,6 @@
 package szkeleton.game;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -29,9 +30,10 @@ public class Aszteroida extends Szomszéd {
 	private Nyersanyag belsoAnyag;
 	
 	public Aszteroida() {
-		kapuk=new List<Teleportkapu>();
-		entitasok=new List <Entitás>();
-		szomszedok=new List <Szomszéd>();
+		Main.printer.print("[" + this + ".Aszteroida()]");
+		kapuk=new ArrayList<Teleportkapu>();
+		entitasok=new ArrayList <Entitás>();
+		szomszedok=new ArrayList <Szomszéd>();
 	}
 	
 	public void SetAnyag(Nyersanyag n) {
