@@ -1,4 +1,5 @@
 package szkeleton.test;
+import java.util.List;
 import java.util.Scanner;
 
 import szkeleton.game.Aszteroida;
@@ -6,12 +7,16 @@ import szkeleton.game.Telepes;
 import szkeleton.game.Teleportkapu;
 import szkeleton.game.Main;
 
+import szkeleton.game.Szomszéd;
+
+
 
 public class telepesmozog implements teszt{
 	Aszteroida aszteroidaA;
 	Aszteroida aszteroidaB;
 	Telepes telepes;
 	Teleportkapu kapu;
+	
 	
 	@Override
 	public void init() {
@@ -32,7 +37,11 @@ public class telepesmozog implements teszt{
 	@Override
 	public void exec() {
 		Main.printer.print("Init");
+
 		System.out.println("Melyik szomszedra lepjen a Telepes?");
+
+		System.out.println("Melyik szomszédra lépjen a Telepes?");
+
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		in.close();

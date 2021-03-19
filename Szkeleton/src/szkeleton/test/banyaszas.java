@@ -6,6 +6,7 @@ import szkeleton.game.Telepes;
 import szkeleton.game.Urán;
 import szkeleton.game.Vas;
 import szkeleton.game.Vízjég;
+import szkeleton.game.Main;
 
 public class banyaszas implements teszt{
 	Telepes telepes;

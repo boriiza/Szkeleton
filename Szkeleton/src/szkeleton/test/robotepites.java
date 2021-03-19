@@ -6,6 +6,7 @@ import szkeleton.game.Telepes;
 import szkeleton.game.Urán;
 import szkeleton.game.Vas;
 import szkeleton.game.Útmutató;
+import szkeleton.game.Main;
 
 public class robotepites implements teszt{
 	Telepes telepes;
@@ -23,9 +24,10 @@ public class robotepites implements teszt{
 		szen = new Szén();
 		vas = new Vas();
 		uran = new Urán();
-		
+
 		aszteroida.AddEntitas(telepes);
 		
+		aszteroida.AddEntitas(telepes);
 	}
 
 	@Override

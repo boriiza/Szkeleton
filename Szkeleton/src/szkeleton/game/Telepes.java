@@ -10,10 +10,13 @@ package szkeleton.game;
 //
 //
 
-
-
+import java.util.List;
 
 public class Telepes extends Entitás {
+	
+	private List<Teleportkapu> kapuk;
+	private List<Nyersanyag> nyersanyagok;
+	
 	public void Felrobban() {
 		System.out.println("A telepes felrobban");
 		Halal();
@@ -57,5 +60,8 @@ public class Telepes extends Entitás {
 	}
 	
 	public void Lep() {
+	}
+	public void AddNyersanyag(Nyersanyag ny) {
+		nyersanyagok.add(ny);
 	}
 }
