@@ -17,7 +17,14 @@ public class banyaszas implements teszt{
 	
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
+		telepes = new Telepes();
+		aszteroida = new Aszteroida();
+		szen = new Szén();
+		vas = new Vas();
+		viz = new Vízjég();
+		uran = new Urán();
+		
+		aszteroida.AddEntitas(telepes);
 		
 	}
 

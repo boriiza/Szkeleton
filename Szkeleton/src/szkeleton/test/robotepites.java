@@ -17,7 +17,14 @@ public class robotepites implements teszt{
 	
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
+		telepes = new Telepes();
+		aszteroida = new Aszteroida();
+		utmutato = new Útmutató();
+		szen = new Szén();
+		vas = new Vas();
+		uran = new Urán();
+		
+		aszteroida.AddEntitas(telepes);
 		
 	}
 
