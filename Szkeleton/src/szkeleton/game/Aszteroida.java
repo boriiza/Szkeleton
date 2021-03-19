@@ -2,6 +2,8 @@ package szkeleton.game;
 
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
+
 import szkeleton.game.Main;
 
 //
@@ -63,6 +65,21 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void Napvihar() {
+		Main.printer.print("[" + this + ".Napvihar()]");
+		Main.printer.print(">Ureges az aszteroida? ('i' = igaz, 'h' = hamis)");
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
+		Main.printer.print(">Ertek: " + answer);
+		if(answer.equals("i")) {
+			Main.printer.print(">A Telepesek as a Robotok el tudtak bujni");
+		}
+		else {
+			for(Entitás e: entitasok) {
+				Main.printer.inc();
+				e.Halal();
+			}
+		}
+		Main.printer.dec();
 	}
 	
 	public void SzomszedTorol(Szomszéd a) {
@@ -77,6 +94,7 @@ public class Aszteroida extends Szomszéd {
 		if(kopenyVastagsag == 0) {
 			Main.printer.print(">Nem lehet tovabb furni");
 		}
+		Main.printer.dec();
 	}
 	
 	public void Robban() {

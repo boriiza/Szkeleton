@@ -44,10 +44,9 @@ public class Telepes extends Entitás {
 	}
 	
 	public void Halal() {
+		Main.printer.print("[" + this + ".Halal()]");   //A
+		Main.printer.dec();								//A
 		System.out.println("A telepes meghal");
-	}
-	
-	public void Lep() {
 	}
 	
 	public void Mozgas(Szomszéd a) {
@@ -61,6 +60,7 @@ public class Telepes extends Entitás {
 	
 	public void Lep() {
 	}
+	
 	public void AddNyersanyag(Nyersanyag ny) {
 		nyersanyagok.add(ny);
 	}

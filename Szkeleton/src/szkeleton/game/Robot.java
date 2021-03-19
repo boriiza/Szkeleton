@@ -26,6 +26,8 @@ public class Robot extends Entitás {
 	}
 	
 	public void Halal() {
+		Main.printer.print("[" + this + ".Halal()]");
+		Main.printer.dec();	
 	}
 	
 	public void Lep() {

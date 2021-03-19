@@ -28,10 +28,13 @@ public abstract class Entitás {
 			Main.printer.print(">Milyen vastag a kereg?");
 			int num = in.nextInt();
 			Main.printer.print(">Ertek:" + num);
-			Main.printer.inc();
-			aszteroida.KeregCsokken();
+			if(num > 0) {
+				Main.printer.inc();
+				aszteroida.KeregCsokken();
+			}
 			Main.printer.dec();
 		}
+		in.close();
 		
 	}
 	
