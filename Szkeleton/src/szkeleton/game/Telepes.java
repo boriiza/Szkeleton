@@ -10,15 +10,27 @@ package szkeleton.game;
 //
 //
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
+/**
+ * @author ticka
+ *
+ */
 public class Telepes extends Entitás {
 	
 	private List<Teleportkapu> kapuk;
 	private List<Nyersanyag> nyersanyagok;
 	
 	public Telepes() {
+<<<<<<< HEAD
 		Main.printer.print("["+this.toString()+"].[Telepes()]");
+=======
+		Main.printer.print("[" + this + ".Telepes()]");
+		kapuk = new ArrayList<>();
+		nyersanyagok = new ArrayList<>();
+>>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 	
 	public void Felrobban() {
@@ -41,7 +53,83 @@ public class Telepes extends Entitás {
 	//public Robot RobotEpit() {}
 	
 	
+	
+	/**
+	 * @param
+	 * @return 
+	 */
 	public void KapuEpit() {
+		Main.printer.print("[" + this + ".KapuEpit()]");
+		Main.printer.inc();
+		List<Nyersanyag> kell = new ArrayList<Nyersanyag>();
+		Main.printer.inc();
+		kell.add(new Urán());
+		Main.printer.inc();
+		kell.add(new Vas());
+		Main.printer.inc();
+		kell.add(new Vas());
+		Main.printer.inc();
+		kell.add(new Vízjég());
+		Main.printer.inc();
+		Útmutató tkapu = new Útmutató(kell);
+		Main.printer.print(">Hany Uran van a Telepesnel?");
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		for(int i = 0; i < num; i++) {
+			if(nyersanyagok.size() <= 10) {
+				Main.printer.inc();
+				nyersanyagok.add(new Urán());
+			}
+		}
+		Main.printer.print(">Hany Szen van a Telepesnel?");
+		int sz = in.nextInt();
+		for(int i = 0; i < sz; i++) {
+			if(nyersanyagok.size() <= 10) {
+				Main.printer.inc();
+				nyersanyagok.add(new Szén());
+			}
+		}
+		Main.printer.print(">Hany Vas van a Telepesnel?");
+		int vas = in.nextInt();
+		for(int i = 0; i < vas; i++) {
+			if(nyersanyagok.size() <= 10) {
+				Main.printer.inc();
+				nyersanyagok.add(new Vas());
+			}
+		}
+		Main.printer.print(">Hany Vizjeg van a Telepesnel?");
+		int vj = in.nextInt();
+		for(int i = 0; i < vj; i++) {
+			if(nyersanyagok.size() <= 10) {
+				Main.printer.inc();
+				nyersanyagok.add(new Vízjég());
+			}
+		}
+		int count = 0;
+		for(Nyersanyag n : nyersanyagok) {
+			Main.printer.inc();
+			boolean answer = tkapu.MindMegvan(n);
+			if(answer)
+				count++;
+		}
+		if(count >= 4) {
+			Main.printer.inc();
+			Teleportkapu k1 = new Teleportkapu();
+			Main.printer.inc();
+			Teleportkapu k2 = new Teleportkapu();
+			Main.printer.inc();
+			kapuk.add(k1);
+			Main.printer.inc();
+			kapuk.add(k2);
+			Main.printer.inc();
+			k1.SetParja(k2);
+			Main.printer.inc();
+			k2.SetParja(k1);
+		}
+		else {
+			Main.printer.print(">Nem epitheto teleportkapu");
+		}
+		Main.printer.dec();
 	}
 	
 	public void KapuLerak() {
@@ -55,7 +143,10 @@ public class Telepes extends Entitás {
 		Main.printer.dec();								//A
 	}
 	
+<<<<<<< HEAD
 	
+=======
+>>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	public void Lep() {
 	}
 	

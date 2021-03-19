@@ -10,29 +10,40 @@ package szkeleton.game;
 //
 //
 
-
-
+import java.util.Scanner;
 
 public class Urán extends Nyersanyag {
 	
+<<<<<<< HEAD
 	
 	
 	public  Urán() {
 		Main.printer.print("["+this.toString()+"].[Urán()]");
+=======
+	public Urán() {
+		Main.printer.print("[" + this + ".Uran()]");
+		Main.printer.dec();
+>>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 	
 	public void Betolt(Telepes a) {
 	}
 	
+<<<<<<< HEAD
 	@Override
 	public void Napkozel(Aszteroida a) {
 		Main.printer.print("[" + this + "].Napkozel()");
 		Main.printer.inc();
 		
 		a.Robban();
+=======
+	public void NapKozel() {
+		System.out.println("Robban az urán");	
+>>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
+<<<<<<< HEAD
 		return false;
 	}
 	@Override
@@ -40,4 +51,19 @@ public class Urán extends Nyersanyag {
 		return "Urán";
 	}
 	
+=======
+		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
+		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis");
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
+		if(answer.equals("i")) {
+			Main.printer.dec();
+			return true;
+		}
+		else {
+			Main.printer.dec();
+			return false;
+		}
+	}
+>>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 }

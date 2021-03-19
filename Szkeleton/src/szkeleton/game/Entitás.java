@@ -17,6 +17,10 @@ public abstract class Entitás {
 	protected Aszteroida aszteroida;
 	public abstract void Mozgas(Szomszéd a);
 	
+	public Entitás() {
+		Main.printer.print("[" + this + ".Entitas()]");
+	}
+	
 	public void Furas() {
 		Main.printer.print("[" + this + ".Furas()]" );
 		Main.printer.inc();

@@ -17,6 +17,12 @@ public class Teleportkapu extends Szomszéd {
 	private Aszteroida aszteroida;
 	private Teleportkapu parja;
 	private Telepes kapuk;
+	
+	public Teleportkapu() {
+		Main.printer.print("[" + this + ".Teleportkapu()]");
+		Main.printer.dec();
+	}
+	
 	public Aszteroida ParHelye() {
 	}
 	
@@ -26,9 +32,9 @@ public class Teleportkapu extends Szomszéd {
 	public void Befogad(Entitás a) {
 	}
 	
-	public void Robban() {
-	}
-	
-	public void Befogad(Entitás a) {
+	public void SetParja(Teleportkapu tk) {
+		Main.printer.print("[" + this + ".SetParja(k1)]");
+		parja = tk;
+		Main.printer.dec();
 	}
 }
