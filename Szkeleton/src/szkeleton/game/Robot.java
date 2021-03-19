@@ -14,13 +14,20 @@ import java.util.List;
 import java.util.Random;
 
 public class Robot extends Entitás {
+	
+	public Robot() {
+		Main.printer.print("["+this.toString()+"].[Robot()]");
+	}
+	
 	public void Mozgas(Szomszéd a) {
-		System.out.println("A robot mozog");
+		Main.printer.print("["+this+"].[Mozgas("+a+")]");
 	}
 	
 	public void Felrobban() {
-		System.out.println("A robot elrepül");
+		Main.printer.print("["+this+"].[Felrobban()]");
+		Main.printer.inc();
 		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
+		this.aszteroida.Ledob(this);
 		this.Mozgas(a);
 		a.Befogad(this);
 	}
@@ -33,6 +40,9 @@ public class Robot extends Entitás {
 	public void Lep() {
 	}
 	
-	
+	@Override 
+	public String toString() {
+		return "Robot";
+	}
 	
 }

@@ -14,6 +14,16 @@ package szkeleton.game;
 
 
 public class Vas extends Nyersanyag {
+	
+	public Vas() {
+		Main.printer.print("["+this.toString()+"].[Vas()]");
+	}
+	
+	@Override
+	public String toString() {
+		return "Vas";
+	}
+	
 	public void Betolt(Telepes a) {
 	}
 	

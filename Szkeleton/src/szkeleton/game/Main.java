@@ -7,7 +7,7 @@ import szkeleton.test.*;
 
 public class Main {
 
-	public static final Print printer = null;
+	public static final Print printer = new Print();
 	
 	public static void main(String[] args) {
 		int input = printer.menu();
@@ -16,8 +16,12 @@ public class Main {
 		case 1:
 		case 2:
 		case 3:
+			uranfuras ur= new uranfuras();
+			ur.init();
+			ur.exec();
 		case 4:
 		case 5:
+			
 		case 6:
 		case 7:
 			uregesfuras uf = new uregesfuras();

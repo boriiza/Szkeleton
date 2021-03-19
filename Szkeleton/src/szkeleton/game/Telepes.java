@@ -17,9 +17,16 @@ public class Telepes extends Entitás {
 	private List<Teleportkapu> kapuk;
 	private List<Nyersanyag> nyersanyagok;
 	
+	public Telepes() {
+		Main.printer.print("["+this.toString()+"].[Telepes()]");
+	}
+	
 	public void Felrobban() {
-		System.out.println("A telepes felrobban");
+		Main.printer.print("["+this+"].[Felrobban()]");
+		Main.printer.inc();
 		Halal();
+		Main.printer.dec();
+	
 	}
 	
 	public void Mozgas(Szomszéd a) {
@@ -31,8 +38,8 @@ public class Telepes extends Entitás {
 	public void Visszatolt() {
 	}
 	
-	public Robot RobotEpit() {
-	}
+	//public Robot RobotEpit() {}
+	
 	
 	public void KapuEpit() {
 	}
@@ -46,22 +53,16 @@ public class Telepes extends Entitás {
 	public void Halal() {
 		Main.printer.print("[" + this + ".Halal()]");   //A
 		Main.printer.dec();								//A
-		System.out.println("A telepes meghal");
 	}
 	
-	public void Mozgas(Szomszéd a) {
-	}
-	
-	public void Halal() {
-	}
-	
-	public void Felrobban() {
-	}
 	
 	public void Lep() {
 	}
 	
 	public void AddNyersanyag(Nyersanyag ny) {
 		nyersanyagok.add(ny);
+		Main.printer.print("[" + this + "].AddNyersanyag("+ny+")");
 	}
+	@Override
+	public String toString() { return "Telepes";} 
 }

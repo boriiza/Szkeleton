@@ -1,5 +1,6 @@
 package szkeleton.game;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -29,13 +30,14 @@ public class Aszteroida extends Szomszéd {
 	private Nyersanyag belsoAnyag;
 	
 	public Aszteroida() {
-		kapuk=new List<Teleportkapu>();
-		entitasok=new List <Entitás>();
-		szomszedok=new List <Szomszéd>();
+		kapuk=new ArrayList<Teleportkapu>();
+		entitasok=new ArrayList <Entitás> ();
+		szomszedok=new ArrayList <Szomszéd>();
 	}
 	
 	public void SetAnyag(Nyersanyag n) {
 		belsoAnyag= n;
+		Main.printer.print("["+this+"].[SetAnyag("+n+")]");
 	}
 	
 	public int GetKopeny() {
@@ -50,18 +52,20 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void AddEntitas(Entitás e) {
+		Main.printer.print("["+this+"].[AddEntitas("+e+")]");
 		entitasok.add(e);
 	}
 	
 	public Nyersanyag AnyagKinyeres() {
+		return belsoAnyag;
 	}
 	
 	public void Ledob(Entitás a) {
+		Main.printer.print("["+this+"].Ledob("+a+")]");
 	}
 	
 	public void Befogad(Entitás a) {
-		System.out.println("Az entitás megérkezett az aszteroidára");
-		a.SetAszteroida(this);											//beállítja az adott aszteroidát az entitásba
+		Main.printer.print("["+this+"].[Befogad("+a+")]");
 	}
 	
 	public void Napvihar() {
@@ -98,16 +102,19 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void Robban() {
-		System.out.println("Robban az aszteroida");
+		Main.printer.print("["+this+"].[Robban()]");
+		Main.printer.inc();
 		for (Entitás e : entitasok) {
 			e.Felrobban();
 		}
+		Main.printer.dec();
 		
 	}
 	
 	public Szomszéd SzomszedotAd() {						//random szomszédot ad 
 		Random rand = new Random();							//a szomszédok listából
 		int randomNum = rand.nextInt(szomszedok.size());
+		Main.printer.print("["+this+"].[SzomszedotAd()]");
 		return szomszedok.get(randomNum);
 	}
 	

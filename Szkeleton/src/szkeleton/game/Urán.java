@@ -14,23 +14,30 @@ package szkeleton.game;
 
 
 public class Urán extends Nyersanyag {
+	
+	
+	
+	public  Urán() {
+		Main.printer.print("["+this.toString()+"].[Urán()]");
+	}
+	
 	public void Betolt(Telepes a) {
 	}
 	
-	public void NapKozel() {
-		System.out.println("Robban az urán");
+	@Override
+	public void Napkozel(Aszteroida a) {
+		Main.printer.print("[" + this + "].Napkozel()");
+		Main.printer.inc();
 		
+		a.Robban();
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
+		return false;
+	}
+	@Override
+	public String toString() {
+		return "Urán";
 	}
 	
-	public void Betolt(Telepes a) {
-	}
-	
-	public void Napkozel() {
-	}
-	
-	public boolean Kompatibilis(Nyersanyag ny) {
-	}
 }

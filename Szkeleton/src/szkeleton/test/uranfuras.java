@@ -5,13 +5,14 @@ import java.util.Scanner;
 import szkeleton.game.*;
 
 
-public class uranfuras {
+public class uranfuras implements teszt {
 
 	Aszteroida aszteroida;
 	Telepes t;
 	Robot r;
 	
-	public void SetUp() {
+	public void init() {
+		Main.printer.print("Init:");
 		aszteroida=new Aszteroida();
 		t= new Telepes();
 		r=new Robot();
@@ -22,8 +23,8 @@ public class uranfuras {
 		
 	}
 	
-	public void furas() {
-		System.out.println("Milyen vastag a köpeny?");
+	public void exec() {
+		Main.printer.print("Exec:");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		if (num > 1) {
@@ -31,14 +32,23 @@ public class uranfuras {
 			t.Furas();
 			System.out.println("Az aszteroida kérgének vastagsága"+ aszteroida.GetKopeny());
 		}
-		if(num==1) {
-		System.out.println("Napközelben van asz aszteroida?");
+		else if(num==1) {
+		System.out.println("Napközelben van asz aszteroida?   i/n");
 		String be=in.next();
+		in.close();
 		if (be=="i") {
+			Main.printer.inc();
+		
 			t.Furas();
 			Nyersanyag anyag=aszteroida.AnyagKinyeres();
-			anyag.Napkozel();
+			anyag.Napkozel(aszteroida);
 			aszteroida.Robban();
+			Main.printer.dec();
+		}
+		else if (be=="n") {
+			Main.printer.inc();
+			t.Furas();
+			Main.printer.dec();
 		}
 			
 		}
@@ -46,9 +56,10 @@ public class uranfuras {
 			if(num==0) {
 				System.out.println("Nem fúrhat tovább, bányássza ki a nyersanyagot");
 			}
-			else {
+			else
 				System.out.println("Érvénytelen érték");
-			}
+			
+		}
 	}
 	
 }

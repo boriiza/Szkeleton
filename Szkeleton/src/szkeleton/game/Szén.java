@@ -14,6 +14,14 @@ package szkeleton.game;
 
 
 public class Szén extends Nyersanyag {
+	
+	public Szén() {
+		Main.printer.print("["+this.toString+ "].[Szén()]");
+	}
+	@Override 
+	public String toString() {
+		return "Szén;
+	}
 	public void Betolt(Telepes a) {
 	}
 	
