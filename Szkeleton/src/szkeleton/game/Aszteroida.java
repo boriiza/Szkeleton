@@ -98,6 +98,15 @@ public class Aszteroida extends Szomszéd {
 	
 	public void AnyagTorol() {
 	}
-	
+	public void SetSzomszed(Szomszéd a) {
+		szomszedok.add(a);
+	}
+
+	public void SetKapu(Teleportkapu t) {
+		kapuk.add(t);
+	}
+	public Szomszéd GetSzomszed(int n) {
+		return szomszedok.get(n);
+	}
 	
 }
