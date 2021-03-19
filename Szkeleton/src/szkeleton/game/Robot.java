@@ -14,6 +14,11 @@ import java.util.List;
 import java.util.Random;
 
 public class Robot extends Entitás {
+	
+	public Robot() {
+		Main.printer.print("[" + this + ".Robot()]");
+	}
+	
 	public void Mozgas(Szomszéd a) {
 		System.out.println("A robot mozog");
 	}

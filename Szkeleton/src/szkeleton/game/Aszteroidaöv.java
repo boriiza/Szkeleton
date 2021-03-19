@@ -17,6 +17,10 @@ public class Aszteroidaöv {
 	private List<Aszteroida> aszteroidak;
 	private List<Entitás> jatekosok;
 	
+	public Aszteroidaöv() {
+		Main.printer.print("[" + this + ".Aszteroidaöv()]");
+	}
+	
 	public void DoNapvihar() {
 		Main.printer.print("[" + this + ".DoNapvihar()]");
 		Main.printer.inc();

@@ -25,9 +25,15 @@ public class Main {
 			uf.exec();
 		case 8:
 		case 9:
+			napvihar np = new napvihar();
+			np.init();
+			np.exec();
 		case 10:
 		case 11:
 		case 12:
+			teleportkapuEpites tkp = new teleportkapuEpites();
+			tkp.init();
+			tkp.exec();
 		case 13:
 		case 14:
 		case 15:
