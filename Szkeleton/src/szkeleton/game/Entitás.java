@@ -17,7 +17,9 @@ public abstract class Entitás {
 	private Aszteroidaöv jatekosok;
 	protected Aszteroida aszteroida;
 	public abstract void Mozgas(Szomszéd a);
+	
 	public void Furas() {
+		
 	}
 	
 	public void SetAszteroida(Aszteroida a) {
