@@ -10,14 +10,19 @@ package szkeleton.game;
 //
 //
 
-
-
+import java.util.List;
+import java.util.Random;
 
 public class Robot extends Entitás {
 	public void Mozgas(Szomszéd a) {
+		System.out.println("A robot mozog");
 	}
 	
 	public void Felrobban() {
+		System.out.println("A robot elrepül");
+		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
+		this.Mozgas(a);
+		a.Befogad(this);
 	}
 	
 	public void Halal() {
@@ -26,15 +31,6 @@ public class Robot extends Entitás {
 	public void Lep() {
 	}
 	
-	public void Mozgas(Szomszéd a) {
-	}
 	
-	public void Halal() {
-	}
 	
-	public void Felrobban() {
-	}
-	
-	public void Lep() {
-	}
 }

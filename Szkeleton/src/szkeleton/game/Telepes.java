@@ -15,6 +15,8 @@ package szkeleton.game;
 
 public class Telepes extends Entitás {
 	public void Felrobban() {
+		System.out.println("A telepes felrobban");
+		Halal();
 	}
 	
 	public void Mozgas(Szomszéd a) {
@@ -39,6 +41,7 @@ public class Telepes extends Entitás {
 	}
 	
 	public void Halal() {
+		System.out.println("A telepes meghal");
 	}
 	
 	public void Lep() {

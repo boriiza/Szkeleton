@@ -18,6 +18,8 @@ public class Urán extends Nyersanyag {
 	}
 	
 	public void NapKozel() {
+		System.out.println("Robban az urán");
+		
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {

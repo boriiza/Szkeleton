@@ -15,9 +15,13 @@ package szkeleton.game;
 
 public abstract class Entitás {
 	private Aszteroidaöv jatekosok;
-	private Aszteroida aszteroida;
+	protected Aszteroida aszteroida;
 	public abstract void Mozgas(Szomszéd a);
 	public void Furas() {
+	}
+	
+	public void SetAszteroida(Aszteroida a) {
+		aszteroida=a;
 	}
 	
 	public abstract void Halal();

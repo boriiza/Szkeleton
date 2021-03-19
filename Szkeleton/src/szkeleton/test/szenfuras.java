@@ -22,7 +22,7 @@ public class szenfuras {
 		in.close();
 		if (num > 0) {
 			aszteroida.SetKopeny(num);
-			aszteroida.KeregCsokken();
+			t.Furas();
 			System.out.println("Az aszteroida kérgének vastagsága"+ aszteroida.GetKopeny());
 		}
 		else {
