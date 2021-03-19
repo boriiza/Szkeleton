@@ -26,12 +26,12 @@ public class robotepites implements teszt{
 		uran = new Urán();
 
 		aszteroida.AddEntitas(telepes);
-		
-		aszteroida.AddEntitas(telepes);
 	}
 
 	@Override
 	public void exec() {
+		Main.printer.print("Init");
+		telepes.RobotEpit();
 		// TODO Auto-generated method stub
 		
 	}

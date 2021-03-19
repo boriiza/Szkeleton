@@ -37,11 +37,7 @@ public class telepesmozog implements teszt{
 	@Override
 	public void exec() {
 		Main.printer.print("Init");
-
 		System.out.println("Melyik szomszedra lepjen a Telepes?");
-
-		System.out.println("Melyik szomszédra lépjen a Telepes?");
-
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		in.close();

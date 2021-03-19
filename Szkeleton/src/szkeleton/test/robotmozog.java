@@ -32,6 +32,8 @@ public class robotmozog implements teszt{
 	@Override
 	public void exec() {
 		Main.printer.print("Init");
+	//randomszám generátor
+		int num = 0;
 		robot.Mozgas(aszteroidaA.GetSzomszed(num));
 		// TODO Auto-generated method stub
 		
