@@ -1,10 +1,5 @@
-using namespace std;
+package szkeleton.game;
+
 public class Proba {
-	int x;
-	int y;
-	double a;
 	
-	Proba(){
-		System.out.println();
-	}
 }

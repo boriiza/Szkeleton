@@ -1,19 +1,17 @@
 package szkeleton.test;
-import java.util.Scanner;
 
+import java.util.Scanner;
 import szkeleton.game.*;
 
-
-public class vasfuras {
-	
+public class szenfuras {
 	Aszteroida aszteroida;
 	Telepes t;
 	
 	
 	public void SetUp() {
 		aszteroida= new Aszteroida();
-		Vas v= new Vas();
-		aszteroida.SetAnyag(v);
+		Szén s= new Szén();
+		aszteroida.SetAnyag(s);
 		t= new Telepes();
 	}
 	
