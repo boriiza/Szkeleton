@@ -25,7 +25,7 @@ public class Szén extends Nyersanyag {
 	public void Betolt(Telepes a) {
 	}
 	
-	public void Napkozel() {
+	public void Napkozel(Aszteroida a) {
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
