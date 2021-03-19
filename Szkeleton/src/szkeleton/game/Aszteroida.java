@@ -1,3 +1,4 @@
+package szkeleton.game;
 //
 //
 //
@@ -20,6 +21,19 @@ public class Aszteroida extends Szomszéd {
 	private Teleportkapu kapuk;
 	private Entitás entitasok;
 	private Szomszéd szomszedok;
+	private Nyersanyag belsoAnyag;
+	
+	public void SetAnyag(Nyersanyag n) {
+		belsoAnyag= n;
+	}
+	
+	public int GetKopeny() {
+		return kopenyVastagsag;
+	}
+	public void SetKopeny(int i) {
+		kopenyVastagsag=i;
+	}
+	
 	public Nyersanyag AnyagKinyeres() {
 	}
 	
