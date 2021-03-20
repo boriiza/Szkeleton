@@ -14,13 +14,10 @@ import java.util.Scanner;
 
 public class Szén extends Nyersanyag {
 	
-	public Szén() {
-		Main.printer.print("["+this.toString+ "].[Szén()]");
-	}
-	@Override 
-	public String toString() {
-		return "Szén";
-	}
+	/*public Szén() {
+		Main.printer.print("["+this.toString()+ "].[Szén()]");
+	}*/
+
 
 	public Szén() {
 		Main.printer.print("[" + this + ".Szen()]");
@@ -30,7 +27,8 @@ public class Szén extends Nyersanyag {
 	public void Betolt(Telepes a) {
 	}
 	
-	public void Napkozel() {
+	@Override
+	public void Napkozel(Aszteroida a) {
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
@@ -38,6 +36,7 @@ public class Szén extends Nyersanyag {
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
+		in.close();
 		if(answer.equals("i")) {
 			Main.printer.dec();
 			return true;
@@ -47,4 +46,10 @@ public class Szén extends Nyersanyag {
 			return false;
 		}
 	}
+
+	@Override 
+	public String toString() {
+		return "Szén";
+	}
+
 }

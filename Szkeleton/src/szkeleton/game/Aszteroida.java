@@ -121,6 +121,9 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void Raktaroz(Nyersanyag a) {
+		Main.printer.print("["+this+"].[Raktaroz(Nyersanyag a)]");
+		belsoAnyag =a;
+		Main.printer.dec();
 	}
 	
 	public void AnyagTorol() {
@@ -135,5 +138,6 @@ public class Aszteroida extends Szomszéd {
 	public Szomszéd GetSzomszed(int n) {
 		return szomszedok.get(n);
 	}
+
 	
 }

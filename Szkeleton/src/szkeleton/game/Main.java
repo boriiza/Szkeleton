@@ -43,6 +43,9 @@ public class Main {
 		case 15:
 		case 16:
 		case 17:
+			szenbetolt tszb = new szenbetolt();
+			tszb.init();
+			tszb.exec();
 		case 18:
 		}
 		

@@ -22,6 +22,7 @@ public class Telepes extends Entitás {
 	
 	private List<Teleportkapu> kapuk;
 	private List<Nyersanyag> nyersanyagok;
+	private Aszteroida aszteroida;
 	
 	public Telepes() {
 		Main.printer.print("["+this.toString()+"].[Telepes()]");
@@ -45,6 +46,12 @@ public class Telepes extends Entitás {
 	}
 	
 	public void Visszatolt() {
+		Main.printer.print("["+this+"].[Visszatolt()]");
+		Main.printer.inc();
+		aszteroida.Raktaroz(nyersanyagok.get(nyersanyagok.size()-1));
+		nyersanyagok.remove(nyersanyagok.size()-1);
+		
+		
 	}
 	
 	//public Robot RobotEpit() {}

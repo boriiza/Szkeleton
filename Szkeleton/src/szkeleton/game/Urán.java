@@ -15,9 +15,9 @@ import java.util.Scanner;
 public class Urán extends Nyersanyag {
 	
 	
-	public  Urán() {
+	/*public  Urán() {
 		Main.printer.print("["+this.toString()+"].[Urán()]");
-	}
+	} */
 
 	public Urán() {
 		Main.printer.print("[" + this + ".Uran()]");
@@ -39,6 +39,7 @@ public class Urán extends Nyersanyag {
 
 	public void NapKozel() {
 		System.out.println("Robban az urán");	
+	}
 
 	
 	/*public boolean Kompatibilis(Nyersanyag ny) {
@@ -46,10 +47,7 @@ public class Urán extends Nyersanyag {
 		return false;
 	}*/
 		
-	@Override
-	public String toString() {
-		return "Urán";
-	}
+
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
@@ -65,4 +63,10 @@ public class Urán extends Nyersanyag {
 			return false;
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return "Urán";
+	}
+	
 }

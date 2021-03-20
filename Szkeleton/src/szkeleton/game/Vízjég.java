@@ -22,8 +22,6 @@ public class Vízjég extends Nyersanyag {
 	public void Betolt(Telepes a) {
 	}
 	
-	public void NapKozel() {
-	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
@@ -39,4 +37,17 @@ public class Vízjég extends Nyersanyag {
 			return false;
 		}
 	}
+
+	@Override
+	public void Napkozel(Aszteroida a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Vízjég";
+	}
+
+	
 }

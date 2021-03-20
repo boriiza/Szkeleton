@@ -14,14 +14,11 @@ import java.util.Scanner;
 
 public class Vas extends Nyersanyag {
 	
-	public Vas() {
+	/*public Vas() {
 		Main.printer.print("["+this.toString()+"].[Vas()]");
-	}
+	}*/
 	
-	@Override
-	public String toString() {
-		return "Vas";
-	}
+
 	
 	public void Betolt(Telepes a) {
 	}
@@ -48,5 +45,10 @@ public class Vas extends Nyersanyag {
 			Main.printer.dec();
 			return false;
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return "Vas";
 	}
 }
