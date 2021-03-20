@@ -138,6 +138,7 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void AnyagTorol() {
+		Main.printer.print("["+this+"].[AnyagTorol()]");
 	}
 	public void SetSzomszed(Szomszéd a) {
 		Main.printer.print("["+this+"].[SetSzomszéd(Szomszéd a)]");

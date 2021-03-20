@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Vízjég extends Nyersanyag {
 	
 	public Vízjég() {
-		Main.printer.print("[" + this + ".Vizjeg()]");
+		Main.printer.print("[" + this.toString() + ".Vizjeg()]");
 		Main.printer.dec();
 	}
 	

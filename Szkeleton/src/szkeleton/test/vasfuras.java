@@ -10,14 +10,14 @@ public class vasfuras {
 	Telepes t;
 	
 	
-	public void SetUp() {
+	public void init() {
 		aszteroida= new Aszteroida();
 		Vas v= new Vas();
 		aszteroida.SetAnyag(v);
 		t= new Telepes();
 	}
 	
-	public void furas() {
+	public void exec() {
 		System.out.println("Milyen vastag a köpeny?");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
