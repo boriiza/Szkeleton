@@ -40,14 +40,6 @@ public class Urán extends Nyersanyag {
 	public void NapKozel() {
 		System.out.println("Robban az urán");
 	}
-
-	
-	/*public boolean Kompatibilis(Nyersanyag ny) {
-
-		return false;
-	}*/
-		
-
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");

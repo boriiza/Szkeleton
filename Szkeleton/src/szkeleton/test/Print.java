@@ -23,7 +23,7 @@ public class Print {
 		inc--;
 	}
 	
-	public int menu() {
+	public int menu(Scanner scan) {
 		System.out.println("Program muveletei");
 		System.out.println("\t0: Kilepes");
 		System.out.println("Mozgas");
@@ -50,8 +50,8 @@ public class Print {
 		System.out.println("\t17: Szen visszatoltes");
 		System.out.println("\t18: Vas visszatoltes");
 		System.out.println("Utasitas sorszama ->");
-		//Scanner in = new Scanner(System.in);
-		int num = Main.scanner.nextInt();
+		int num = scan.nextInt();
+		//Main.scanner.close();
 		//in.close();
 		return num;
 	}

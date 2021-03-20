@@ -1,5 +1,7 @@
 package szkeleton.test;
 
+import java.util.Scanner;
+
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Aszteroidaöv;
 import szkeleton.game.Main;
@@ -31,7 +33,14 @@ public class napvihar {
 	
 	public void exec() {
 		Main.printer.print("Exec");
-		jatekter.DoNapvihar();
+		Main.printer.print("Letrejon napvihar? ('i' = igaz, 'h' = hamis)");
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
+		if(answer.equals("i"))
+			jatekter.DoNapvihar();
+		else
+			Main.printer.print("Nem jott letre napvihar");
+		//in.close();
 	}
 	
 }

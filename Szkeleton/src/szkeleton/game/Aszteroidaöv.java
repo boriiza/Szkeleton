@@ -27,16 +27,16 @@ public class Aszteroidaöv {
 	public void DoNapvihar() {
 		Main.printer.print("[" + this + ".DoNapvihar()]");
 		Main.printer.inc();
-		Main.printer.print(">Letrejon napvihar? ('i' = igaz, 'h' = hamis)");
+		//Main.printer.print(">Letrejon napvihar? ('i' = igaz, 'h' = hamis)");
 		//Scanner in = new Scanner(System.in);
-		String answer = Main.scanner.nextLine();
-		Main.printer.print(">Ertek: " + answer);
-		if(answer.equals("i")) {
+		//String answer = in.nextLine();
+		//Main.printer.print(">Ertek: " + answer);
+		//if(answer.equals("i")) {
 			Main.printer.inc();
 			aszteroidak.get(0).Napvihar();
-		}
-		else
-			Main.printer.print(">Nem jott letre napvihar");
+		//}
+		//else
+			//Main.printer.print(">Nem jott letre napvihar");
 		//in.close();
 	}
 	

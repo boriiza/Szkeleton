@@ -79,8 +79,8 @@ public class Aszteroida extends Szomszéd {
 	public void Napvihar() {
 		Main.printer.print("[" + this + ".Napvihar()]");
 		Main.printer.print(">Ureges az aszteroida? ('i' = igaz, 'h' = hamis)");
-		//Scanner in = new Scanner(System.in);
-		String answer = Main.scanner.nextLine();
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
 		Main.printer.print(">Ertek: " + answer);
 		if(answer.equals("i")) {
 			Main.printer.print(">A Telepesek as a Robotok el tudtak bujni");
@@ -92,7 +92,7 @@ public class Aszteroida extends Szomszéd {
 			}
 		}
 		Main.printer.dec();
-		//Main.scanner.close();
+		in.close();
 	}
 	
 	public void SzomszedTorol(Szomszéd a) {
