@@ -35,12 +35,12 @@ public class banyaszas implements teszt{
 	public void exec() {
 		Main.printer.print("Init");
 		
-		System.out.println("Milyen vastag az aszteroida kérge?");
+		System.out.println(">Milyen vastag az aszteroida kérge?");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		in.close();
 		
-		System.out.println("Mit bányászik a Telepes? (0 = vas, 1 = szén, 2 = vízjég, 3 = urán)");
+		System.out.println(">Mit bányászik a Telepes? (0 = vas, 1 = szén, 2 = vízjég, 3 = urán)");
 		Scanner in2 = new Scanner(System.in);
 		int anyag = in2.nextInt();
 		in2.close();
@@ -55,7 +55,7 @@ public class banyaszas implements teszt{
 			telepes.Banyaszat();
 		}
 		else {
-			System.out.print("Még nincs kifúrva az aszteroida");
+			System.out.print(">Még nincs kifúrva az aszteroida");
 		}
 		
 		

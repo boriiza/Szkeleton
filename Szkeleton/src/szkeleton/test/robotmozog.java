@@ -1,11 +1,9 @@
 package szkeleton.test;
 
-import java.util.List;
+
 
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Robot;
-import szkeleton.game.Szomszéd;
-import szkeleton.game.Telepes;
 import szkeleton.game.Teleportkapu;
 import szkeleton.game.Main;
 
@@ -32,9 +30,7 @@ public class robotmozog implements teszt{
 	@Override
 	public void exec() {
 		Main.printer.print("Init");
-	//randomszám generátor
-		int num = 0;
-		robot.Mozgas(aszteroidaA.GetSzomszed(num));
+		robot.Mozgas(aszteroidaA.SzomszedotAd());
 		// TODO Auto-generated method stub
 		
 	}

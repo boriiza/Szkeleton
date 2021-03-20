@@ -53,7 +53,10 @@ public class Telepes extends Entitás {
 		Main.printer.dec();
 	}
 	
-	//public Robot RobotEpit() {}
+	public Robot RobotEpit() {
+		Robot r = null;
+		return r;
+	}
 	
 	
 	
