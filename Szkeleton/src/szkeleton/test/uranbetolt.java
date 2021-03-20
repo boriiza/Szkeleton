@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
-import szkeleton.game.Vas;
 import szkeleton.game.Telepes;
+import szkeleton.game.Urán;
 
-public class vasbetolt implements teszt {
-
+public class uranbetolt implements teszt {
 	Aszteroida aszteroida;
 	Telepes t;
 	
@@ -24,24 +23,29 @@ public class vasbetolt implements teszt {
 	
 	@Override
 	public void exec() {
-		Main.printer.print("Van vas a telepesnél? ('i' = igaz, 'h' = hamis");
+		Main.printer.print("Van urán a telepesnél? ('i' = igaz, 'h' = hamis");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
 		in.close();
 		if(answer.equals("i")) {
-			t.AddNyersanyag(new Vas());
+			t.AddNyersanyag(new Urán());
+			Main.printer.print("Napközelben van az aszteroida? ('i' = igaz, 'h' = hamis");
+			in = new Scanner(System.in);
+			answer = in.nextLine();
+			in.close();
+			if(answer.equals("i"))
+				aszteroida.SetNapkozel(true);
 			Main.printer.inc();
 			t.Visszatolt();
 			System.out.println("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
 		}
 		else {
 			if(answer.equals("h")) {
-				System.out.println("Az akció nem hajtható végre : A telepesnél nincs vas");
+				System.out.println("Az akció nem hajtható végre : A telepesnél nincs urán");
 			}
 			else {
 				System.out.println("Érvénytelen válasz");
 			}
 		}
 	}
-	
 }

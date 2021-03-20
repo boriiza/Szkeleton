@@ -42,7 +42,7 @@ public class vizjegbetolt implements teszt {
 		}
 		else {
 			if(answer.equals("h")) {
-				System.out.println("Az akció nem hajtható végre : A telepesnél nincs szén");
+				System.out.println("Az akció nem hajtható végre : A telepesnél nincs vízjég");
 			}
 			else {
 				System.out.println("Érvénytelen válasz");
