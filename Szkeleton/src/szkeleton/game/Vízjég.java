@@ -40,8 +40,9 @@ public class Vízjég extends Nyersanyag {
 
 	@Override
 	public void Napkozel(Aszteroida a) {
-		// TODO Auto-generated method stub
-		
+		Main.printer.print("[" + this + ".Napkozel(a)]");
+		a.AnyagTorol();
+		Main.printer.dec();
 	}
 
 	@Override

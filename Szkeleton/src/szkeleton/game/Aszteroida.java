@@ -28,12 +28,14 @@ public class Aszteroida extends Szomszéd {
 	private List<Entitás> entitasok;
 	private List<Szomszéd> szomszedok;
 	private Nyersanyag belsoAnyag;
+	private boolean napkozel;
 	
 	public Aszteroida() {
 		Main.printer.print("[" + this + ".Aszteroida()]");
 		kapuk=new ArrayList<Teleportkapu>();
 		entitasok=new ArrayList <Entitás>();
 		szomszedok=new ArrayList <Szomszéd>();
+		napkozel = false;
 	}
 	
 	public void SetAnyag(Nyersanyag n) {
@@ -56,6 +58,11 @@ public class Aszteroida extends Szomszéd {
 		Main.printer.print("["+this+"].[AddEntitas("+e+")]");
 		entitasok.add(e);
 	}
+	
+	public void SetNapkozel(boolean b) {
+		napkozel = b;
+	}
+	
 	
 	public Nyersanyag AnyagKinyeres() {
 		return belsoAnyag;
@@ -123,6 +130,10 @@ public class Aszteroida extends Szomszéd {
 	public void Raktaroz(Nyersanyag a) {
 		Main.printer.print("["+this+"].[Raktaroz(Nyersanyag a)]");
 		belsoAnyag =a;
+		if(napkozel) {
+			Main.printer.inc();
+			a.Napkozel(this);
+		}
 		Main.printer.dec();
 	}
 	

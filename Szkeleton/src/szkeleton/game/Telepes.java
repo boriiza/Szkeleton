@@ -50,8 +50,7 @@ public class Telepes extends Entitás {
 		Main.printer.inc();
 		aszteroida.Raktaroz(nyersanyagok.get(nyersanyagok.size()-1));
 		nyersanyagok.remove(nyersanyagok.size()-1);
-		
-		
+		Main.printer.dec();
 	}
 	
 	//public Robot RobotEpit() {}

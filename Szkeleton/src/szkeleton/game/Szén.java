@@ -29,6 +29,8 @@ public class Szén extends Nyersanyag {
 	
 	@Override
 	public void Napkozel(Aszteroida a) {
+		Main.printer.print("[" + this + ".Napkozel(a)]");
+		Main.printer.dec();
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {

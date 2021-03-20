@@ -31,14 +31,14 @@ public class Urán extends Nyersanyag {
 
 	@Override
 	public void Napkozel(Aszteroida a) {
-		Main.printer.print("[" + this + "].Napkozel()");
+		Main.printer.print("[" + this + "].Napkozel(a)");	
 		Main.printer.inc();
-		
 		a.Robban();
+		Main.printer.dec();
 	}
 
 	public void NapKozel() {
-		System.out.println("Robban az urán");	
+		System.out.println("Robban az urán");
 	}
 
 	
