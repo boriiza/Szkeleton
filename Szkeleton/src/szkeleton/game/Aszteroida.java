@@ -150,5 +150,7 @@ public class Aszteroida extends Szomszéd {
 		return szomszedok.get(n);
 	}
 
+	@Override
+	public String toString() { return "Aszteroida";} 
 	
 }

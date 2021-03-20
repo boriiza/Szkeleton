@@ -24,6 +24,7 @@ public class Teleportkapu extends Szomszéd {
 	}
 	
 	public Aszteroida ParHelye() {
+		return parja.aszteroida;
 	}
 	
 	public void Robban() {
