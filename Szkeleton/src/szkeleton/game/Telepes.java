@@ -79,8 +79,8 @@ public class Telepes extends Entitás {
 		Main.printer.inc();
 		Útmutató tkapu = new Útmutató(kell);
 		Main.printer.print(">Hany Uran van a Telepesnel?");
-		Scanner in = new Scanner(System.in);
-		int num = in.nextInt();
+		//Scanner in = new Scanner(System.in);
+		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
 			if(nyersanyagok.size() <= 10) {
 				Main.printer.inc();
@@ -88,7 +88,7 @@ public class Telepes extends Entitás {
 			}
 		}
 		Main.printer.print(">Hany Szen van a Telepesnel?");
-		int sz = in.nextInt();
+		int sz = Main.scanner.nextInt();
 		for(int i = 0; i < sz; i++) {
 			if(nyersanyagok.size() <= 10) {
 				Main.printer.inc();
@@ -96,7 +96,7 @@ public class Telepes extends Entitás {
 			}
 		}
 		Main.printer.print(">Hany Vas van a Telepesnel?");
-		int vas = in.nextInt();
+		int vas = Main.scanner.nextInt();
 		for(int i = 0; i < vas; i++) {
 			if(nyersanyagok.size() <= 10) {
 				Main.printer.inc();
@@ -104,7 +104,7 @@ public class Telepes extends Entitás {
 			}
 		}
 		Main.printer.print(">Hany Vizjeg van a Telepesnel?");
-		int vj = in.nextInt();
+		int vj = Main.scanner.nextInt();
 		for(int i = 0; i < vj; i++) {
 			if(nyersanyagok.size() <= 10) {
 				Main.printer.inc();
@@ -156,6 +156,7 @@ public class Telepes extends Entitás {
 		nyersanyagok.add(ny);
 		Main.printer.print("[" + this + "].AddNyersanyag("+ny+")");
 	}
+	
 	@Override
 	public String toString() { return "Telepes";} 
 }

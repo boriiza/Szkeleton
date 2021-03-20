@@ -2,6 +2,8 @@ package szkeleton.test;
 
 import java.util.Scanner;
 
+import szkeleton.game.Main;
+
 public class Print {
 	
 	private int inc = 0;
@@ -48,9 +50,9 @@ public class Print {
 		System.out.println("\t17: Szen visszatoltes");
 		System.out.println("\t18: Vas visszatoltes");
 		System.out.println("Utasitas sorszama ->");
-		Scanner in = new Scanner(System.in);
-		int num = in.nextInt();
-		in.close();
+		//Scanner in = new Scanner(System.in);
+		int num = Main.scanner.nextInt();
+		//in.close();
 		return num;
 	}
 }

@@ -25,12 +25,12 @@ public abstract class Entitás {
 		Main.printer.print("[" + this + ".Furas()]" );
 		Main.printer.inc();
 		Main.printer.print(">Ureges az aszteroida? ('i' = igaz, 'h' = hamis)");
-		Scanner in = new Scanner(System.in);
-		String answer = in.nextLine();
+		//Scanner in = new Scanner(System.in);
+		String answer = Main.scanner.nextLine();
 		Main.printer.print(">Ertek:" + answer);
 		if (answer.equals("i")) {
 			Main.printer.print(">Milyen vastag a kereg?");
-			int num = in.nextInt();
+			int num = Main.scanner.nextInt();
 			Main.printer.print(">Ertek:" + num);
 			if(num > 0) {
 				Main.printer.inc();
@@ -38,7 +38,7 @@ public abstract class Entitás {
 			}
 			Main.printer.dec();
 		}
-		in.close();
+		//Main.scanner.close();
 		
 	}
 	

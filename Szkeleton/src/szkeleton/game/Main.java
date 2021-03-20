@@ -8,6 +8,7 @@ import szkeleton.test.*;
 public class Main {
 
 	public static final Print printer = new Print();
+	public static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		int input = printer.menu();
@@ -19,25 +20,29 @@ public class Main {
 			uranfuras ur= new uranfuras();
 			ur.init();
 			ur.exec();
+			break;
 		case 4:
 		case 5:
 			
 		case 6:
-		case 7:
+		case 7: 
 			uregesfuras uf = new uregesfuras();
 			uf.init();
 			uf.exec();
+			break;
 		case 8:
 		case 9:
 			napvihar np = new napvihar();
 			np.init();
 			np.exec();
+			break;
 		case 10:
 		case 11:
 		case 12:
 			teleportkapuEpites tkp = new teleportkapuEpites();
 			tkp.init();
 			tkp.exec();
+			break;
 		case 13:
 		case 14:
 		case 15:
@@ -46,6 +51,7 @@ public class Main {
 			szenbetolt tszb = new szenbetolt();
 			tszb.init();
 			tszb.exec();
+			break;
 		case 18:
 		}
 		

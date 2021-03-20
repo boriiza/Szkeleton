@@ -10,6 +10,7 @@ package szkeleton.game;
 //
 //
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,22 +20,24 @@ public class Aszteroidaöv {
 	
 	public Aszteroidaöv() {
 		Main.printer.print("[" + this + ".Aszteroidaöv()]");
+		aszteroidak = new ArrayList<Aszteroida>();
+		jatekosok = new ArrayList<>();
 	}
 	
 	public void DoNapvihar() {
 		Main.printer.print("[" + this + ".DoNapvihar()]");
 		Main.printer.inc();
 		Main.printer.print(">Letrejon napvihar? ('i' = igaz, 'h' = hamis)");
-		Scanner in = new Scanner(System.in);
-		String answer = in.nextLine();
+		//Scanner in = new Scanner(System.in);
+		String answer = Main.scanner.nextLine();
 		Main.printer.print(">Ertek: " + answer);
 		if(answer.equals("i")) {
 			Main.printer.inc();
-			aszteroidak.get(1).Napvihar();
+			aszteroidak.get(0).Napvihar();
 		}
 		else
 			Main.printer.print(">Nem jott letre napvihar");
-		in.close();
+		//in.close();
 	}
 	
 	public void MinuszAszteroida(Aszteroida a) {
@@ -47,4 +50,9 @@ public class Aszteroidaöv {
 	public void AddJatekos(Entitás e) {
 		jatekosok.add(e);
 	}
+	
+	@Override
+	public String toString() { 
+		return "Aszteroidaöv";
+	} 
 }
