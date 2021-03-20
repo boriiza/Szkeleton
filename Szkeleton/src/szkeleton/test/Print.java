@@ -50,6 +50,7 @@ public class Print {
 		System.out.println("Utasitas sorszama ->");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
+		in.close();
 		return num;
 	}
 }

@@ -30,14 +30,9 @@ public class Aszteroida extends Szomszéd {
 	private Nyersanyag belsoAnyag;
 	
 	public Aszteroida() {
-<<<<<<< HEAD
-		kapuk=new ArrayList<Teleportkapu>();
-		entitasok=new ArrayList <Entitás> ();
-=======
 		Main.printer.print("[" + this + ".Aszteroida()]");
 		kapuk=new ArrayList<Teleportkapu>();
 		entitasok=new ArrayList <Entitás>();
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 		szomszedok=new ArrayList <Szomszéd>();
 	}
 	
@@ -90,6 +85,7 @@ public class Aszteroida extends Szomszéd {
 			}
 		}
 		Main.printer.dec();
+		in.close();
 	}
 	
 	public void SzomszedTorol(Szomszéd a) {

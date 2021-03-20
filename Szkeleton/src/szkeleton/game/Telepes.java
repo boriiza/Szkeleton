@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * @author ticka
+ * @author
  *
  */
 public class Telepes extends Entitás {
@@ -24,13 +24,10 @@ public class Telepes extends Entitás {
 	private List<Nyersanyag> nyersanyagok;
 	
 	public Telepes() {
-<<<<<<< HEAD
 		Main.printer.print("["+this.toString()+"].[Telepes()]");
-=======
 		Main.printer.print("[" + this + ".Telepes()]");
 		kapuk = new ArrayList<>();
 		nyersanyagok = new ArrayList<>();
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 	
 	public void Felrobban() {
@@ -143,10 +140,6 @@ public class Telepes extends Entitás {
 		Main.printer.dec();								//A
 	}
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	public void Lep() {
 	}
 	

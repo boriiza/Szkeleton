@@ -16,11 +16,8 @@ import java.util.Random;
 public class Robot extends Entitás {
 	
 	public Robot() {
-<<<<<<< HEAD
 		Main.printer.print("["+this.toString()+"].[Robot()]");
-=======
 		Main.printer.print("[" + this + ".Robot()]");
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 	
 	public void Mozgas(Szomszéd a) {

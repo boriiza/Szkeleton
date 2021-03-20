@@ -13,30 +13,18 @@ package szkeleton.game;
 import java.util.Scanner;
 
 public class Szén extends Nyersanyag {
-<<<<<<< HEAD
 	
 	public Szén() {
 		Main.printer.print("["+this.toString+ "].[Szén()]");
 	}
 	@Override 
 	public String toString() {
-		return "Szén;
+		return "Szén";
 	}
-	public void Betolt(Telepes a) {
-	}
-=======
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
-	
-<<<<<<< HEAD
-	public void Napkozel(Aszteroida a) {
-	}
-	
-	public boolean Kompatibilis(Nyersanyag ny) {
-=======
+
 	public Szén() {
 		Main.printer.print("[" + this + ".Szen()]");
 		Main.printer.dec();
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 	
 	public void Betolt(Telepes a) {

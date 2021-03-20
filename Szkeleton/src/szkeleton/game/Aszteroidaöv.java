@@ -34,6 +34,7 @@ public class Aszteroidaöv {
 		}
 		else
 			Main.printer.print(">Nem jott letre napvihar");
+		in.close();
 	}
 	
 	public void MinuszAszteroida(Aszteroida a) {

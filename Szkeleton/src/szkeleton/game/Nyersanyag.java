@@ -14,9 +14,8 @@ package szkeleton.game;
 
 
 public abstract class Nyersanyag {
-<<<<<<< HEAD
+
 	private Aszteroida aszteroida;
-=======
 	private Aszteroida belsoAnyag;
 	private Telepes nyersanyagok;
 	
@@ -25,7 +24,6 @@ public abstract class Nyersanyag {
 		Main.printer.dec();
 	}
 	
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	public abstract void Betolt(Telepes a);
 	public abstract void Napkozel(Aszteroida a);
 	public abstract boolean Kompatibilis(Nyersanyag ny);
