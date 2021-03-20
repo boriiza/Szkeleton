@@ -19,9 +19,9 @@ public class vasfuras {
 	
 	public void exec() {
 		System.out.println("Milyen vastag a köpeny?");
-		Scanner in = new Scanner(System.in);
-		int num = in.nextInt();
-		in.close();
+		//Scanner in = new Scanner(System.in);
+		int num = Main.scanner.nextInt();
+		Main.scanner.close();
 		if (num > 0) {
 			aszteroida.SetKopeny(num);
 			t.Furas();

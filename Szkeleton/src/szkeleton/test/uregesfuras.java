@@ -19,6 +19,11 @@ public class uregesfuras implements teszt{
 	
 	public void exec() {
 		Main.printer.print("Exec");
-		t.Furas();
+		Main.printer.print(">Ureges az aszteroida? ('i' = igaz, 'h' = hamis)");
+		//Scanner in = new Scanner(System.in);
+		String answer = Main.scanner.nextLine();
+		Main.printer.print(">Ertek:" + answer);
+		if(answer.equals("i"))
+			t.Furas();
 	}
 }
