@@ -11,7 +11,7 @@ public class Robot extends Entitás {
 	}
 	
 	public void Mozgas(Szomszéd a) {
-		Main.printer.print("["+this+"].[Mozgas("+a+")]");
+		Main.printer.print("["+this+".Mozgas("+a+")]");
 		
 		Main.printer.inc();
 		aszteroida.Ledob(this);
@@ -22,7 +22,7 @@ public class Robot extends Entitás {
 	}
 	
 	public void Felrobban() {
-		Main.printer.print("["+this+"].[Felrobban()]");
+		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
 		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
 		this.aszteroida.Ledob(this);
