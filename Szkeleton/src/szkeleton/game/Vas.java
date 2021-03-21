@@ -9,7 +9,12 @@ public class Vas extends Nyersanyag {
 	}*/
 	
 
-	
+	/**
+	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
+	 * jelen esetben a Vasat.
+	 * @param A Telepes, aki bányászik.
+	 * @return Nincs.
+	 */
 	public void Betolt(Telepes a) {
 		Main.printer.print("[" + this + ".Betolt(a)]");
 		a.AddNyersanyag(this);
