@@ -105,6 +105,7 @@ public class Telepes extends Entitás {
 			r.SetAszteroida(this.aszteroida);
 			Main.printer.inc();
 			aszteroida.Befogad(r);
+			
 		}
 		else {
 			Main.printer.print(">Nem epitheto robot");
