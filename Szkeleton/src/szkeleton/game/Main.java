@@ -7,10 +7,12 @@ import szkeleton.test.*;
 
 public class Main {
 
-	public static final Print printer = new Print();
+	public static Print printer;
 	public static Scanner scanner;
 	
 	public static void main(String[] args) {
+		printer = new Print();
+		printer.setInc(0);
 		scanner = new Scanner(System.in);
 		boolean notover = true;
 		while(notover) {

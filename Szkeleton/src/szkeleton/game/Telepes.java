@@ -24,13 +24,18 @@ public class Telepes extends Entitás {
 		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
 		Halal();
-		Main.printer.dec();
+		//Main.printer.dec();
 	
 	}
-	
+	/**
+	 * A robot megépítésére szolgáló függvény. 
+	 * @param Az a szomszéd a paraméter, amelyre az Telepes mozogni fog.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Mozgas(Szomszéd a) {
 		Main.printer.print("["+this+".Mozgas(" + a + ")]");
 		Main.printer.inc();
+		//System.out.println(Main.printer.getInc());
 		aszteroida.Ledob(this);
 		Main.printer.dec();
 		Main.printer.inc();
@@ -55,10 +60,15 @@ public class Telepes extends Entitás {
 		nyersanyagok.remove(nyersanyagok.size()-1);
 		Main.printer.dec();
 	}
-	//void lett 
+	/**
+	 * A robot megépítésére szolgáló függvény. A robotot a Telepes építi, ha minden nyersanyag nála van, ami kell.
+	 * A teszt során nem ellenõrzi a nyersanyagok típusát, ha 3 igen választ kap, az építés megtörténik
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void RobotEpit() {
 		Main.printer.print("[" + this + ".RobotEpit()]");
-		Main.printer.inc();
+		//Main.printer.inc();
 		List<Nyersanyag> kellRobot = new ArrayList<Nyersanyag>();
 		
 		Main.printer.inc();
@@ -73,7 +83,7 @@ public class Telepes extends Entitás {
 		Main.printer.print(">Hany Uran van a Telepesnel?");
 		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				Main.printer.inc();
 				nyersanyagok.add(new Urán());
 			}
@@ -81,7 +91,7 @@ public class Telepes extends Entitás {
 		Main.printer.print(">Hany Szen van a Telepesnel?");
 		int sz = Main.scanner.nextInt();
 		for(int i = 0; i < sz; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				Main.printer.inc();
 				nyersanyagok.add(new Szén());
 			}
@@ -89,7 +99,7 @@ public class Telepes extends Entitás {
 		Main.printer.print(">Hany Vas van a Telepesnel?");
 		int vas = Main.scanner.nextInt();
 		for(int i = 0; i < vas; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				Main.printer.inc();
 				nyersanyagok.add(new Vas());
 			}
@@ -102,12 +112,15 @@ public class Telepes extends Entitás {
 				count++;
 		}
 		if(count >= 3) {
-			Main.printer.inc();
+			//Main.printer.inc();
 			Robot r = new Robot();
-			Main.printer.inc();
+			//Main.printer.dec();
+			//Main.printer.inc();
 			r.SetAszteroida(this.aszteroida);
-			Main.printer.inc();
+			//Main.printer.dec();
+			//Main.printer.inc();
 			aszteroida.Befogad(r);
+			//Main.printer.dec();
 			
 		}
 		else {
@@ -121,7 +134,8 @@ public class Telepes extends Entitás {
 	 * A Telepes létrehoz egy Útmutatót, ami alapján megépítheti a Teleportkapu-párt. 
 	 * Az Útmutatónak egyesével átadja a nála lévõ nyersanyagokat, ami leellenõrzi, hogy van-e egyezés.
 	 * Ha megvan az összes nyersanyag, akkor megépíti a telepes a teleportkapu-párt, és elraktározza.
-	 * Ezen kívül beállítja, hogy a két teleportkapu egymás párjai.	 * 
+	 * Ezen kívül beállítja, hogy a két teleportkapu egymás párjai.	 
+	 * A teszt során nem ellenõrzi a nyeersanyagok típusát, ha 4 igen választ kap a tesztelõtõl, az építés megtörténik. 
 	 * @param Nincs átadott paramétere.
 	 * @return Nincs visszatérési értéke.
 	 */
@@ -220,7 +234,7 @@ public class Telepes extends Entitás {
 	
 	public void AddNyersanyag(Nyersanyag ny) {
 		nyersanyagok.add(ny);
-		Main.printer.print("[" + this + "].AddNyersanyag("+ny+")");
+		Main.printer.print("[" + this + ".AddNyersanyag("+ny+")");
 	}
 	
 	@Override

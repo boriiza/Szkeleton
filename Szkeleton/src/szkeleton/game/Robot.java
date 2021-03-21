@@ -6,11 +6,16 @@ import java.util.Random;
 public class Robot extends Entitás {
 	
 	public Robot() {
-		Main.printer.print("["+this.toString()+"].[Robot()]");
+		//Main.printer.print("["+this.toString()+"].[Robot()]");
 		Main.printer.print("[" + this + ".Robot()]");
 	}
-	
+	/**
+	 * Robot mozgása a véletlenszerûen kapott szomszédra.
+	 * @param Az a szomszéd a paraméter, amelyre az robot mozogni fog.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Mozgas(Szomszéd a) {
+		Main.printer.inc();
 		Main.printer.print("["+this+".Mozgas("+a+")]");
 		
 		Main.printer.inc();
@@ -32,6 +37,8 @@ public class Robot extends Entitás {
 		Main.printer.inc();
 		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
 		this.Mozgas(a);
+
+
 	}
 	
 	/**

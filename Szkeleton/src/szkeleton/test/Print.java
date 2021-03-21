@@ -6,13 +6,27 @@ import szkeleton.game.Main;
 
 public class Print {
 	
-	private int inc = 0;
+	private int inc;
+	
+	public Print() {
+		inc = 0;
+	}
 	
 	public void print(String s) {
-		for(int i = 0; i < inc; i++) {
-			System.out.print("\t");
+		if(inc >= 0) {
+			for(int i = 0; i < inc; i++) {
+				System.out.print("\t");
+			}
 		}
 		System.out.println(s);
+	}
+	
+	public int getInc() {
+		return inc;
+	}
+	
+	public void setInc(int i) {
+		inc = i;
 	}
 	
 	public void inc() {

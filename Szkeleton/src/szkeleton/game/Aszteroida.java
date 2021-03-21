@@ -77,8 +77,8 @@ public class Aszteroida extends Szomszéd {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void Ledob(Entitás a) {
+		Main.printer.inc();
 		Main.printer.print("["+this+".Ledob("+a+")]");
-		entitasok.remove(a);
 	}
 
 	
@@ -88,6 +88,7 @@ public class Aszteroida extends Szomszéd {
 	 *@return Nincs visszatérési értéke.
 	 */
 	public void Befogad(Entitás a) {
+		Main.printer.inc();
 		Main.printer.print("["+this+".Befogad("+a+")]");
 		entitasok.add(a);
 	}
@@ -210,7 +211,7 @@ public class Aszteroida extends Szomszéd {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void AnyagTorol() {
-		Main.printer.print("[" + this + "].AnyagTorol()]");
+		Main.printer.print("[" + this + ".AnyagTorol()]");
 		belsoAnyag = null;
 	}
 

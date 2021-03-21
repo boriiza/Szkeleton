@@ -26,6 +26,11 @@ public class Urán extends Nyersanyag {
 	}
 	
 
+	/**
+	 *Az urán viselkedését valósítja meg, ha az napközelbe kerül, tehát felrobbantja a paraméterként kapott aszteroidát
+	 *@param Aszteroida a: az az aszteroida, amelyen a robbanás megtörténik, ennek az aszteroidának a magja az adott urán.
+	 *@return visszatérési értékkel nem rendelkezik
+	 */
 	@Override
 	public void Napkozel(Aszteroida a) {
 		Main.printer.print("[" + this + "].Napkozel(a)");	
@@ -33,13 +38,7 @@ public class Urán extends Nyersanyag {
 		a.Robban();
 		Main.printer.dec();
 	}
-
-	public void NapKozel(Aszteroida a) {
-		Main.printer.print("["+this+"].NapKozel()");
-		Main.printer.inc();
-		a.Robban();
-		Main.printer.dec();
-	}
+	
 	
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");

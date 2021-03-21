@@ -17,6 +17,11 @@ public class Teleportkapu extends Szomszéd {
 		//Main.printer.dec();
 	}
 	
+	/**
+	 * Megadja, hogy a teleportkapu párja melyik aszteroidán helyezkedik el
+	 * @param nem rendelkezik paraméterrel
+	 * @return Aszteroida visszatérési értékkel rendelkezik, ez az az aszteroida, amely elérhetõ az adott kapun keresztül
+	 */
 	public Aszteroida ParHelye() {
 		Main.printer.print("[" + this + ".ParHelye()]");
 		return parja.aszteroida;
@@ -25,6 +30,13 @@ public class Teleportkapu extends Szomszéd {
 	public void Robban() {
 	}
 	
+	/**
+	 *Az entitás mozgása során hívódik meg, feladata, hogy a kiválasztott kapun átlépve
+	 * eljuttassa az entitást az azon keresztül elérhetõ aszteroidára.
+	 * Amennyiben a kapu párja nem aktív, az entitás az aktuális aszteroidán marad.
+	 * @param Entitás a: az az Entitás, akit el kell szállítani a megfelelõ aszteroidára.
+	 * @return visszatérési értékkel nem rendelkezik
+	 */
 	public void Befogad(Entitás a) {
 		Main.printer.print("[" + this + ".Befogad()]");
 		Main.printer.print(">Aktív a kapu? (0 = nem, 1 = igen)");
@@ -52,12 +64,12 @@ public class Teleportkapu extends Szomszéd {
 	public void SetParja(Teleportkapu tk) {
 		Main.printer.print("[" + this + ".SetParja(" + this + ")]");
 		parja = tk;
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 	public void SetAszteroida(Aszteroida a) {
 		Main.printer.print("[" + this + ".SetAszteroida(" + this + ")]");
 		aszteroida = a;
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 	@Override
 	public String toString() { 
