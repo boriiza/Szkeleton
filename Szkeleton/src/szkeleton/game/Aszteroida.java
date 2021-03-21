@@ -123,7 +123,14 @@ public class Aszteroida extends Szomszéd {
 		Main.printer.print("[" + this + ".KeregCsokken()]");
 		kopenyVastagsag--;
 		if(kopenyVastagsag == 0) {
+			Main.printer.print("Napkozelben van az aszteroida?   (i=igen, n=nem)");
+			Scanner in = new Scanner(System.in);
+			String sz = in.next();
+			if(sz.equals("i")) {
+				this.belsoAnyag.Napkozel(this);
+			}
 			Main.printer.print(">Nem lehet tovabb furni");
+			
 		}
 		Main.printer.dec();
 	}

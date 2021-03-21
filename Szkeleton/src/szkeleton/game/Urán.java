@@ -37,8 +37,11 @@ public class Urán extends Nyersanyag {
 		Main.printer.dec();
 	}
 
-	public void NapKozel() {
-		System.out.println("Robban az urán");
+	public void NapKozel(Aszteroida a) {
+		Main.printer.print("["+this+"].NapKozel()");
+		Main.printer.inc();
+		a.Robban();
+		Main.printer.dec();
 	}
 	
 	public boolean Kompatibilis(Nyersanyag ny) {

@@ -53,6 +53,6 @@ public class Print {
 		int num = scan.nextInt();
 		//Main.scanner.close();
 		//in.close();
-		return num;
+return num;
 	}
 }
