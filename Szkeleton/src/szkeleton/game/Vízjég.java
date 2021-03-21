@@ -8,7 +8,12 @@ public class Vízjég extends Nyersanyag {
 		Main.printer.print("[" + this.toString() + ".Vizjeg()]");
 		Main.printer.dec();
 	}
-	
+	/**
+	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
+	 * jelen esetben a Vízjeget.
+	 * @param A Telepes, aki bányászik.
+	 * @return Nincs.
+	 */
 	public void Betolt(Telepes a) {
 		Main.printer.print("[" + this + ".Betolt(a)]");
 		a.AddNyersanyag(this);
