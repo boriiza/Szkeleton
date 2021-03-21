@@ -61,15 +61,32 @@ public class Aszteroida extends Szomszéd {
 		napkozel = b;
 	}
 
+	/**
+	 * Visszaadja az aszteroida belsejében lévõ Nyersanyagot.
+	 * @param Nincs átadott paramétere.
+	 * @return Az aszteroida belsejében lévõ Nyersanyag.
+	 */
 	public Nyersanyag AnyagKinyeres() {
 		return belsoAnyag;
 	}
 
+	
+	/**
+	 * Az aszteroidát elhagyó Entitást kiveszi az Aszteroida az entitások listájából.
+	 * @param a - Az Aszteroidát elhagyó Entitás.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Ledob(Entitás a) {
 		Main.printer.print("["+this+".Ledob("+a+")]");
 		entitasok.remove(a);
 	}
 
+	
+	/**
+	 *Az Aszteroidára érkezõ Entitást hozzáadja az enitátsok listájához.
+	 *@param nincs átadott paramétere.
+	 *@return Nincs visszatérési értéke.
+	 */
 	public void Befogad(Entitás a) {
 		Main.printer.print("["+this+".Befogad("+a+")]");
 		entitasok.add(a);
@@ -101,6 +118,12 @@ public class Aszteroida extends Szomszéd {
 		// in.close();
 	}
 
+	
+	/**
+	 * Kitörli a szomszédok listából a paraméterként kapott eddigi Szomszédját.
+	 * @param a - Egy szomszéd, amit törölni kell a szomszédok listából.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void SzomszedTorol(Szomszéd a) {
 		Main.printer.print("[" + this + ".SzomszedTorol()]");
 		szomszedok.remove(a);
@@ -148,6 +171,12 @@ public class Aszteroida extends Szomszéd {
 
 	}
 
+	
+	/**
+	 * Az Aszteroida kiválasztja véletlenszerûen egy Szomszédját, amit visszaad.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public Szomszéd SzomszedotAd() { // random szomszédot ad
 		Random rand = new Random(); // a szomszédok listából
 		int randomNum = rand.nextInt(szomszedok.size());
@@ -165,6 +194,12 @@ public class Aszteroida extends Szomszéd {
 		Main.printer.dec();
 	}
 
+	
+	/**
+	 * Kitörli a belsejében lévõ Nyersanyagot.
+	 * @paramm Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void AnyagTorol() {
 		Main.printer.print("[" + this + "].[AnyagTorol()]");
 		belsoAnyag = null;
