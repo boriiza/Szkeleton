@@ -52,12 +52,12 @@ public class Teleportkapu extends Szomszéd {
 	public void SetParja(Teleportkapu tk) {
 		Main.printer.print("[" + this + ".SetParja(" + this + ")]");
 		parja = tk;
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 	public void SetAszteroida(Aszteroida a) {
 		Main.printer.print("[" + this + ".SetAszteroida(" + this + ")]");
 		aszteroida = a;
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 	@Override
 	public String toString() { 

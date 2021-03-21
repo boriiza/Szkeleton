@@ -79,7 +79,6 @@ public class Aszteroida extends Szomszéd {
 	public void Ledob(Entitás a) {
 		Main.printer.inc();
 		Main.printer.print("["+this+".Ledob("+a+")]");
-		entitasok.remove(a);
 	}
 
 	

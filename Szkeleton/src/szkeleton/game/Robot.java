@@ -6,7 +6,7 @@ import java.util.Random;
 public class Robot extends Entitás {
 	
 	public Robot() {
-		Main.printer.print("["+this.toString()+"].[Robot()]");
+		//Main.printer.print("["+this.toString()+"].[Robot()]");
 		Main.printer.print("[" + this + ".Robot()]");
 	}
 	/**
@@ -36,9 +36,9 @@ public class Robot extends Entitás {
 		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
 		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
-		this.aszteroida.Ledob(this);
+		//this.aszteroida.Ledob(this);
 		this.Mozgas(a);
-		a.Befogad(this);
+		//a.Befogad(this);
 	}
 	
 	/**

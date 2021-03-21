@@ -25,6 +25,7 @@ public class banyaszas implements teszt{
 		aszteroida = new Aszteroida();
 		
 		aszteroida.AddEntitas(telepes);
+		telepes.SetAszteroida(aszteroida);
 		
 		
 	}
@@ -40,7 +41,7 @@ public class banyaszas implements teszt{
 		
 		System.out.println(">Mit bányászik a Telepes? (0 = vas, 1 = szén, 2 = vízjég, 3 = urán)");
 		int anyag = in.nextInt();
-		in.close();
+		//in.close();
 		switch(anyag) {
 			case 0: vas = new Vas(); aszteroida.SetAnyag(vas); break;
 			case 1: szen = new Szén(); aszteroida.SetAnyag(szen); break;
