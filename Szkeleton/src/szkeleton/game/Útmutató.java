@@ -33,12 +33,8 @@ public class Útmutató {
 		Main.printer.dec();
 		return false;
 	}
-	
-	@Override
-	public String toString() { 
-		return "Útmutató";
-	}
-	
+	public String toString() { return "Útmutató";}
+
 }
 
 

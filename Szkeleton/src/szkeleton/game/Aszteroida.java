@@ -30,7 +30,7 @@ public class Aszteroida extends Szomszéd {
 	
 	public void SetAnyag(Nyersanyag n) {
 		belsoAnyag= n;
-		Main.printer.print("["+this+"].[SetAnyag("+n+")]");
+		Main.printer.print("["+this+".SetAnyag("+n+")]");
 	}
 	
 	public int GetKopeny() {
@@ -99,6 +99,9 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void SzomszedTorol(Szomszéd a) {
+		Main.printer.print("[" + this + ".SzomszedTorol()]");
+		szomszedok.remove(a);
+		
 	}
 	
 	public void BazisEpit() {

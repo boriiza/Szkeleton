@@ -32,10 +32,16 @@ public class Telepes extends Entitás {
 	}
 	
 	public void Banyaszat() {
+		Main.printer.print("["+this+".Banyaszat()]");
+		Nyersanyag ny = aszteroida.AnyagKinyeres();
+		if(nyersanyagok.size()<10) {
+			
+		}
+		aszteroida.AnyagTorol();
 	}
 	
 	public void Visszatolt() {
-		Main.printer.print("["+this+"].[Visszatolt()]");
+		Main.printer.print("["+this+".Visszatolt()]");
 		Main.printer.inc();
 		aszteroida.Raktaroz(nyersanyagok.get(nyersanyagok.size()-1));
 		nyersanyagok.remove(nyersanyagok.size()-1);
