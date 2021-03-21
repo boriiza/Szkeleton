@@ -8,31 +8,18 @@ public class szenfuras {
 	Telepes t;
 	
 	
-	public void SetUp() {
+	public void init() {
 		Main.printer.print("Init:");
 		aszteroida= new Aszteroida();
 		Szén s= new Szén();
 		aszteroida.SetAnyag(s);
 		t= new Telepes();
+		t.SetAszteroida(aszteroida);
 	}
 	
-	public void furas() {
-		System.out.println("Milyen vastag a köpeny?");
-		Scanner in = new Scanner(System.in);
-		int num = in.nextInt();
-		in.close();
-		if (num > 0) {
-			aszteroida.SetKopeny(num);
-			t.Furas();
-			System.out.println("Az aszteroida kérgének vastagsága"+ aszteroida.GetKopeny());
-		}
-		else {
-			if(num==0) {
-				System.out.println("Nem fúrhat tovább, bányássza ki a nyersanyagot");
-			}
-			else {
-				System.out.println("Érvénytelen érték");
-			}
-		}
+	public void exec() {
+		Main.printer.inc();
+		t.Furas();
+		Main.printer.dec();
 	}
 }

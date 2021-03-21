@@ -136,7 +136,7 @@ public class Aszteroida extends Szomszéd {
 	}
 	
 	public void Robban() {
-		Main.printer.print("["+this+"].[Robban()]");
+		Main.printer.print("["+this+".Robban()]");
 		Main.printer.inc();
 		for (Entitás e : entitasok) {
 			e.Felrobban();

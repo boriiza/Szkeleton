@@ -32,7 +32,7 @@ public class Telepes extends Entitás {
 	}
 	
 	public void Felrobban() {
-		Main.printer.print("["+this+"].[Felrobban()]");
+		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
 		Halal();
 		Main.printer.dec();

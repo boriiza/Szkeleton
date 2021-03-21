@@ -15,25 +15,12 @@ public class vasfuras {
 		Vas v= new Vas();
 		aszteroida.SetAnyag(v);
 		t= new Telepes();
+		t.SetAszteroida(aszteroida);
 	}
 	
 	public void exec() {
-		System.out.println("Milyen vastag a köpeny?");
-		//Scanner in = new Scanner(System.in);
-		int num = Main.scanner.nextInt();
-		Main.scanner.close();
-		if (num > 0) {
-			aszteroida.SetKopeny(num);
-			t.Furas();
-			System.out.println("Az aszteroida kérgének vastagsága"+ aszteroida.GetKopeny());
-		}
-		else {
-			if(num==0) {
-				System.out.println("Nem fúrhat tovább, bányássza ki a nyersanyagot");
-			}
-			else {
-				System.out.println("Érvénytelen érték");
-			}
-		}
+		Main.printer.inc();
+		t.Furas();
+		Main.printer.dec();
 	}
 }

@@ -26,9 +26,20 @@ public class Main {
 				break;
 			case 4:
 				vizjegfuras vf= new vizjegfuras();
+				vf.init();
+				vf.exec();
+				break;
 			case 5:
+				vasfuras vs= new vasfuras();
+				vs.init();
+				vs.exec();
+				break;
 				
 			case 6:
+				szenfuras sf= new szenfuras();
+				sf.init();
+				sf.exec();
+				break;
 			case 7: 
 				uregesfuras uf = new uregesfuras();
 				uf.init();
