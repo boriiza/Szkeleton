@@ -11,6 +11,7 @@ public class Robot extends Entitás {
 	}
 	
 	public void Mozgas(Szomszéd a) {
+		Main.printer.inc();
 		Main.printer.print("["+this+".Mozgas("+a+")]");
 		
 		Main.printer.inc();

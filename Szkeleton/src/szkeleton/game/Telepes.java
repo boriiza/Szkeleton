@@ -220,7 +220,7 @@ public class Telepes extends Entitás {
 	
 	public void AddNyersanyag(Nyersanyag ny) {
 		nyersanyagok.add(ny);
-		Main.printer.print("[" + this + "].AddNyersanyag("+ny+")");
+		Main.printer.print("[" + this + ".AddNyersanyag("+ny+")");
 	}
 	
 	@Override

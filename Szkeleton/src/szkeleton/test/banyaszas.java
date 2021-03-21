@@ -26,6 +26,7 @@ public class banyaszas implements teszt{
 		
 		aszteroida.AddEntitas(telepes);
 		
+		
 	}
 
 	@Override
