@@ -18,7 +18,9 @@ public class Main {
 			switch(input) {
 			case 0: notover = false; printer.print("Viszlat!"); break;
 			case 1:
+				break;
 			case 2:
+				break;
 			case 3:
 				uranfuras ur= new uranfuras();
 				ur.init();
@@ -46,12 +48,14 @@ public class Main {
 				uf.exec();
 				break;
 			case 8:
+				break;
 			case 9:
 				napvihar np = new napvihar();
 				np.init();
 				np.exec();
 				break;
 			case 10:
+				break;
 			case 11:
 				robotepites ro = new robotepites();
 				ro.init();
@@ -63,15 +67,20 @@ public class Main {
 				tkp.exec();
 				break;
 			case 13:
+				break;
 			case 14:
+				break;
 			case 15:
+				break;
 			case 16:
+				break;
 			case 17:
 				szenbetolt tszb = new szenbetolt();
 				tszb.init();
 				tszb.exec();
 				break;
 			case 18:
+				break;
 		}
 		}
 		
