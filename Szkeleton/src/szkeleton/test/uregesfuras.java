@@ -28,6 +28,6 @@ public class uregesfuras implements teszt{
 		Main.printer.print(">Ertek:" + answer);
 		if(answer.equals("i"))
 			t.Furas();
-		in.close();
+		//in.close();
 	}
 }

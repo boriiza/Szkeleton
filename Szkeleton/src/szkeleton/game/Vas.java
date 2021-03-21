@@ -34,6 +34,11 @@ public class Vas extends Nyersanyag {
 
 	}
 	
+	/**
+	 * A Nyersanyagok összehasonlítását végzõ függvény.
+	 * @param A Nyersanyag, amivel össze kell hasonlítania önmagát.
+	 * @return Egy logikai változó, ami megmondja, hogy ugyanolyan fajátjúak-e az összehasonlított Nyersanyagok.
+	 */
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis");

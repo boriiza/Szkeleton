@@ -22,6 +22,11 @@ import szkeleton.game.Main;
 
 
 
+/**
+ * @author
+ *
+ */
+
 public class Aszteroida extends Szomszéd {
 	private int kopenyVastagsag;
 	private List<Teleportkapu> kapuk;
@@ -54,6 +59,12 @@ public class Aszteroida extends Szomszéd {
 		return this.szomszedok;
 	}
 	
+	/**
+	 * A paraméterként kapott Entitást hozzáadja az entitások listájához, 
+	 * így az aszteroidára kerül egy entitás.
+	 * @param Egy Entitás, amit hozzá kell adnia az Entitások listájához.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void AddEntitas(Entitás e) {
 		Main.printer.print("["+this+"].[AddEntitas("+e+")]");
 		entitasok.add(e);
@@ -76,6 +87,13 @@ public class Aszteroida extends Szomszéd {
 		Main.printer.print("["+this+"].[Befogad("+a+")]");
 	}
 	
+	/**
+	 * Az Aszteroidaövben létrejött Napvihar kezeli.
+	 * Ha üres az aszteroida, akkor túlélik a rajta lévõ entitások.
+	 * Ha nem üreges az aszteroida, akkor meghalnak a rajta lévõ entitások.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Napvihar() {
 		Main.printer.print("[" + this + ".Napvihar()]");
 		Main.printer.print(">Ureges az aszteroida? ('i' = igaz, 'h' = hamis)");
@@ -83,7 +101,7 @@ public class Aszteroida extends Szomszéd {
 		String answer = in.nextLine();
 		Main.printer.print(">Ertek: " + answer);
 		if(answer.equals("i")) {
-			Main.printer.print(">A Telepesek as a Robotok el tudtak bujni");
+			Main.printer.print(">A Telepesek es a Robotok el tudtak bujni");
 		}
 		else {
 			for(Entitás e: entitasok) {
@@ -92,7 +110,7 @@ public class Aszteroida extends Szomszéd {
 			}
 		}
 		Main.printer.dec();
-		in.close();
+		//in.close();
 	}
 	
 	public void SzomszedTorol(Szomszéd a) {

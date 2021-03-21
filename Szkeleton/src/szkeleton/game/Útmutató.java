@@ -29,7 +29,7 @@ public class Útmutató {
 			hozzavalok.add(n);
 		}
 		megvanLista = new ArrayList<Nyersanyag>();
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 	
 	public boolean MindMegvan(Nyersanyag ny) {
@@ -45,5 +45,10 @@ public class Útmutató {
 		}
 		Main.printer.dec();
 		return false;
+	}
+	
+	@Override
+	public String toString() { 
+		return "Útmutató";
 	}
 }

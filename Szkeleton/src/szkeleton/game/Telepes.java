@@ -18,6 +18,7 @@ import java.util.Scanner;
  * @author
  *
  */
+
 public class Telepes extends Entitás {
 	
 	private List<Teleportkapu> kapuk;
@@ -61,12 +62,16 @@ public class Telepes extends Entitás {
 	
 	
 	/**
-	 * @param
-	 * @return 
+	 * A Telepes létrehoz egy Útmutatót, ami alapján megépítheti a Teleportkapu-párt. 
+	 * Az Útmutatónak egyesével átadja a nála lévõ nyersanyagokat, ami leellenõrzi, hogy van-e egyezés.
+	 * Ha megvan az összes nyersanyag, akkor megépíti a telepes a teleportkapu-párt, és elraktározza.
+	 * Ezen kívül beállítja, hogy a két teleportkapu egymás párjai.	 * 
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
 	 */
 	public void KapuEpit() {
 		Main.printer.print("[" + this + ".KapuEpit()]");
-		Main.printer.inc();
+		//Main.printer.inc();
 		List<Nyersanyag> kell = new ArrayList<Nyersanyag>();
 		Main.printer.inc();
 		kell.add(new Urán());
@@ -119,9 +124,9 @@ public class Telepes extends Entitás {
 				count++;
 		}
 		if(count >= 4) {
-			Main.printer.inc();
+			//Main.printer.inc();
 			Teleportkapu k1 = new Teleportkapu();
-			Main.printer.inc();
+			//Main.printer.inc();
 			Teleportkapu k2 = new Teleportkapu();
 			Main.printer.inc();
 			kapuk.add(k1);
@@ -144,6 +149,11 @@ public class Telepes extends Entitás {
 	public void BazisEpit() {
 	}
 	
+	/**
+	 * A Telepes halálát intézõ függvény.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Halal() {
 		Main.printer.print("[" + this + ".Halal()]");   //A
 		Main.printer.dec();								//A
@@ -158,5 +168,7 @@ public class Telepes extends Entitás {
 	}
 	
 	@Override
-	public String toString() { return "Telepes";} 
+	public String toString() { 
+		return "Telepes";
+	} 
 }

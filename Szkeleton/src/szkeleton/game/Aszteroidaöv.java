@@ -27,27 +27,19 @@ public class Aszteroidaöv {
 	public void DoNapvihar() {
 		Main.printer.print("[" + this + ".DoNapvihar()]");
 		Main.printer.inc();
-		//Main.printer.print(">Letrejon napvihar? ('i' = igaz, 'h' = hamis)");
-		//Scanner in = new Scanner(System.in);
-		//String answer = in.nextLine();
-		//Main.printer.print(">Ertek: " + answer);
-		//if(answer.equals("i")) {
-			Main.printer.inc();
-			aszteroidak.get(0).Napvihar();
-		//}
-		//else
-			//Main.printer.print(">Nem jott letre napvihar");
-		//in.close();
+		aszteroidak.get(0).Napvihar();
 	}
 	
 	public void MinuszAszteroida(Aszteroida a) {
 	}
 	
 	public void AddAszteroida(Aszteroida a) {
+		Main.printer.print("[" + this + ".AddAszteroida(" + a + ")]");
 		aszteroidak.add(a);
 	}
 	
 	public void AddJatekos(Entitás e) {
+		Main.printer.print("[" + this + ".AddJatekos(" + e + ")]");
 		jatekosok.add(e);
 	}
 	

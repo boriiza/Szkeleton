@@ -13,6 +13,11 @@ package szkeleton.game;
 
 
 
+/**
+ * @author 
+ *
+ */
+
 public class Teleportkapu extends Szomszéd {
 	private Aszteroida aszteroida;
 	private Teleportkapu parja;
@@ -20,7 +25,7 @@ public class Teleportkapu extends Szomszéd {
 	
 	public Teleportkapu() {
 		Main.printer.print("[" + this + ".Teleportkapu()]");
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 	
 	public Aszteroida ParHelye() {
@@ -33,9 +38,19 @@ public class Teleportkapu extends Szomszéd {
 	public void Befogad(Entitás a) {
 	}
 	
+	/**
+	 * A Teleportkapu beállítja a paraméterként kapott Teleportkaput párjának.
+	 * @param Egy Teleportkapau, amit be kell állítania a párjának.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void SetParja(Teleportkapu tk) {
-		Main.printer.print("[" + this + ".SetParja(k1)]");
+		Main.printer.print("[" + this + ".SetParja(" + this + ")]");
 		parja = tk;
 		Main.printer.dec();
+	}
+	
+	@Override
+	public String toString() { 
+		return "Teleportkapu";
 	}
 }

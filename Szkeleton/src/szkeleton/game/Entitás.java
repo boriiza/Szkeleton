@@ -25,7 +25,8 @@ public abstract class Entitás {
 		Main.printer.print("[" + this + ".Furas()]" );
 		Main.printer.inc();
 		Main.printer.print(">Milyen vastag a kereg?");
-		int num = Main.scanner.nextInt();
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
 		Main.printer.print(">Ertek:" + num);
 		if(num > 0) {
 			Main.printer.inc();
@@ -37,6 +38,7 @@ public abstract class Entitás {
 	}
 	
 	public void SetAszteroida(Aszteroida a) {
+		Main.printer.print("[" + this + ".SetAszteroida(" + a + ")]");
 		aszteroida=a;
 	}
 	

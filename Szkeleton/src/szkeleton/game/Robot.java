@@ -33,6 +33,11 @@ public class Robot extends Entitás {
 		a.Befogad(this);
 	}
 	
+	/**
+	 * A Robot halálát intézõ függvény.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Halal() {
 		Main.printer.print("[" + this + ".Halal()]");
 		Main.printer.dec();	

@@ -16,7 +16,7 @@ public class Main {
 		while(notover) {
 			int input = printer.menu(new Scanner(System.in));
 			switch(input) {
-			case 0: notover = true; break;
+			case 0: notover = false; printer.print("Viszlat!"); break;
 			case 1:
 			case 2:
 			case 3:
