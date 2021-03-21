@@ -14,7 +14,7 @@ public class szenbetolt implements teszt {
 	
 	@Override
 	public void init() {
-		Main.printer.print("Init:");
+		Main.printer.print("Init");
 		aszteroida= new Aszteroida();
 		aszteroida.SetAnyag(null);
 		aszteroida.SetKopeny(0);
@@ -25,6 +25,7 @@ public class szenbetolt implements teszt {
 	
 	@Override
 	public void exec() {
+		Main.printer.print("Exec");
 		Main.printer.print("Van szén a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = Main.scanner.nextLine();
@@ -32,6 +33,7 @@ public class szenbetolt implements teszt {
 			t.AddNyersanyag(new Szén());
 			Main.printer.inc();
 			t.Visszatolt();
+			Main.printer.dec();
 			if(aszteroida.AnyagKinyeres() != null)
 				Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
 			else

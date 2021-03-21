@@ -9,7 +9,7 @@ public class szenfuras {
 	
 	
 	public void init() {
-		Main.printer.print("Init:");
+		Main.printer.print("Init");
 		aszteroida= new Aszteroida();
 		Szén s= new Szén();
 		aszteroida.SetAnyag(s);
@@ -18,8 +18,7 @@ public class szenfuras {
 	}
 	
 	public void exec() {
-		Main.printer.inc();
+		Main.printer.print("Exec");
 		t.Furas();
-		Main.printer.dec();
 	}
 }

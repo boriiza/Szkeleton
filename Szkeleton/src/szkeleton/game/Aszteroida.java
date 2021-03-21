@@ -77,7 +77,6 @@ public class Aszteroida extends Szomszéd {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void Ledob(Entitás a) {
-		Main.printer.inc();
 		Main.printer.print("["+this+".Ledob("+a+")]");
 	}
 
@@ -88,7 +87,7 @@ public class Aszteroida extends Szomszéd {
 	 *@return Nincs visszatérési értéke.
 	 */
 	public void Befogad(Entitás a) {
-		Main.printer.inc();
+		//Main.printer.inc();
 		Main.printer.print("["+this+".Befogad("+a+")]");
 		entitasok.add(a);
 	}
@@ -144,17 +143,18 @@ public class Aszteroida extends Szomszéd {
 	public void KeregCsokken() {
 		Main.printer.print("[" + this + ".KeregCsokken()]");
 		kopenyVastagsag--;
-		if (kopenyVastagsag == 0) {
+		if (kopenyVastagsag == 0 && belsoAnyag != null) {
 			Main.printer.print("Napkozelben van az aszteroida?   (i=igen, n=nem)");
 			Scanner in = new Scanner(System.in);
 			String sz = in.next();
 			if (sz.equals("i")) {
+				Main.printer.inc();
 				this.belsoAnyag.Napkozel(this);
+				Main.printer.dec();
 			}
 			Main.printer.print(">Nem lehet tovabb furni");
-
 		}
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 
 	
@@ -196,9 +196,9 @@ public class Aszteroida extends Szomszéd {
 	 */
 	public void Raktaroz(Nyersanyag a) {
 		Main.printer.print("[" + this + ".Raktaroz(Nyersanyag a)]");
+		Main.printer.inc();
 		belsoAnyag = a;
 		if (napkozel) {
-			Main.printer.inc();
 			a.Napkozel(this);
 		}
 		Main.printer.dec();

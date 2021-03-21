@@ -13,7 +13,7 @@ public class uranfuras implements teszt {
 	Robot r;
 	
 	public void init() {
-		Main.printer.print("Init:");
+		Main.printer.print("Init");
 		aszteroida=new Aszteroida();
 		szomszed=new Aszteroida();
 		t= new Telepes();
@@ -30,9 +30,9 @@ public class uranfuras implements teszt {
 	}
 	
 	public void exec() {
-		Main.printer.print("Exec:");
-			Main.printer.inc();
-			t.Furas();
-			Main.printer.dec();
+		Main.printer.print("Exec");
+		//Main.printer.inc();
+		t.Furas();
+		//Main.printer.dec();
 		}
 }

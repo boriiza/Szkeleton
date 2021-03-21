@@ -15,7 +15,6 @@ public class Útmutató {
 			hozzavalok.add(n);
 		}
 		megvanLista = new ArrayList<Nyersanyag>();
-		//Main.printer.dec();
 	}
 	
 	
@@ -28,9 +27,9 @@ public class Útmutató {
 	 */
 	public boolean MindMegvan(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Mindmegvan(n)]");
+		Main.printer.inc();
 		boolean answer;
 		for(Nyersanyag n : hozzavalok) {
-			Main.printer.inc();
 			answer = n.Kompatibilis(ny);
 			if(answer) {
 				Main.printer.dec();

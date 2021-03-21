@@ -22,12 +22,6 @@ public class uregesfuras implements teszt{
 	
 	public void exec() {
 		Main.printer.print("Exec");
-		Main.printer.print(">Ureges az aszteroida? ('i' = igaz, 'h' = hamis)");
-		Scanner in = new Scanner(System.in);
-		String answer = in.nextLine();
-		Main.printer.print(">Ertek:" + answer);
-		if(answer.equals("i"))
-			t.Furas();
-		//in.close();
+		t.Furas();
 	}
 }

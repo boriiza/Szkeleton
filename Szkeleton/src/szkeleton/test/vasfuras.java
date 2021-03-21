@@ -11,6 +11,7 @@ public class vasfuras {
 	
 	
 	public void init() {
+		Main.printer.print("Init");
 		aszteroida= new Aszteroida();
 		Vas v= new Vas();
 		aszteroida.SetAnyag(v);
@@ -19,8 +20,7 @@ public class vasfuras {
 	}
 	
 	public void exec() {
-		Main.printer.inc();
+		Main.printer.print("Exec");
 		t.Furas();
-		Main.printer.dec();
 	}
 }

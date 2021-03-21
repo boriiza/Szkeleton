@@ -19,10 +19,10 @@ public abstract class Entitás {
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		Main.printer.print(">Ertek:" + num);
-		if(num > 0) {
+		if(num < 5 && num > 0) {
 			aszteroida.SetKopeny(num);
-			Main.printer.inc();
 			aszteroida.KeregCsokken();
+			Main.printer.print("Az aszteroida keregvastagsaga : " + aszteroida.GetKopeny());
 		}	
 		Main.printer.dec();
 		//Main.scanner.close();

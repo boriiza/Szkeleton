@@ -13,7 +13,7 @@ public class uranbetolt implements teszt {
 	
 	@Override
 	public void init() {
-		Main.printer.print("Init:");
+		Main.printer.print("Init");
 		aszteroida= new Aszteroida();
 		aszteroida.SetAnyag(null);
 		aszteroida.SetKopeny(0);
@@ -24,6 +24,7 @@ public class uranbetolt implements teszt {
 	
 	@Override
 	public void exec() {
+		Main.printer.print("Exec");
 		Main.printer.print("Van urán a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
@@ -36,6 +37,7 @@ public class uranbetolt implements teszt {
 				aszteroida.SetNapkozel(true);
 			Main.printer.inc();
 			t.Visszatolt();
+			Main.printer.dec();
 			if(aszteroida.AnyagKinyeres() != null)
 				Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
 			else

@@ -11,6 +11,7 @@ public class vizjegfuras {
 	Nyersanyag belsoAnyag;
 	
 	public void init() {
+		Main.printer.print("Init");
 		a= new Aszteroida();
 		t= new Telepes();
 		belsoAnyag= new Vízjég();
@@ -20,8 +21,9 @@ public class vizjegfuras {
 		
 	}
 	public void exec() {
-		Main.printer.inc();
+		Main.printer.print("Exec");
+		//Main.printer.inc();
 		t.Furas();
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 }

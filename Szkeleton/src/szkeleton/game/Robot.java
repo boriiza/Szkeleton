@@ -15,13 +15,10 @@ public class Robot extends Entitás {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void Mozgas(Szomszéd a) {
-		Main.printer.inc();
+		//Main.printer.inc();
 		Main.printer.print("["+this+".Mozgas("+a+")]");
-		
 		Main.printer.inc();
 		aszteroida.Ledob(this);
-		Main.printer.dec();
-		Main.printer.inc();
 		a.Befogad(this);
 		Main.printer.dec();
 	}
@@ -37,8 +34,7 @@ public class Robot extends Entitás {
 		Main.printer.inc();
 		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
 		this.Mozgas(a);
-
-
+		Main.printer.dec();
 	}
 	
 	/**

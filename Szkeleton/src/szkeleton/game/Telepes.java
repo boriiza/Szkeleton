@@ -24,11 +24,11 @@ public class Telepes extends Entitás {
 		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
 		Halal();
-		//Main.printer.dec();
+		Main.printer.dec();
 	
 	}
 	/**
-	 * A robot megépítésére szolgáló függvény. 
+	 * A Telepes mozgatásáért felelõs függvény. 
 	 * @param Az a szomszéd a paraméter, amelyre az Telepes mozogni fog.
 	 * @return Nincs visszatérési értéke.
 	 */
@@ -46,11 +46,13 @@ public class Telepes extends Entitás {
 	
 	public void Banyaszat() {
 		Main.printer.print("["+this+".Banyaszat()]");
+		Main.printer.inc();
 		Nyersanyag ny = aszteroida.AnyagKinyeres();
 		if(nyersanyagok.size()<10) {
 			ny.Betolt(this);
 		}
 		aszteroida.AnyagTorol();
+		Main.printer.dec();
 	}
 	
 	public void Visszatolt() {
@@ -68,23 +70,17 @@ public class Telepes extends Entitás {
 	 */
 	public void RobotEpit() {
 		Main.printer.print("[" + this + ".RobotEpit()]");
-		//Main.printer.inc();
+		Main.printer.inc();
 		List<Nyersanyag> kellRobot = new ArrayList<Nyersanyag>();
 		
-		Main.printer.inc();
 		kellRobot.add(new Szén());
-		Main.printer.inc();
 		kellRobot.add(new Urán());
-		Main.printer.inc();
 		kellRobot.add(new Vas());
-		Main.printer.inc();
-		
 		Útmutató robotRecept = new Útmutató(kellRobot);
 		Main.printer.print(">Hany Uran van a Telepesnel?");
 		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
 			if(nyersanyagok.size() < 10) {
-				Main.printer.inc();
 				nyersanyagok.add(new Urán());
 			}
 		}
@@ -92,7 +88,6 @@ public class Telepes extends Entitás {
 		int sz = Main.scanner.nextInt();
 		for(int i = 0; i < sz; i++) {
 			if(nyersanyagok.size() < 10) {
-				Main.printer.inc();
 				nyersanyagok.add(new Szén());
 			}
 		}
@@ -100,28 +95,19 @@ public class Telepes extends Entitás {
 		int vas = Main.scanner.nextInt();
 		for(int i = 0; i < vas; i++) {
 			if(nyersanyagok.size() < 10) {
-				Main.printer.inc();
 				nyersanyagok.add(new Vas());
 			}
 		}
 		int count = 0;
 		for(Nyersanyag n : nyersanyagok) {
-			Main.printer.inc();
 			boolean answer = robotRecept.MindMegvan(n);
 			if(answer)
 				count++;
 		}
 		if(count >= 3) {
-			//Main.printer.inc();
 			Robot r = new Robot();
-			//Main.printer.dec();
-			//Main.printer.inc();
 			r.SetAszteroida(this.aszteroida);
-			//Main.printer.dec();
-			//Main.printer.inc();
 			aszteroida.Befogad(r);
-			//Main.printer.dec();
-			
 		}
 		else {
 			Main.printer.print(">Nem epitheto robot");
@@ -145,20 +131,15 @@ public class Telepes extends Entitás {
 		List<Nyersanyag> kell = new ArrayList<Nyersanyag>();
 		Main.printer.inc();
 		kell.add(new Urán());
-		Main.printer.inc();
 		kell.add(new Vas());
-		Main.printer.inc();
 		kell.add(new Vas());
-		Main.printer.inc();
 		kell.add(new Vízjég());
-		Main.printer.inc();
 		Útmutató tkapu = new Útmutató(kell);
 		Main.printer.print(">Hany Uran van a Telepesnel?");
 		//Scanner in = new Scanner(System.in);
 		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
 			if(nyersanyagok.size() <= 10) {
-				Main.printer.inc();
 				nyersanyagok.add(new Urán());
 			}
 		}
@@ -166,7 +147,6 @@ public class Telepes extends Entitás {
 		int sz = Main.scanner.nextInt();
 		for(int i = 0; i < sz; i++) {
 			if(nyersanyagok.size() <= 10) {
-				Main.printer.inc();
 				nyersanyagok.add(new Szén());
 			}
 		}
@@ -174,7 +154,6 @@ public class Telepes extends Entitás {
 		int vas = Main.scanner.nextInt();
 		for(int i = 0; i < vas; i++) {
 			if(nyersanyagok.size() <= 10) {
-				Main.printer.inc();
 				nyersanyagok.add(new Vas());
 			}
 		}
@@ -182,13 +161,11 @@ public class Telepes extends Entitás {
 		int vj = Main.scanner.nextInt();
 		for(int i = 0; i < vj; i++) {
 			if(nyersanyagok.size() <= 10) {
-				Main.printer.inc();
 				nyersanyagok.add(new Vízjég());
 			}
 		}
 		int count = 0;
 		for(Nyersanyag n : nyersanyagok) {
-			Main.printer.inc();
 			boolean answer = tkapu.MindMegvan(n);
 			if(answer)
 				count++;
@@ -198,13 +175,9 @@ public class Telepes extends Entitás {
 			Teleportkapu k1 = new Teleportkapu();
 			//Main.printer.inc();
 			Teleportkapu k2 = new Teleportkapu();
-			Main.printer.inc();
 			kapuk.add(k1);
-			Main.printer.inc();
 			kapuk.add(k2);
-			Main.printer.inc();
 			k1.SetParja(k2);
-			Main.printer.inc();
 			k2.SetParja(k1);
 		}
 		else {
@@ -225,8 +198,7 @@ public class Telepes extends Entitás {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void Halal() {
-		Main.printer.print("[" + this + ".Halal()]");   //A
-		Main.printer.dec();								//A
+		Main.printer.print("[" + this + ".Halal()]");
 	}
 	
 	public void Lep() {

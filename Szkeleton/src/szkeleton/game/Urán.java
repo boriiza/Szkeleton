@@ -3,15 +3,10 @@ package szkeleton.game;
 import java.util.Scanner;
 
 public class Urán extends Nyersanyag {
-	
-	
-	/*public  Urán() {
-		Main.printer.print("["+this.toString()+"].[Urán()]");
-	} */
 
 	public Urán() {
 		Main.printer.print("[" + this + ".Uran()]");
-		Main.printer.dec();
+		//Main.printer.dec();
 
 	}
 	/**
@@ -38,19 +33,21 @@ public class Urán extends Nyersanyag {
 		a.Robban();
 		Main.printer.dec();
 	}
-	
-	
+
+	/**
+	 * A Nyersanyagok összehasonlítását végzõ függvény.
+	 * @param A Nyersanyag, amivel össze kell hasonlítania önmagát.
+	 * @return Egy logikai változó, ami megmondja, hogy ugyanolyan fajátjúak-e az összehasonlított Nyersanyagok.
+	 */
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
-		//Scanner in = new Scanner(System.in);
-		String answer = Main.scanner.nextLine();
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
 		if(answer.equals("i")) {
-			Main.printer.dec();
 			return true;
 		}
 		else {
-			Main.printer.dec();
 			return false;
 		}
 	}

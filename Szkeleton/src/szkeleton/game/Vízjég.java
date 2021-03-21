@@ -6,7 +6,7 @@ public class Vízjég extends Nyersanyag {
 	
 	public Vízjég() {
 		Main.printer.print("[" + this.toString() + ".Vizjeg()]");
-		Main.printer.dec();
+		//Main.printer.dec();
 	}
 	/**
 	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
@@ -27,14 +27,12 @@ public class Vízjég extends Nyersanyag {
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
-		//Scanner in = new Scanner(System.in);
-		String answer = Main.scanner.nextLine();
+		Scanner in = new Scanner(System.in);
+		String answer = in.nextLine();
 		if(answer.equals("i")) {
-			Main.printer.dec();
 			return true;
 		}
 		else {
-			Main.printer.dec();
 			return false;
 		}
 	}
@@ -42,8 +40,10 @@ public class Vízjég extends Nyersanyag {
 	@Override
 	public void Napkozel(Aszteroida a) {
 		Main.printer.print("[" + this + ".Napkozel(a)]");
+		Main.printer.inc();
 		a.AnyagTorol();
 		Main.printer.dec();
+		//Main.printer.dec();
 	}
 
 	@Override

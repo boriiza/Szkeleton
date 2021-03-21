@@ -43,16 +43,16 @@ public class banyaszas implements teszt{
 		int anyag = in.nextInt();
 		//in.close();
 		switch(anyag) {
-			case 0: vas = new Vas(); aszteroida.SetAnyag(vas); break;
-			case 1: szen = new Szén(); aszteroida.SetAnyag(szen); break;
-			case 2: viz = new Vízjég(); aszteroida.SetAnyag(viz); break;
-			case 3: uran = new Urán(); aszteroida.SetAnyag(uran); break;
+			case 0: Main.printer.inc(); vas = new Vas(); aszteroida.SetAnyag(vas); Main.printer.dec(); break;
+			case 1: Main.printer.inc(); szen = new Szén(); aszteroida.SetAnyag(szen); Main.printer.dec(); break;
+			case 2: Main.printer.inc(); viz = new Vízjég(); aszteroida.SetAnyag(viz); Main.printer.dec(); break;
+			case 3: Main.printer.inc(); uran = new Urán(); aszteroida.SetAnyag(uran); Main.printer.dec(); break;
 		}
 		if(num == 0) {
 			telepes.Banyaszat();
 		}
 		else {
-			System.out.print(">Még nincs kifúrva az aszteroida");
+			System.out.print(">Még nincs kifúrva az aszteroida\n");
 		}
 		
 		
