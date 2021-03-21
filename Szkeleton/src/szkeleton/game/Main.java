@@ -18,8 +18,14 @@ public class Main {
 			switch(input) {
 			case 0: notover = false; printer.print("Viszlat!"); break;
 			case 1:
+				telepesmozog tm = new telepesmozog();
+				tm.init();
+				tm.exec();
 				break;
 			case 2:
+				robotmozog rm = new robotmozog();
+				rm.init();
+				rm.exec();
 				break;
 			case 3:
 				uranfuras ur= new uranfuras();
@@ -36,7 +42,6 @@ public class Main {
 				vs.init();
 				vs.exec();
 				break;
-				
 			case 6:
 				szenfuras sf= new szenfuras();
 				sf.init();
@@ -48,6 +53,7 @@ public class Main {
 				uf.exec();
 				break;
 			case 8:
+				
 				break;
 			case 9:
 				napvihar np = new napvihar();
