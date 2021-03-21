@@ -42,8 +42,8 @@ public class telepesmozog implements teszt{
 		int num = in.nextInt();
 		in.close();
 		
-		if(in.equals(1)) {
-			telepes.Mozgas(aszteroidaA.GetSzomszed(num));		
+		if(num == 1) {
+			telepes.Mozgas(aszteroidaB);		
 		}
 		else {
 			Main.printer.print(">A Telepes nem lép."); 
