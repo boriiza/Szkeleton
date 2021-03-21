@@ -158,7 +158,10 @@ public class Aszteroida extends Szomszéd {
 
 	
 	/**
-	 *
+	 *Az aszteroida felrobbanása. Urán napközelbe kerülésekor hívódik meg, felrobbantja a rajta lévõ entitásokat,
+	 *és kitörli az aszteroida magját.
+	 *@param nincs paramétere
+	 *@return nincs visszatérési értéke
 	 */
 	public void Robban() {
 		Main.printer.print("[" + this + ".Robban()]");
@@ -184,6 +187,12 @@ public class Aszteroida extends Szomszéd {
 		return szomszedok.get(randomNum);
 	}
 
+	/**
+	 * A nyersanyagok aszteroidába való betöltésére szolgáló függvény
+	 * amennyiben az aszteroida éppen napközelben van, a nyersanyag Napkozel() függvénye meghívódik
+	 * @param a Nyersanyag típusú paraméter, amelyet beállít az aszteroida belsõ magjaként
+	 * @return nincs visszatérési értéke
+	 */
 	public void Raktaroz(Nyersanyag a) {
 		Main.printer.print("[" + this + "].[Raktaroz(Nyersanyag a)]");
 		belsoAnyag = a;
@@ -206,7 +215,7 @@ public class Aszteroida extends Szomszéd {
 	}
 
 	public void SetSzomszed(Szomszéd a) {
-		Main.printer.print("[" + this + "].[SetSzomszéd(Szomszéd a)]");
+		Main.printer.print("[" + this + ".SetSzomszéd(Szomszéd a)]");
 		szomszedok.add(a);
 	}
 
