@@ -8,7 +8,9 @@ public class Szén extends Nyersanyag {
 		Main.printer.print("["+this.toString()+ "].[Szén()]");
 	}*/
 
-
+	/**
+	 * A Szén osztály konstruktora.
+	 */
 	public Szén() {
 		Main.printer.print("[" + this + ".Szen()]");
 		Main.printer.dec();
