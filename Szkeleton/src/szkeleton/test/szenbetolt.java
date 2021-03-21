@@ -20,11 +20,12 @@ public class szenbetolt implements teszt {
 		aszteroida.SetKopeny(0);
 		t= new Telepes();
 		t.SetAszteroida(aszteroida);
+		aszteroida.AddEntitas(t);
 	}
 	
 	@Override
 	public void exec() {
-		Main.printer.print("Van szén a telepesnél? ('i' = igaz, 'h' = hamis");
+		Main.printer.print("Van szén a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = Main.scanner.nextLine();
 		in.close();
@@ -32,14 +33,17 @@ public class szenbetolt implements teszt {
 			t.AddNyersanyag(new Szén());
 			Main.printer.inc();
 			t.Visszatolt();
-			System.out.println("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+			if(aszteroida.AnyagKinyeres() != null)
+				Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+			else
+				Main.printer.print("Az aszteroida belsõ anyaga : üreges");
 		}
 		else {
 			if(answer.equals("h")) {
-				System.out.println("Az akció nem hajtható végre : A telepesnél nincs szén");
+				Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs szén");
 			}
 			else {
-				System.out.println("Érvénytelen válasz");
+				Main.printer.print("Érvénytelen válasz");
 			}
 		}
 	}

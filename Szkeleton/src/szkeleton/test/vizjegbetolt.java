@@ -20,6 +20,7 @@ public class vizjegbetolt implements teszt {
 		aszteroida.SetKopeny(0);
 		t= new Telepes();
 		t.SetAszteroida(aszteroida);
+		aszteroida.AddEntitas(t);
 	}
 	
 	@Override
@@ -38,14 +39,17 @@ public class vizjegbetolt implements teszt {
 				aszteroida.SetNapkozel(true);
 			Main.printer.inc();
 			t.Visszatolt();
-			System.out.println("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+			if(aszteroida.AnyagKinyeres() != null)
+				Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+			else
+				Main.printer.print("Az aszteroida belsõ anyaga : üreges");
 		}
 		else {
 			if(answer.equals("h")) {
-				System.out.println("Az akció nem hajtható végre : A telepesnél nincs vízjég");
+				Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs vízjég");
 			}
 			else {
-				System.out.println("Érvénytelen válasz");
+				Main.printer.print("Érvénytelen válasz");
 			}
 		}
 	}

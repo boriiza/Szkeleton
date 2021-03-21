@@ -19,6 +19,7 @@ public class uranbetolt implements teszt {
 		aszteroida.SetKopeny(0);
 		t= new Telepes();
 		t.SetAszteroida(aszteroida);
+		aszteroida.AddEntitas(t);
 	}
 	
 	@Override
@@ -29,22 +30,24 @@ public class uranbetolt implements teszt {
 		in.close();
 		if(answer.equals("i")) {
 			t.AddNyersanyag(new Urán());
-			Main.printer.print("Napközelben van az aszteroida? ('i' = igaz, 'h' = hamis");
+			Main.printer.print("Napközelben van az aszteroida? ('i' = igaz, 'h' = hamis)");
 			in = new Scanner(System.in);
 			answer = in.nextLine();
-			in.close();
 			if(answer.equals("i"))
 				aszteroida.SetNapkozel(true);
 			Main.printer.inc();
 			t.Visszatolt();
-			System.out.println("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+			if(aszteroida.AnyagKinyeres() != null)
+				Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+			else
+				Main.printer.print("Az aszteroida belsõ anyaga : üreges");
 		}
 		else {
 			if(answer.equals("h")) {
-				System.out.println("Az akció nem hajtható végre : A telepesnél nincs urán");
+				Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs urán");
 			}
 			else {
-				System.out.println("Érvénytelen válasz");
+				Main.printer.print("Érvénytelen válasz");
 			}
 		}
 	}

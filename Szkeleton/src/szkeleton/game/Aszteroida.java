@@ -129,6 +129,7 @@ public class Aszteroida extends Szomszéd {
 		for (Entitás e : entitasok) {
 			e.Felrobban();
 		}
+		AnyagTorol();
 		Main.printer.dec();
 		
 	}
@@ -152,6 +153,7 @@ public class Aszteroida extends Szomszéd {
 	
 	public void AnyagTorol() {
 		Main.printer.print("["+this+"].[AnyagTorol()]");
+		belsoAnyag = null;
 	}
 	public void SetSzomszed(Szomszéd a) {
 		Main.printer.print("["+this+"].[SetSzomszéd(Szomszéd a)]");
