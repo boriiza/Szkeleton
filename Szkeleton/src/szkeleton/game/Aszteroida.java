@@ -53,7 +53,7 @@ public class Aszteroida extends Szomszéd {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void AddEntitas(Entitás e) {
-		Main.printer.print("[" + this + "].[AddEntitas(" + e + ")]");
+		Main.printer.print("[" + this + ".AddEntitas(" + e + ")]");
 		entitasok.add(e);
 	}
 
@@ -183,7 +183,7 @@ public class Aszteroida extends Szomszéd {
 	public Szomszéd SzomszedotAd() { // random szomszédot ad
 		Random rand = new Random(); // a szomszédok listából
 		int randomNum = rand.nextInt(szomszedok.size());
-		Main.printer.print("[" + this + "].[SzomszedotAd()]");
+		Main.printer.print("[" + this + ".SzomszedotAd()]");
 		return szomszedok.get(randomNum);
 	}
 
@@ -194,7 +194,7 @@ public class Aszteroida extends Szomszéd {
 	 * @return nincs visszatérési értéke
 	 */
 	public void Raktaroz(Nyersanyag a) {
-		Main.printer.print("[" + this + "].[Raktaroz(Nyersanyag a)]");
+		Main.printer.print("[" + this + ".Raktaroz(Nyersanyag a)]");
 		belsoAnyag = a;
 		if (napkozel) {
 			Main.printer.inc();
@@ -210,7 +210,7 @@ public class Aszteroida extends Szomszéd {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void AnyagTorol() {
-		Main.printer.print("[" + this + "].[AnyagTorol()]");
+		Main.printer.print("[" + this + "].AnyagTorol()]");
 		belsoAnyag = null;
 	}
 
@@ -220,12 +220,12 @@ public class Aszteroida extends Szomszéd {
 	}
 
 	public void SetKapu(Teleportkapu t) {
-		Main.printer.print("[" + this + "].[SetKapu(Teleportkapu t)]");
+		Main.printer.print("[" + this + ".SetKapu(Teleportkapu t)]");
 		kapuk.add(t);
 	}
 
 	public Szomszéd GetSzomszed(int n) {
-		Main.printer.print("[" + this + "].[GetSzomszed(int n)]");
+		Main.printer.print("[" + this + ".GetSzomszed(int n)]");
 		return szomszedok.get(n);
 	}
 

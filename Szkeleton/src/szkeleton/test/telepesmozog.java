@@ -55,7 +55,7 @@ public class telepesmozog implements teszt{
 		if(num == 0) {
 			telepes.Mozgas(aszteroidaB);		
 		}
-		if(num == 1) {
+		else if(num == 1) {
 			telepes.Mozgas(kapu1);
 		}
 		else {
