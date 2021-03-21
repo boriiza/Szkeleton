@@ -14,14 +14,15 @@ import szkeleton.game.Robot;
 
 public class robotepites implements teszt{
 	Telepes telepes;
-	Aszteroida aszteroida;
+	Aszteroida a;
 	
 	@Override
 	public void init() {
 		Main.printer.print("Init");
 		telepes = new Telepes();
-		aszteroida  = new Aszteroida();
-		aszteroida.AddEntitas(telepes);
+		a = new Aszteroida();
+		a.AddEntitas(telepes);
+		telepes.SetAszteroida(a);
 	}
 
 	@Override
