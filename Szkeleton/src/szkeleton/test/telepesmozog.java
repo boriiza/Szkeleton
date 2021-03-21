@@ -36,12 +36,19 @@ public class telepesmozog implements teszt{
 
 	@Override
 	public void exec() {
-		Main.printer.print("Init");
-		System.out.println(">Melyik szomszedra lepjen a Telepes?"); //LISTA???????
+		Main.printer.print("Exec");
+		Main.printer.print(">Megfelel, hogy ha az aszteroidaB-re lép a Telepes? (0 = nem, 1 = igen) "); 
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		in.close();
-		telepes.Mozgas(aszteroidaA.GetSzomszed(num));
+		
+		if(in.equals(1)) {
+			telepes.Mozgas(aszteroidaA.GetSzomszed(num));		
+		}
+		else {
+			Main.printer.print(">A Telepes nem lép."); 
+		}
+		
 		
 		// TODO Auto-generated method stub
 		

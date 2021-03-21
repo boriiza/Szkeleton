@@ -20,6 +20,7 @@ public class banyaszas implements teszt{
 	
 	@Override
 	public void init() {
+		Main.printer.print("Init");
 		telepes = new Telepes();
 		aszteroida = new Aszteroida();
 		
@@ -29,7 +30,7 @@ public class banyaszas implements teszt{
 
 	@Override
 	public void exec() {
-		Main.printer.print("Init");
+		Main.printer.print("Exec");
 		
 		System.out.println(">Milyen vastag az aszteroida kérge?");
 		Scanner in = new Scanner(System.in);
