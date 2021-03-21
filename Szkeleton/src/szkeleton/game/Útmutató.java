@@ -19,6 +19,14 @@ public class Útmutató {
 		//Main.printer.dec();
 	}
 	
+	
+	/**
+	 * Összehasonlítja a hozzávalók listán lévõ Nyersanyagokkal a paraméterként kapott Nyersanyagot, úgy 
+	 * , hogy meghívja a Nyersanyagok Kompatibilis függvényét, és igazzal tér vissza, ha egyezést talál
+	 * @param ny - Egy Nyersanyag, amit össze kell hasonlítani a hozzávalók listán lévõ nyersanyagokkal
+	 * @return Egy logikai változó, ami megmondja, hogy egyezett-e egy, a listán lévõ 
+	 * Nyersanyaggal a paraméterként kapott Nyersanyag
+	 */
 	public boolean MindMegvan(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Mindmegvan(n)]");
 		boolean answer;
@@ -33,7 +41,9 @@ public class Útmutató {
 		Main.printer.dec();
 		return false;
 	}
-	public String toString() { return "Útmutató";}
+	public String toString() { 
+		return "Útmutató";
+	}
 
 }
 
