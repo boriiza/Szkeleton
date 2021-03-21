@@ -77,8 +77,14 @@ public class Main {
 			case 14:
 				break;
 			case 15:
+				uranbetolt tub = new uranbetolt();
+				tub.init();
+				tub.exec();
 				break;
 			case 16:
+				vizjegbetolt tvjb = new vizjegbetolt();
+				tvjb.init();
+				tvjb.exec();
 				break;
 			case 17:
 				szenbetolt tszb = new szenbetolt();
@@ -86,6 +92,9 @@ public class Main {
 				tszb.exec();
 				break;
 			case 18:
+				vasbetolt tvb = new vasbetolt();
+				tvb.init();
+				tvb.exec();
 				break;
 		}
 		}
