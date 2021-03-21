@@ -53,7 +53,9 @@ public class Main {
 				uf.exec();
 				break;
 			case 8:
-				
+				banyaszas ba = new banyaszas();
+				ba.init();
+				ba.exec();
 				break;
 			case 9:
 				napvihar np = new napvihar();
