@@ -23,7 +23,8 @@ public class Útmutató {
 	private List<Nyersanyag> megvanLista;
 	
 	public Útmutató(List<Nyersanyag> kellenek) {
-		Main.printer.print("[" + this + ".Útmutató()]");
+		
+		Main.printer.print("["+this.toString()+ ".Útmutató()]");
 		hozzavalok = new ArrayList<Nyersanyag>();
 		for(Nyersanyag n : kellenek) {
 			hozzavalok.add(n);

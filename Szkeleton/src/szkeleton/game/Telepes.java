@@ -26,7 +26,7 @@ public class Telepes extends Entitás {
 	private Aszteroida aszteroida;
 	
 	public Telepes() {
-		Main.printer.print("["+this.toString()+"].[Telepes()]");
+		//Main.printer.print("["+this.toString()+"].[Telepes()]");
 		Main.printer.print("[" + this + ".Telepes()]");
 		kapuk = new ArrayList<>();
 		nyersanyagok = new ArrayList<>();
@@ -53,11 +53,67 @@ public class Telepes extends Entitás {
 		nyersanyagok.remove(nyersanyagok.size()-1);
 		Main.printer.dec();
 	}
-	
-	public Robot RobotEpit() {
-		Robot r = null;
-		return r;
+	//void lett 
+	public void RobotEpit() {
+		Main.printer.print("[" + this + ".RobotEpit()]");
+		Main.printer.inc();
+		List<Nyersanyag> kellRobot = new ArrayList<Nyersanyag>();
+		
+		Main.printer.inc();
+		kellRobot.add(new Szén());
+		Main.printer.inc();
+		kellRobot.add(new Urán());
+		Main.printer.inc();
+		kellRobot.add(new Vas());
+		Main.printer.inc();
+		
+		Útmutató robotRecept = new Útmutató(kellRobot);
+		Main.printer.print(">Hany Uran van a Telepesnel?");
+		int num = Main.scanner.nextInt();
+		for(int i = 0; i < num; i++) {
+			if(nyersanyagok.size() <= 10) {
+				Main.printer.inc();
+				nyersanyagok.add(new Urán());
+			}
+		}
+		Main.printer.print(">Hany Szen van a Telepesnel?");
+		int sz = Main.scanner.nextInt();
+		for(int i = 0; i < sz; i++) {
+			if(nyersanyagok.size() <= 10) {
+				Main.printer.inc();
+				nyersanyagok.add(new Szén());
+			}
+		}
+		Main.printer.print(">Hany Vas van a Telepesnel?");
+		int vas = Main.scanner.nextInt();
+		for(int i = 0; i < vas; i++) {
+			if(nyersanyagok.size() <= 10) {
+				Main.printer.inc();
+				nyersanyagok.add(new Vas());
+			}
+		}
+		int count = 0;
+		for(Nyersanyag n : nyersanyagok) {
+			Main.printer.inc();
+			boolean answer = robotRecept.MindMegvan(n);
+			if(answer)
+				count++;
+		}
+		if(count >= 3) {
+			Main.printer.inc();
+			Robot r = new Robot();
+			Main.printer.inc();
+			r.SetAszteroida(this.aszteroida);
+			Main.printer.inc();
+			aszteroida.Befogad(r);
+		}
+		else {
+			Main.printer.print(">Nem epitheto robot");
+		}
+		Main.printer.dec();
 	}
+		
+	
 	
 	
 	

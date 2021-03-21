@@ -40,7 +40,7 @@ public class Szén extends Nyersanyag {
 	 */
 	public boolean Kompatibilis(Nyersanyag ny) {
 		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
-		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis");
+		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
 		//Scanner in = new Scanner(System.in);
 		String answer = Main.scanner.nextLine();
 		//in.close();

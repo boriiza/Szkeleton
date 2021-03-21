@@ -41,6 +41,10 @@ public class Main {
 				break;
 			case 10:
 			case 11:
+				robotepites ro = new robotepites();
+				ro.init();
+				ro.exec();
+				break;
 			case 12:
 				teleportkapuEpites tkp = new teleportkapuEpites();
 				tkp.init();

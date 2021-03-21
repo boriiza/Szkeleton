@@ -42,7 +42,7 @@ public class Print {
 		System.out.println("Epites");
 		System.out.println("\t11: Robotepites");
 		System.out.println("\t12: Kapuepites");
-		System.out.println("\t13: Bezisepites");
+		System.out.println("\t13: Bazisepites");
 		System.out.println("\t14: Kapu lerakas");
 		System.out.println("Visszatoltes");
 		System.out.println("\t15: Uran visszatoltes");
