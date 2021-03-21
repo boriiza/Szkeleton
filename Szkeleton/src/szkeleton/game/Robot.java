@@ -21,6 +21,12 @@ public class Robot extends Entitás {
 		Main.printer.dec();
 	}
 	
+	/**
+	 *Az aszteroida felrobbanásakor hívódik meg, a robot felrobbantására szolgál.
+	 *robbanáskor a robot az aszteroidája egyik random szomszédjára repül át
+	 *@param paraméter nélküli függvény
+	 *@return nem rendelkezik visszatérési értékkel
+	 */
 	public void Felrobban() {
 		Main.printer.print("["+this+"].[Felrobban()]");
 		Main.printer.inc();
