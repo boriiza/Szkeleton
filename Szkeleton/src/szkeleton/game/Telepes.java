@@ -27,7 +27,11 @@ public class Telepes extends Entitás {
 		Main.printer.dec();
 	
 	}
-	
+	/**
+	 * A robot megépítésére szolgáló függvény. 
+	 * @param Az a szomszéd a paraméter, amelyre az Telepes mozogni fog.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Mozgas(Szomszéd a) {
 		Main.printer.print("["+this+".Mozgas(" + a + ")]");
 		Main.printer.inc();
@@ -55,7 +59,11 @@ public class Telepes extends Entitás {
 		nyersanyagok.remove(nyersanyagok.size()-1);
 		Main.printer.dec();
 	}
-	//void lett 
+	/**
+	 * A robot megépítésére szolgáló függvény. A robotot a Telepes építi, ha minden nyersanyag nála van, ami kell.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void RobotEpit() {
 		Main.printer.print("[" + this + ".RobotEpit()]");
 		Main.printer.inc();

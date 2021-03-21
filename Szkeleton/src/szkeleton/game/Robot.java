@@ -9,7 +9,11 @@ public class Robot extends Entitás {
 		Main.printer.print("["+this.toString()+"].[Robot()]");
 		Main.printer.print("[" + this + ".Robot()]");
 	}
-	
+	/**
+	 * Robot mozgása a véletlenszerûen kapott szomszédra.
+	 * @param Az a szomszéd a paraméter, amelyre az robot mozogni fog.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Mozgas(Szomszéd a) {
 		Main.printer.inc();
 		Main.printer.print("["+this+".Mozgas("+a+")]");
