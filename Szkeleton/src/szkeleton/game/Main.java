@@ -25,7 +25,7 @@ public class Main {
 				ur.exec();
 				break;
 			case 4:
-				vizjegfuras vf= new v
+				vizjegfuras vf= new vizjegfuras();
 			case 5:
 				
 			case 6:
