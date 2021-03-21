@@ -8,34 +8,41 @@ import szkeleton.game.*;
 public class uranfuras implements teszt {
 
 	Aszteroida aszteroida;
+	Aszteroida szomszed;
 	Telepes t;
 	Robot r;
 	
 	public void init() {
 		Main.printer.print("Init:");
 		aszteroida=new Aszteroida();
+		szomszed=new Aszteroida();
 		t= new Telepes();
 		r=new Robot();
 		Urán u= new Urán();
+		t.SetAszteroida(aszteroida);
+		r.SetAszteroida(aszteroida);
 		aszteroida.SetAnyag(u);
 		aszteroida.AddEntitas(t);
 		aszteroida.AddEntitas(r);
+		aszteroida.SetSzomszed(szomszed);
+		szomszed.SetSzomszed(aszteroida);
 		
 	}
 	
 	public void exec() {
 		Main.printer.print("Exec:");
-		Scanner in = new Scanner(System.in);
-		int num = in.nextInt();
-		if (num > 1) {
-			aszteroida.SetKopeny(num);
+		//Main.printer.print("Milyen vastag az aszteroida köpenye?");
+		//Scanner in = new Scanner(System.in);
+		//int sz = in.nextInt();
+		//if (sz > 1) {
+			Main.printer.inc();
+			//aszteroida.SetKopeny(sz);
 			t.Furas();
-			System.out.println("Az aszteroida kérgének vastagsága"+ aszteroida.GetKopeny());
+			Main.printer.dec();
 		}
-		else if(num==1) {
-		System.out.println("Napközelben van asz aszteroida?   i/n");
+		/*else if(sz==1) {
+		Main.printer.print("Napközelben van az aszteroida?   (i=igen, n=nem");
 		String be=in.next();
-		in.close();
 		if (be=="i") {
 			Main.printer.inc();
 		
@@ -53,13 +60,16 @@ public class uranfuras implements teszt {
 			
 		}
 		else {
-			if(num==0) {
-				System.out.println("Nem fúrhat tovább, bányássza ki a nyersanyagot");
+			if(sz==0) {
+				Main.printer.print("Nem fúrhat tovább, bányássza ki a nyersanyagot");
 			}
 			else
-				System.out.println("Érvénytelen érték");
+				Main.printer.print("Érvénytelen érték");
 			
 		}
-	}
+		in.close();
+		}
+*/
+	
 	
 }

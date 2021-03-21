@@ -29,9 +29,11 @@ public abstract class Entitás {
 		int num = in.nextInt();
 		Main.printer.print(">Ertek:" + num);
 		if(num > 0) {
+			aszteroida.SetKopeny(num);
+		Main.printer.print("["+this+"].Furas()");
 			Main.printer.inc();
 			aszteroida.KeregCsokken();
-		}
+		}	
 		Main.printer.dec();
 		//Main.scanner.close();
 		

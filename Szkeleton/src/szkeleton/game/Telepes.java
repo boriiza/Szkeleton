@@ -26,7 +26,6 @@ public class Telepes extends Entitás {
 	private Aszteroida aszteroida;
 	
 	public Telepes() {
-		//Main.printer.print("["+this.toString()+"].[Telepes()]");
 		Main.printer.print("[" + this + ".Telepes()]");
 		kapuk = new ArrayList<>();
 		nyersanyagok = new ArrayList<>();
