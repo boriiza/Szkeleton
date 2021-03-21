@@ -66,10 +66,12 @@ public class Aszteroida extends Szomszéd {
 	
 	public void Ledob(Entitás a) {
 		Main.printer.print("["+this+".Ledob("+a+")]");
+		entitasok.remove(a);
 	}
 	
 	public void Befogad(Entitás a) {
 		Main.printer.print("["+this+".Befogad("+a+")]");
+		entitasok.add(a);
 	}
 	
 	/**
