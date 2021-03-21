@@ -31,9 +31,7 @@ public class Robot extends Entitás {
 		Main.printer.print("["+this+"].[Felrobban()]");
 		Main.printer.inc();
 		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
-		this.aszteroida.Ledob(this);
 		this.Mozgas(a);
-		a.Befogad(this);
 	}
 	
 	/**
