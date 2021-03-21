@@ -29,6 +29,14 @@ public class Telepes extends Entitás {
 	}
 	
 	public void Mozgas(Szomszéd a) {
+		Main.printer.print("["+this+".Mozgas(" + a + ")]");
+		Main.printer.inc();
+		aszteroida.Ledob(this);
+		Main.printer.dec();
+		Main.printer.inc();
+		a.Befogad(this);
+		Main.printer.dec();
+
 	}
 	
 	public void Banyaszat() {

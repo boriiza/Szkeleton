@@ -25,10 +25,9 @@ public class vasbetolt implements teszt {
 	
 	@Override
 	public void exec() {
-		Main.printer.print("Van vas a telepesnél? ('i' = igaz, 'h' = hamis");
+		Main.printer.print("Van vas a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
-		in.close();
 		if(answer.equals("i")) {
 			t.AddNyersanyag(new Vas());
 			Main.printer.inc();

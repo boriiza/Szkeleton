@@ -15,6 +15,7 @@ public class robotmozog implements teszt{
 	
 	@Override
 	public void init() {
+		Main.printer.print("Init");
 		aszteroidaA = new Aszteroida();
 		aszteroidaB = new Aszteroida();
 		robot = new Robot();
@@ -29,7 +30,7 @@ public class robotmozog implements teszt{
 
 	@Override
 	public void exec() {
-		Main.printer.print("Init");
+		Main.printer.print("Exec");
 		robot.Mozgas(aszteroidaA.SzomszedotAd());
 		// TODO Auto-generated method stub
 		
