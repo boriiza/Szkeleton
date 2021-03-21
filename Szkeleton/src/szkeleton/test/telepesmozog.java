@@ -14,8 +14,10 @@ import szkeleton.game.Szomszéd;
 public class telepesmozog implements teszt{
 	Aszteroida aszteroidaA;
 	Aszteroida aszteroidaB;
+	Aszteroida aszteroidaC;
 	Telepes telepes;
-	Teleportkapu kapu;
+	Teleportkapu kapu1;
+	Teleportkapu kapu2;
 	
 	
 	@Override
@@ -23,27 +25,38 @@ public class telepesmozog implements teszt{
 		Main.printer.print("Init");
 		aszteroidaA = new Aszteroida();
 		aszteroidaB = new Aszteroida();
+		aszteroidaC = new Aszteroida();
 		telepes = new Telepes();
-		kapu = new Teleportkapu();
+		kapu1 = new Teleportkapu();
+		kapu2 = new Teleportkapu();
 		
+		telepes.SetAszteroida(aszteroidaA);
 		aszteroidaA.AddEntitas(telepes);
 		aszteroidaA.SetSzomszed(aszteroidaB);
-		aszteroidaA.SetSzomszed(kapu);
 		aszteroidaB.SetSzomszed(aszteroidaA);
-		aszteroidaA.SetKapu(kapu);
+		aszteroidaA.SetKapu(kapu1);
+		aszteroidaC.SetKapu(kapu2);
+		kapu1.SetParja(kapu2);
+		kapu1.SetAszteroida(aszteroidaA);
+		kapu2.SetParja(kapu1);
+		kapu2.SetAszteroida(aszteroidaB);
+		
 		
 	}
 
 	@Override
 	public void exec() {
 		Main.printer.print("Exec");
-		Main.printer.print(">Megfelel, hogy ha az aszteroidaB-re lép a Telepes? (0 = nem, 1 = igen) "); 
+		Main.printer.print(">Hova lépjen a Telepes? (0 = aszteroidaB, 1 = aszteroidaC) "); 
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
-		in.close();
+		//in.close();
 		
-		if(num == 1) {
+		if(num == 0) {
 			telepes.Mozgas(aszteroidaB);		
+		}
+		if(num == 1) {
+			telepes.Mozgas(kapu1);
 		}
 		else {
 			Main.printer.print(">A Telepes nem lép."); 

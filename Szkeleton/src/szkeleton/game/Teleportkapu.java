@@ -1,5 +1,7 @@
 package szkeleton.game;
 
+import java.util.Scanner;
+
 /**
  * @author 
  *
@@ -16,6 +18,7 @@ public class Teleportkapu extends Szomszéd {
 	}
 	
 	public Aszteroida ParHelye() {
+		Main.printer.print("[" + this + ".ParHelye()]");
 		return parja.aszteroida;
 	}
 	
@@ -23,6 +26,22 @@ public class Teleportkapu extends Szomszéd {
 	}
 	
 	public void Befogad(Entitás a) {
+		Main.printer.print("[" + this + ".Befogad()]");
+		Main.printer.print(">Aktív a kapu? (0 = nem, 1 = igen)");
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		
+		if(num == 1) {
+			Main.printer.inc();
+			parja.aszteroida.Befogad(a);
+			Main.printer.dec();
+		}
+		else{
+			Main.printer.inc();
+			aszteroida.Befogad(a);
+			Main.printer.dec();
+		}
+		
 	}
 	
 	/**
@@ -35,9 +54,15 @@ public class Teleportkapu extends Szomszéd {
 		parja = tk;
 		Main.printer.dec();
 	}
-	
+	public void SetAszteroida(Aszteroida a) {
+		Main.printer.print("[" + this + ".SetAszteroida(" + this + ")]");
+		aszteroida = a;
+		Main.printer.dec();
+	}
 	@Override
 	public String toString() { 
 		return "Teleportkapu";
 	}
+	
+	
 }
