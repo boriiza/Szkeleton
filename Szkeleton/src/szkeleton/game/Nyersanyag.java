@@ -1,10 +1,6 @@
 package szkeleton.game;
 
 public abstract class Nyersanyag {
-
-	private Aszteroida aszteroida;
-	private Aszteroida belsoAnyag;
-	private Telepes nyersanyagok;
 	
 	public Nyersanyag() {
 		Main.printer.print("[" + this + ".Nyersanyag()]");

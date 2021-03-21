@@ -10,6 +10,8 @@ public class Vízjég extends Nyersanyag {
 	}
 	
 	public void Betolt(Telepes a) {
+		Main.printer.print("[" + this + ".Betolt(a)]");
+		a.AddNyersanyag(this);
 	}
 	
 	/**

@@ -35,7 +35,7 @@ public class Telepes extends Entitás {
 		Main.printer.print("["+this+".Banyaszat()]");
 		Nyersanyag ny = aszteroida.AnyagKinyeres();
 		if(nyersanyagok.size()<10) {
-			
+			ny.Betolt(this);
 		}
 		aszteroida.AnyagTorol();
 	}
