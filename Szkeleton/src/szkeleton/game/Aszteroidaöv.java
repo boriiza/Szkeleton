@@ -15,6 +15,11 @@ public class Aszteroidaöv {
 		jatekosok = new ArrayList<>();
 	}
 	
+	/**
+	 * Intézi az Aszteroidaövben a napvihart, meghívja az Aszteroidákon a Napvihar függvényüket.
+	 * @param Nincs étadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void DoNapvihar() {
 		Main.printer.print("[" + this + ".DoNapvihar()]");
 		Main.printer.inc();
