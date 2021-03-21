@@ -66,21 +66,13 @@ public class Aszteroida extends Szomszéd {
 	}
 
 	public void Ledob(Entitás a) {
-<<<<<<< HEAD
-		Main.printer.print("[" + this + ".Ledob(" + a + ")]");
-=======
 		Main.printer.print("["+this+".Ledob("+a+")]");
 		entitasok.remove(a);
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 
 	public void Befogad(Entitás a) {
-<<<<<<< HEAD
-		Main.printer.print("[" + this + ".Befogad(" + a + ")]");
-=======
 		Main.printer.print("["+this+".Befogad("+a+")]");
 		entitasok.add(a);
->>>>>>> branch 'main' of https://github.com/boriiza/Szkeleton.git
 	}
 
 	/**
