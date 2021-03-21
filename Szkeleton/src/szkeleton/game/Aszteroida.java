@@ -215,7 +215,7 @@ public class Aszteroida extends Szomszéd {
 	}
 
 	public void SetSzomszed(Szomszéd a) {
-		Main.printer.print("[" + this + "].[SetSzomszéd(Szomszéd a)]");
+		Main.printer.print("[" + this + ".SetSzomszéd(Szomszéd a)]");
 		szomszedok.add(a);
 	}
 
