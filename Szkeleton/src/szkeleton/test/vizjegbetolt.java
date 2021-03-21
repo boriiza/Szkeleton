@@ -25,16 +25,14 @@ public class vizjegbetolt implements teszt {
 	
 	@Override
 	public void exec() {
-		Main.printer.print("Van vízjég a telepesnél? ('i' = igaz, 'h' = hamis");
+		Main.printer.print("Van vízjég a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
-		in.close();
-		if(answer.equals("i")) {
+		if(answer.equals("i"))
+		{
 			t.AddNyersanyag(new Vízjég());
-			Main.printer.print("Napközelben van az aszteroida? ('i' = igaz, 'h' = hamis");
-			in = new Scanner(System.in);
+			Main.printer.print("Napközelben van az aszteroida? ('i' = igaz, 'h' = hamis)");
 			answer = in.nextLine();
-			in.close();
 			if(answer.equals("i"))
 				aszteroida.SetNapkozel(true);
 			Main.printer.inc();

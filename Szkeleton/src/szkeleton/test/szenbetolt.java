@@ -28,7 +28,6 @@ public class szenbetolt implements teszt {
 		Main.printer.print("Van szén a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = Main.scanner.nextLine();
-		in.close();
 		if(answer.equals("i")) {
 			t.AddNyersanyag(new Szén());
 			Main.printer.inc();
