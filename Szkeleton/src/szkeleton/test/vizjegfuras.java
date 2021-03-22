@@ -10,6 +10,10 @@ public class vizjegfuras {
 	Telepes t;
 	Nyersanyag belsoAnyag;
 	
+	/**
+	 * A vízjég maggal rendelkezõ aszteroida fúrásának teszteléséhez létrehozunk egy aszteroidát, 
+	 * egy vízjeget, amelyet beállítunk az aszteroida magjának, valamint egy telepest, aki az aszteroidán tartózkodik.
+	 */
 	public void init() {
 		Main.printer.print("Init");
 		a= new Aszteroida();
@@ -22,8 +26,6 @@ public class vizjegfuras {
 	}
 	public void exec() {
 		Main.printer.print("Exec");
-		//Main.printer.inc();
 		t.Furas();
-		//Main.printer.dec();
 	}
 }

@@ -10,6 +10,10 @@ public class vasfuras {
 	Telepes t;
 	
 	
+	/**
+	 * A vas belsejû aszteroida fúrásának teszteléséhez létrehozunk egy aszteroidát, egy vasat, amely az aszteroida magja lesz, 
+	 * valamint egy telepest, aki az aszteroidán tartózkodik és fúrást tud végezni
+	 */
 	public void init() {
 		Main.printer.print("Init");
 		aszteroida= new Aszteroida();
