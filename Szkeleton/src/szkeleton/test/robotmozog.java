@@ -13,7 +13,12 @@ public class robotmozog implements teszt{
 	Teleportkapu kapu1;
 	Teleportkapu kapu2;
 	
-	
+	/**
+	 * Létrehoztunk egy robotot. A robot az aszteroidaA-n áll. 
+	 * Az aszteroidaA közvetlen szomszédja az aszteroidaB.
+	 * Az aszteroidaA-ról a robot elérheti az aszteroidaC-t teleportkapun keresztül.
+	 * Az aszteroidaA teleportkapuja a kapu1, az aszteroidaC teleportkapuja a kapu2.
+	 */
 	@Override
 	public void init() {
 		Main.printer.print("Init");
@@ -37,6 +42,10 @@ public class robotmozog implements teszt{
 		kapu2.SetAszteroida(aszteroidaB);
 	}
 
+	/**
+	 * A Telepessel ellentétben a robot nem választhat magának célt. 
+	 * Az aszteroidaA szomszédjai közül fog véletlenszerûen helyszínt kapni.
+	 */
 	@Override
 	public void exec() {
 		Main.printer.print("Exec");

@@ -8,6 +8,11 @@ public class robotepites implements teszt{
 	Telepes telepes;
 	Aszteroida a;
 	
+	/**
+	 * Létrehoztunk egy Telepest és egy aszteroidát, a Telepes ezen az aszteroidán áll.
+	 * A Telepes tulajdonában lévõ nyersanyagok a RobotEpit() 
+	 * függvényben adhatóak meg a tesztelõ által.
+	 */
 	@Override
 	public void init() {
 		Main.printer.print("Init");
