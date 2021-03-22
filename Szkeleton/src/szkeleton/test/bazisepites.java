@@ -32,13 +32,13 @@ public class bazisepites implements teszt {
 		Main.printer.print("Exec");
 		a.BazisEpit();
 		
-		Main.printer.print("> Összesítve van elég nyersanyag a telepeseknél? (‘i’ = igaz, ‘h’ = hamis)");
+		Main.printer.print("> Osszesitve van eleg nyersanyag a telepeseknel? (‘i’ = igaz, ‘h’ = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
 		
 		if (answer.equals("i")) j.Vege(true);
 		else
-			Main.printer.print("> A bázis építése sikertelen");
+			Main.printer.print("> A bazis epitese sikertelen");
 		
 	}
 

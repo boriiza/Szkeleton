@@ -44,7 +44,7 @@ public class telepesmozog implements teszt{
 	@Override
 	public void exec() {
 		Main.printer.print("Exec");
-		Main.printer.print(">Hova lépjen a Telepes? (0 = aszteroidaB, 1 = aszteroidaC) "); 
+		Main.printer.print(">Hova lepjen a Telepes? (0 = aszteroidaB, 1 = aszteroidaC) "); 
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		

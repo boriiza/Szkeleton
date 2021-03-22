@@ -25,32 +25,32 @@ public class uranbetolt implements teszt {
 	@Override
 	public void exec() {
 		Scanner in = new Scanner(System.in);
-		Main.printer.print("Üreges az aszteroida('i' = igen, 'n' = nem)");
+		Main.printer.print("Ureges az aszteroida('i' = igen, 'n' = nem)");
 		String answer = in.nextLine();
 		if(answer.equals("i")) 
 		{
-			Main.printer.print("Van urán a telepesnél? ('i' = igen, 'n' = nem)");
+			Main.printer.print("Van uran a telepesnel? ('i' = igen, 'n' = nem)");
 			answer = in.nextLine();
 			if(answer.equals("i")) 
 			{
 				t.AddNyersanyag(new Uran());
-				Main.printer.print("Napközelben van az aszteroida? ('i' = igen, 'n' = nem)");
+				Main.printer.print("Napkozelben van az aszteroida? ('i' = igen, 'n' = nem)");
 				answer = in.nextLine();
 				if(answer.equals("i"))
 					aszteroida.SetNapkozel(true);
 				Main.printer.inc();
 				t.Visszatolt();
 				if(aszteroida.AnyagKinyeres() != null)
-					Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+					Main.printer.print("Az aszteroida belso anyaga :"+ aszteroida.AnyagKinyeres().toString());
 				else
-					Main.printer.print("Az aszteroida belsõ anyaga : üreges");
+					Main.printer.print("Az aszteroida belso anyaga : ureges");
 			}
 			else {
 				if(answer.equals("n")) {
-					Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs urán");
+					Main.printer.print("Az akcio nem hajthato vegre : A telepesnel nincs uran");
 				}
 				else {
-					Main.printer.print("Érvénytelen válasz");
+					Main.printer.print("Ervenytelen valasz");
 				}
 			}
 		}

@@ -23,7 +23,7 @@ public class telepesmeghal implements teszt {
 		Main.printer.print("Exec");
 		t.Felrobban();
 		
-		System.out.println(">Van más telepes is az aszteroidaövben? (‘i’ = igaz, ‘h’ = hamis)");
+		System.out.println(">Van mas telepes is az aszteroidaovben? (‘i’ = igaz, ‘h’ = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
 		

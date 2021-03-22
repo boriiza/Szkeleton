@@ -26,41 +26,41 @@ public class vizjegbetolt implements teszt {
 	@Override
 	public void exec() {
 		Scanner in = new Scanner(System.in);
-		Main.printer.print("Üreges az aszteroidal? ('i' = igen, 'n' = nem)");
+		Main.printer.print("Ureges az aszteroida? ('i' = igen, 'n' = nem)");
 		String answer = in.nextLine();
 		if(answer.equals("i"))
 		{
-			Main.printer.print("Van vízjég a telepesnél? ('i' = igen, 'n' = nem)");
+			Main.printer.print("Van vizjeg a telepesnel? ('i' = igen, 'n' = nem)");
 			answer = in.nextLine();
 			if(answer.equals("i"))
 				{
 				t.AddNyersanyag(new Vizjeg());
-				Main.printer.print("Napközelben van az aszteroida? ('i' = igen, 'n' = nem)");
+				Main.printer.print("Napkozelben van az aszteroida? ('i' = igen, 'n' = nem)");
 				answer = in.nextLine();
 				if(answer.equals("i"))
 					aszteroida.SetNapkozel(true);
 				Main.printer.inc();
 				t.Visszatolt();
 				if(aszteroida.AnyagKinyeres() != null)
-					Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+					Main.printer.print("Az aszteroida belso anyaga :"+ aszteroida.AnyagKinyeres().toString());
 				else
-					Main.printer.print("Az aszteroida belsõ anyaga : üreges");
+					Main.printer.print("Az aszteroida belso anyaga : ureges");
 				}
 			else {
 				if(answer.equals("n")) {
-					Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs vízjég");
+					Main.printer.print("Az akcio nem hajtható vegre : A telepesnel nincs vizjeg");
 				}
 				else {
-					Main.printer.print("Érvénytelen válasz");
+					Main.printer.print("Ervenytelen valasz");
 				}
 			}
 		}
 		else{
 			if(answer.equals("n")) {
-				Main.printer.print("Az akció nem hajtható végre : Az aszteroida nem üreges");
+				Main.printer.print("Az akcio nem hajthato vegre : Az aszteroida nem ureges");
 			}
 			else {
-				Main.printer.print("Érvénytelen válasz");
+				Main.printer.print("Ervenytelen valasz");
 			}
 		}
 	}
