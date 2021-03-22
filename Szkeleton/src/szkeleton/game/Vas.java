@@ -32,7 +32,7 @@ public class Vas extends Nyersanyag {
 	 * @return Egy logikai változó, ami megmondja, hogy ugyanolyan fajátjúak-e az összehasonlított Nyersanyagok.
 	 */
 	public boolean Kompatibilis(Nyersanyag ny) {
-		Main.printer.print("[" + this + ".Kompatibilis(ny)]");
+		Main.printer.print("[" + this + ".Kompatibilis(" + this + ")]");
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
