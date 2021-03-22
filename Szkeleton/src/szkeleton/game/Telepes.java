@@ -213,7 +213,7 @@ public class Telepes extends Entitas {
 			kapuk.remove(0);
 		}
 		else
-			Main.printer.print(">A Telepes nem tud kaput lerakni, mert nincs nála");
+			Main.printer.print(">A Telepes nem tud kaput lerakni, mert nincs nala");
 		
 		Main.printer.dec();
 	}

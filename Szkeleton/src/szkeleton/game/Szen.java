@@ -48,7 +48,7 @@ public class Szen extends Nyersanyag {
 
 	@Override 
 	public String toString() {
-		return "Szén";
+		return "Szen";
 	}
 
 }

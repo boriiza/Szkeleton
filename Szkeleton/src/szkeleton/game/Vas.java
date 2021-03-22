@@ -3,6 +3,10 @@ package szkeleton.game;
 import java.util.Scanner;
 
 public class Vas extends Nyersanyag {	
+	
+	public Vas() {
+		Main.printer.print("[" + this + ".Vas()]");
+	}
 
 	/**
 	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
@@ -17,10 +21,6 @@ public class Vas extends Nyersanyag {
 
 	public void Napkozel(Aszteroida a) {
 		Main.printer.print("[" + this + ".Napkozel(a)]");
-	}
-
-	public Vas() {
-		Main.printer.print("[" + this + ".Vas()]");
 	}
 	
 	/**

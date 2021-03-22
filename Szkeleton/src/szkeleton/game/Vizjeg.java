@@ -37,7 +37,13 @@ public class Vizjeg extends Nyersanyag {
 			return false;
 		}
 	}
-
+	
+	/**
+	 * A vízjég nöpkezlebn való viselkedését valósítja meg, kitörli a paraméterként kapott 
+	 * aszteroida belsõ anyagát.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke. 
+	 */
 	@Override
 	public void Napkozel(Aszteroida a) {
 		Main.printer.print("[" + this + ".Napkozel(a)]");
@@ -48,7 +54,7 @@ public class Vizjeg extends Nyersanyag {
 
 	@Override
 	public String toString() {
-		return "Vízjég";
+		return "Vizjeg";
 	}
 
 	

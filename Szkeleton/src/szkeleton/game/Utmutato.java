@@ -9,7 +9,7 @@ public class Utmutato {
 	private List<Nyersanyag> megvanLista;
 	
 	public Utmutato(List<Nyersanyag> kellenek) {
-		Main.printer.print("["+this.toString()+ ".Útmutató()]");
+		Main.printer.print("["+this.toString()+ ".Utmutato()]");
 		hozzavalok = new ArrayList<Nyersanyag>();
 		for(Nyersanyag n : kellenek) {
 			hozzavalok.add(n);
@@ -40,7 +40,7 @@ public class Utmutato {
 		return false;
 	}
 	public String toString() { 
-		return "Útmutató";
+		return "Utmutato";
 	}
 
 }

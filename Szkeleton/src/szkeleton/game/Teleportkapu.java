@@ -22,13 +22,19 @@ public class Teleportkapu extends Szomszed {
 		return parja.aszteroida;
 	}
 	
+	/**
+	 * A teleportkapu robbanását végzõ függvény, beállítja null-ra a oárját,
+	 * így az aktuális kapu már nem használható.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Robban() {
 		Main.printer.print("["+this+".Robban()]");
 		parja.SetParja(null);
 	}
 	
 	/**
-	 *Az entitás mozgása során hívódik meg, feladata, hogy a kiválasztott kapun átlépve
+	 * Az entitás mozgása során hívódik meg, feladata, hogy a kiválasztott kapun átlépve
 	 * eljuttassa az entitást az azon keresztül elérhetõ aszteroidára.
 	 * Amennyiben a kapu párja nem aktív, az entitás az aktuális aszteroidán marad.
 	 * @param Entitas a: az az Entitás, akit el kell szállítani a megfelelõ aszteroidára.
@@ -36,7 +42,7 @@ public class Teleportkapu extends Szomszed {
 	 */
 	public void Befogad(Entitas a) {
 		Main.printer.print("[" + this + ".Befogad()]");
-		Main.printer.print(">Aktív a kapu? (0 = nem, 1 = igen)");
+		Main.printer.print(">Aktiv a kapu? (0 = nem, 1 = igen)");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		

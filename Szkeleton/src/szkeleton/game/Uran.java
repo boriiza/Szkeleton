@@ -55,7 +55,7 @@ public class Uran extends Nyersanyag {
 	
 	@Override
 	public String toString() {
-		return "Urán";
+		return "Uran";
 	}
 	
 }
