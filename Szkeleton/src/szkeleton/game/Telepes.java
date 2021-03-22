@@ -143,28 +143,28 @@ public class Telepes extends Entitás {
 		//Scanner in = new Scanner(System.in);
 		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Urán());
 			}
 		}
 		Main.printer.print(">Hany Szen van a Telepesnel?");
 		int sz = Main.scanner.nextInt();
 		for(int i = 0; i < sz; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Szén());
 			}
 		}
 		Main.printer.print(">Hany Vas van a Telepesnel?");
 		int vas = Main.scanner.nextInt();
 		for(int i = 0; i < vas; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Vas());
 			}
 		}
 		Main.printer.print(">Hany Vizjeg van a Telepesnel?");
 		int vj = Main.scanner.nextInt();
 		for(int i = 0; i < vj; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Vízjég());
 			}
 		}
@@ -216,28 +216,28 @@ public class Telepes extends Entitás {
 		//Scanner in = new Scanner(System.in);
 		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Urán());
 			}
 		}
 		Main.printer.print(">Hany Szen van a Telepesnel?");
 		int sz = Main.scanner.nextInt();
 		for(int i = 0; i < sz; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Szén());
 			}
 		}
 		Main.printer.print(">Hany Vas van a Telepesnel?");
 		int vas = Main.scanner.nextInt();
 		for(int i = 0; i < vas; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Vas());
 			}
 		}
 		Main.printer.print(">Hany Vizjeg van a Telepesnel?");
 		int vj = Main.scanner.nextInt();
 		for(int i = 0; i < vj; i++) {
-			if(nyersanyagok.size() <= 10) {
+			if(nyersanyagok.size() < 10) {
 				nyersanyagok.add(new Vízjég());
 			}
 		}
