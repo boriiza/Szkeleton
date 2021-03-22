@@ -13,7 +13,12 @@ public class bazisepites implements teszt {
 	Telepes t2;
 	Aszteroida a;
 	Jatek j;
-
+	/**
+	 * Mivel egy Telepesnél nem lehet elegendõ nyersanyag egy bázishoz, ezért 2 Telepest
+	 * hozunk létre. Mindketten az a aszteroidán állnak. 
+	 * Valamint létrehoztunk egy j Játékot, amely vége függvénye meghívódik, ha
+	 * a bázis valóban megépül, tehát ha a Telepesek nyernek.
+	 */
 	@Override
 	public void init() {
 		Main.printer.print("Init");
@@ -27,6 +32,10 @@ public class bazisepites implements teszt {
 		j = new Jatek();
 	}
 
+	/**
+	 * Ha van elég nyersanyaguk a Telepeseknek a bázis megépülhet, ha nincs akkor
+	 * sikertelen az építés.
+	 */
 	@Override
 	public void exec() {
 		Main.printer.print("Exec");
