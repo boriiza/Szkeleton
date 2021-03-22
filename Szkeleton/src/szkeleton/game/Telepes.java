@@ -14,6 +14,11 @@ public class Telepes extends Entitas {
 		nyersanyagok = new ArrayList<>();
 	}
 	
+	/**
+     * A telepes felrobbanásáért felelõs függvény. Megöli a telepest és ha vannak nála kapuk, azokat is felrobbantja.
+     * @param Nincs átadott paramétere.
+     * @return Nincs visszatérési értéke.
+     */
 	public void Felrobban() {
 		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
@@ -42,6 +47,13 @@ public class Telepes extends Entitas {
 
 	}
 	
+	/**
+     * A bányászásért felelõs függvény. Kinyeri az aszteroidából a nyersanyagot és ha elfér az inventoryjában,
+     * akkor belerakja, ha nem, kitörli, Majd kitörli az aszteroidából is
+     * @param Nincs átadott paramétere.
+     * @return Nincs visszatérési értéke.
+     *
+     */
 	public void Banyaszat() {
 		Main.printer.print("["+this+".Banyaszat()]");
 		Main.printer.inc();
@@ -53,6 +65,11 @@ public class Telepes extends Entitas {
 		Main.printer.dec();
 	}
 	
+	/**
+     *  Visszatölti a telepes inventoryjában található utolsó anyagot az aszteroidába
+     * @param Nincs átadott paramétere.
+     * @return Nincs visszatérési értéke.
+     */
 	public void Visszatolt() {
 		Main.printer.print("["+this+".Visszatolt()]");
 		Main.printer.inc();
@@ -180,8 +197,10 @@ public class Telepes extends Entitas {
 		}
 		Main.printer.dec();
 	}
+	
 	/**
-	 * A telepes
+	 * A telepes lerakja a nála lévõ Teleportkapuk egyikét arra az aszteroidára,
+	 * amin éppen tartózkodik, és beállítja a kapuk szükséges tagváltozóit.
 	 * @param Nincs átadott paramétere.
 	 * @return Nincs visszatérési értéke.
 	 */
@@ -199,9 +218,16 @@ public class Telepes extends Entitas {
 		Main.printer.dec();
 	}
 	
+	
+	/**
+	 * Megkérdezi, hogy mik vannak a Telepesnél és ezek alapján feltölti a 
+	 * Telepes nyersanyagok listáját.
+	 *@param Nincs átadott paramétere.
+	 *@return Nincs visszatérési értéke.
+	 */
 	public void BazisEpit() {
 		
-		Main.printer.print("[" + this + ".BazisEpit()]"); // TODO Nem lehet megcsinálni, ha az Útmutató nincs implementálva
+		Main.printer.print("[" + this + ".BazisEpit()]");
 		Main.printer.inc();
 		Main.printer.print(">Hany Uran van a Telepesnel?");
 		int num = Main.scanner.nextInt();

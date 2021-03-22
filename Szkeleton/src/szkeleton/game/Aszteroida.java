@@ -124,6 +124,13 @@ public class Aszteroida extends Szomszed {
 
 	}
 
+	
+	/**
+	 * Létrehozza a Bázis megépítéséhez szükséges Útmutatót, és meghívja a rajta lévõ 
+	 * Entitásokon a BazisEpit() függvényüket. Ezzel elindítja a bázis építést.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void BazisEpit() {
 		Main.printer.print("[" + this + ".BazisEpit()]");
 		
@@ -151,11 +158,6 @@ public class Aszteroida extends Szomszed {
 		for (int j = 0; j < entitasok.size(); j++) {
 			entitasok.get(j).BazisEpit();
 		}
-		
-		
-		
-		
-		
 		Main.printer.dec();
 	}
 
@@ -242,7 +244,7 @@ public class Aszteroida extends Szomszed {
 	}
 
 	public void SetSzomszed(Szomszed a) {
-		Main.printer.print("[" + this + ".SetSzomszéd(Szomszéd a)]");
+		Main.printer.print("[" + this + ".SetSzomszed(Szomszed a)]");
 		szomszedok.add(a);
 	}
 
