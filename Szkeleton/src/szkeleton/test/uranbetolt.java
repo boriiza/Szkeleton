@@ -5,7 +5,7 @@ import java.util.Scanner;
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
-import szkeleton.game.Ur·n;
+import szkeleton.game.Ur√°n;
 
 public class uranbetolt implements teszt {
 	Aszteroida aszteroida;
@@ -13,7 +13,7 @@ public class uranbetolt implements teszt {
 	
 	@Override
 	public void init() {
-		Main.printer.print("Init");
+		Main.printer.print("Init:");
 		aszteroida= new Aszteroida();
 		aszteroida.SetAnyag(null);
 		aszteroida.SetKopeny(0);
@@ -24,31 +24,42 @@ public class uranbetolt implements teszt {
 	
 	@Override
 	public void exec() {
-		Main.printer.print("Exec");
-		Main.printer.print("Van ur·n a telepesnÈl? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
+		Main.printer.print("√úreges az aszteroida('i' = igen, 'n' = nem)");
 		String answer = in.nextLine();
 		if(answer.equals("i")) 
 		{
-			t.AddNyersanyag(new Ur·n());
-			Main.printer.print("Napkˆzelben van az aszteroida? ('i' = igaz, 'h' = hamis)");
+			Main.printer.print("Van ur√°n a telepesn√©l? ('i' = igen, 'n' = nem)");
 			answer = in.nextLine();
-			if(answer.equals("i"))
-				aszteroida.SetNapkozel(true);
-			Main.printer.inc();
-			t.Visszatolt();
-			Main.printer.dec();
-			if(aszteroida.AnyagKinyeres() != null)
-				Main.printer.print("Az aszteroida belsı anyaga :"+ aszteroida.AnyagKinyeres().toString());
-			else
-				Main.printer.print("Az aszteroida belsı anyaga : ¸reges");
-		}
-		else {
-			if(answer.equals("h")) {
-				Main.printer.print("Az akciÛ nem hajthatÛ vÈgre : A telepesnÈl nincs ur·n");
+			if(answer.equals("i")) 
+			{
+				t.AddNyersanyag(new Ur√°n());
+				Main.printer.print("Napk√∂zelben van az aszteroida? ('i' = igen, 'n' = nem)");
+				answer = in.nextLine();
+				if(answer.equals("i"))
+					aszteroida.SetNapkozel(true);
+				Main.printer.inc();
+				t.Visszatolt();
+				if(aszteroida.AnyagKinyeres() != null)
+					Main.printer.print("Az aszteroida bels√µ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+				else
+					Main.printer.print("Az aszteroida bels√µ anyaga : √ºreges");
 			}
 			else {
-				Main.printer.print("…rvÈnytelen v·lasz");
+				if(answer.equals("n")) {
+					Main.printer.print("Az akci√≥ nem hajthat√≥ v√©gre : A telepesn√©l nincs ur√°n");
+				}
+				else {
+					Main.printer.print("√ârv√©nytelen v√°lasz");
+				}
+			}
+		}
+		else {
+			if(answer.equals("n")) {
+				Main.printer.print("Az akci√≥ nem hajthat√≥ v√©gre : Az aszteroida nem √ºreges");
+			}
+			else {
+				Main.printer.print("√ârv√©nytelen v√°lasz");
 			}
 		}
 	}

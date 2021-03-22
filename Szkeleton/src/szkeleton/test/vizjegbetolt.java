@@ -5,7 +5,7 @@ import java.util.Scanner;
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
-import szkeleton.game.Vízjég;
+import szkeleton.game.VÃ­zjÃ©g;
 
 public class vizjegbetolt implements teszt {
 
@@ -14,7 +14,7 @@ public class vizjegbetolt implements teszt {
 	
 	@Override
 	public void init() {
-		Main.printer.print("Init");
+		Main.printer.print("Init:");
 		aszteroida= new Aszteroida();
 		aszteroida.SetAnyag(null);
 		aszteroida.SetKopeny(0);
@@ -25,31 +25,42 @@ public class vizjegbetolt implements teszt {
 	
 	@Override
 	public void exec() {
-		Main.printer.print("Exec");
-		Main.printer.print("Van vízjég a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
+		Main.printer.print("Ãœreges az aszteroidal? ('i' = igen, 'n' = nem)");
 		String answer = in.nextLine();
 		if(answer.equals("i"))
 		{
-			t.AddNyersanyag(new Vízjég());
-			Main.printer.print("Napközelben van az aszteroida? ('i' = igaz, 'h' = hamis)");
+			Main.printer.print("Van vÃ­zjÃ©g a telepesnÃ©l? ('i' = igen, 'n' = nem)");
 			answer = in.nextLine();
 			if(answer.equals("i"))
-				aszteroida.SetNapkozel(true);
-			Main.printer.inc();
-			t.Visszatolt();
-			Main.printer.dec();
-			if(aszteroida.AnyagKinyeres() != null)
-				Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
-			else
-				Main.printer.print("Az aszteroida belsõ anyaga : üreges");
+				{
+				t.AddNyersanyag(new VÃ­zjÃ©g());
+				Main.printer.print("NapkÃ¶zelben van az aszteroida? ('i' = igen, 'n' = nem)");
+				answer = in.nextLine();
+				if(answer.equals("i"))
+					aszteroida.SetNapkozel(true);
+				Main.printer.inc();
+				t.Visszatolt();
+				if(aszteroida.AnyagKinyeres() != null)
+					Main.printer.print("Az aszteroida belsÃµ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+				else
+					Main.printer.print("Az aszteroida belsÃµ anyaga : Ã¼reges");
+				}
+			else {
+				if(answer.equals("n")) {
+					Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre : A telepesnÃ©l nincs vÃ­zjÃ©g");
+				}
+				else {
+					Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+				}
+			}
 		}
-		else {
-			if(answer.equals("h")) {
-				Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs vízjég");
+		else{
+			if(answer.equals("n")) {
+				Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre : Az aszteroida nem Ã¼reges");
 			}
 			else {
-				Main.printer.print("Érvénytelen válasz");
+				Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
 			}
 		}
 	}

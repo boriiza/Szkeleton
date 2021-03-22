@@ -14,7 +14,7 @@ public class vasbetolt implements teszt {
 	
 	@Override
 	public void init() {
-		Main.printer.print("Init");
+		Main.printer.print("Init:");
 		aszteroida= new Aszteroida();
 		aszteroida.SetAnyag(null);
 		aszteroida.SetKopeny(0);
@@ -25,27 +25,37 @@ public class vasbetolt implements teszt {
 	
 	@Override
 	public void exec() {
-		Main.printer.print("Exec");
-		Main.printer.print("Van vas a telepesnél? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
+		Main.printer.print("Ãœreges az szteroida? ('i' = igen, 'n' = nem)");
 		String answer = in.nextLine();
 		if(answer.equals("i")) {
-			t.AddNyersanyag(new Vas());
-			Main.printer.inc();
-			t.Visszatolt();
-			Main.printer.dec();
-			if(aszteroida.AnyagKinyeres() != null)
-				Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
-			else
-				Main.printer.print("Az aszteroida belsõ anyaga : üreges");
+			Main.printer.print("Van vas a telepesnÃ©l? ('i' = igen, 'n' = nem)");
+			answer = in.nextLine();
+			if(answer.equals("i")) {
+				t.AddNyersanyag(new Vas());
+				Main.printer.inc();
+				t.Visszatolt();
+				if(aszteroida.AnyagKinyeres() != null)
+					Main.printer.print("Az aszteroida belsÃµ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+				else
+					Main.printer.print("Az aszteroida belsÃµ anyaga : Ã¼reges");
+				}
+			else {
+				if(answer.equals("n")) {
+				Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre : A telepesnÃ©l nincs vas");
+				}
+				else {
+					Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+				}
+			}
 		}
 		else {
-			if(answer.equals("h")) {
-				Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs vas");
-			}
-			else {
-				Main.printer.print("Érvénytelen válasz");
-			}
+			if(answer.equals("n")) {
+				Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre: Nem Ã¼reges az aszteroida");
+				}
+				else {
+					Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+				}
 		}
 	}
 	
