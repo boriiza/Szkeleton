@@ -11,7 +11,7 @@ public class vizjegfuras {
 	/**
 	 * A vízjég maggal rendelkezõ aszteroida fúrásának teszteléséhez létrehozunk egy aszteroidát, 
 	 * egy vízjeget, amelyet beállítunk az aszteroida magjának, valamint egy telepest, aki az aszteroidán tartózkodik. 
-	 * Ez a telepes fog fúrni
+	 * Ez a telepes fog fúrni.
 	 */
 	public void init() {
 		Main.printer.print("Init");
