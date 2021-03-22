@@ -54,5 +54,7 @@ public class Robot extends Entitás {
 	public String toString() {
 		return "Robot";
 	}
+	@Override
+	public void BazisEpit() {}
 	
 }

@@ -28,6 +28,8 @@ public class Teleportkapu extends Szomszéd {
 	}
 	
 	public void Robban() {
+		Main.printer.print("["+this+".Robban()]");
+		parja.SetParja(null);
 	}
 	
 	/**

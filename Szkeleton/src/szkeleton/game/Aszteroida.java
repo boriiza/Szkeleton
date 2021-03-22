@@ -131,6 +131,38 @@ public class Aszteroida extends Szomszéd {
 	}
 
 	public void BazisEpit() {
+		Main.printer.print("[" + this + ".BazisEpit()]");
+		
+		List<Nyersanyag> kell = new ArrayList<Nyersanyag>();
+		Main.printer.inc();
+		
+		kell.add(new Urán());
+		kell.add(new Urán());
+		kell.add(new Urán());
+		
+		kell.add(new Vas());
+		kell.add(new Vas());
+		kell.add(new Vas());
+		
+		kell.add(new Vízjég());
+		kell.add(new Vízjég());
+		kell.add(new Vízjég());
+		
+		kell.add(new Szén());
+		kell.add(new Szén());
+		kell.add(new Szén());
+		
+		Útmutató tkapu = new Útmutató(kell);
+		
+		for (int j = 0; j < entitasok.size(); j++) {
+			entitasok.get(j).BazisEpit();
+		}
+		
+		
+		
+		
+		
+		Main.printer.dec();
 	}
 
 	/**

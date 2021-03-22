@@ -2,7 +2,6 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-import szkeleton.test.Print;
 import szkeleton.test.*;
 
 public class Main {
@@ -65,6 +64,9 @@ public class Main {
 				np.exec();
 				break;
 			case 10:
+				telepesmeghal th = new telepesmeghal();
+				th.init();
+				th.exec();
 				break;
 			case 11:
 				robotepites ro = new robotepites();
@@ -77,8 +79,14 @@ public class Main {
 				tkp.exec();
 				break;
 			case 13:
+				bazisepites bep = new bazisepites();
+				bep.init();
+				bep.exec();
 				break;
 			case 14:
+				kapulerak kep = new kapulerak();
+				kep.init();
+				kep.exec();
 				break;
 			case 15:
 				uranbetolt tub = new uranbetolt();

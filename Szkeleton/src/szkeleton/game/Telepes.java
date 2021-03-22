@@ -23,6 +23,10 @@ public class Telepes extends Entitás {
 	public void Felrobban() {
 		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
+		
+		for (int i = 0; i < kapuk.size(); i++)
+			kapuk.get(i).Robban();
+		
 		Halal();
 		Main.printer.dec();
 	
@@ -185,11 +189,59 @@ public class Telepes extends Entitás {
 		}
 		Main.printer.dec();
 	}
-	
+	/**
+	 * A telepes
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void KapuLerak() {
+		Main.printer.print("["+this+".KapuLerak()]");
+		Main.printer.inc();
+		if (kapuk.size() > 0) {
+			aszteroida.SetKapu(kapuk.get(0));
+			kapuk.get(0).SetAszteroida(aszteroida);
+			kapuk.remove(0);
+		}
+		else
+			Main.printer.print(">A Telepes nem tud kaput lerakni, mert nincs nála");
+		
+		Main.printer.dec();
 	}
 	
 	public void BazisEpit() {
+		
+		Main.printer.print("[" + this + ".BazisEpit()]"); // TODO Nem lehet megcsinálni, ha az Útmutató nincs implementálva
+		Main.printer.inc();
+		Main.printer.print(">Hany Uran van a Telepesnel?");
+		//Scanner in = new Scanner(System.in);
+		int num = Main.scanner.nextInt();
+		for(int i = 0; i < num; i++) {
+			if(nyersanyagok.size() <= 10) {
+				nyersanyagok.add(new Urán());
+			}
+		}
+		Main.printer.print(">Hany Szen van a Telepesnel?");
+		int sz = Main.scanner.nextInt();
+		for(int i = 0; i < sz; i++) {
+			if(nyersanyagok.size() <= 10) {
+				nyersanyagok.add(new Szén());
+			}
+		}
+		Main.printer.print(">Hany Vas van a Telepesnel?");
+		int vas = Main.scanner.nextInt();
+		for(int i = 0; i < vas; i++) {
+			if(nyersanyagok.size() <= 10) {
+				nyersanyagok.add(new Vas());
+			}
+		}
+		Main.printer.print(">Hany Vizjeg van a Telepesnel?");
+		int vj = Main.scanner.nextInt();
+		for(int i = 0; i < vj; i++) {
+			if(nyersanyagok.size() <= 10) {
+				nyersanyagok.add(new Vízjég());
+			}
+		}
+		Main.printer.dec();
 	}
 	
 	/**

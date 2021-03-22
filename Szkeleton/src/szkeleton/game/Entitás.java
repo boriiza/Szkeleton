@@ -34,6 +34,8 @@ public abstract class Entitás {
 		aszteroida=a;
 	}
 	
+	public abstract void BazisEpit();
+	
 	public abstract void Halal();
 	
 	public abstract void Felrobban();
