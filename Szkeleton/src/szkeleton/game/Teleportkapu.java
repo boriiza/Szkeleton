@@ -2,11 +2,6 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-/**
- * @author 
- *
- */
-
 public class Teleportkapu extends Szomszéd {
 	private Aszteroida aszteroida;
 	private Teleportkapu parja;
@@ -14,7 +9,6 @@ public class Teleportkapu extends Szomszéd {
 	
 	public Teleportkapu() {
 		Main.printer.print("[" + this + ".Teleportkapu()]");
-		//Main.printer.dec();
 	}
 	
 	/**
@@ -66,13 +60,13 @@ public class Teleportkapu extends Szomszéd {
 	public void SetParja(Teleportkapu tk) {
 		Main.printer.print("[" + this + ".SetParja(" + this + ")]");
 		parja = tk;
-		//Main.printer.dec();
 	}
+	
 	public void SetAszteroida(Aszteroida a) {
 		Main.printer.print("[" + this + ".SetAszteroida(" + this + ")]");
 		aszteroida = a;
-		//Main.printer.dec();
 	}
+	
 	@Override
 	public String toString() { 
 		return "Teleportkapu";

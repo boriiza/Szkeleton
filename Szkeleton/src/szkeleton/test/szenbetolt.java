@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
-import szkeleton.game.SzÃ©n;
+import szkeleton.game.Szén;
 import szkeleton.game.Telepes;
 
 public class szenbetolt implements teszt {
@@ -26,36 +26,35 @@ public class szenbetolt implements teszt {
 	@Override
 	public void exec() {
 		Scanner in = new Scanner(System.in);
-		Main.printer.print("Ãœreges az aszteroida? ('i' = igen, 'n' = nem)");
+		Main.printer.print("Üreges az aszteroida? ('i' = igen, 'n' = nem)");
 		String answer = Main.scanner.nextLine();
 		if(answer.equals("i")) {
-			Main.printer.print("Van szÃ©n a telepesnÃ©l? ('i' = igen, 'n' = nem)");
+			Main.printer.print("Van szén a telepesnél? ('i' = igen, 'n' = nem)");
 			answer = Main.scanner.nextLine();
 			if(answer.equals("i")) {
-				t.AddNyersanyag(new SzÃ©n());
+				t.AddNyersanyag(new Szén());
 				Main.printer.inc();
 				t.Visszatolt();
 				if(aszteroida.AnyagKinyeres() != null)
-					Main.printer.print("Az aszteroida belsÃµ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+					Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
 				else
-					Main.printer.print("Az aszteroida belsÃµ anyaga : Ã¼reges");
+					Main.printer.print("Az aszteroida belsõ anyaga : üreges");
 			}
 			else {
 				if(answer.equals("n")) {
-					Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre : A telepesnÃ©l nincs szÃ©n");
+					Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs szén");
 				}
 				else {
-					Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+					Main.printer.print("Érvénytelen válasz");
 				}
 			}
-			
 		}
 		else {
 			if(answer.equals("n")) {
-				Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre: Nem Ã¼reges az aszteroida");
+				Main.printer.print("Az akció nem hajtható végre: Nem üreges az aszteroida");
 			}
 			else {
-				Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+				Main.printer.print("Érvénytelen válasz");
 			}
 		}
 	}

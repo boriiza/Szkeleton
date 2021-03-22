@@ -5,13 +5,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import szkeleton.game.Main;
-
-/**
- * @author
- *
- */
-
 public class Aszteroida extends Szomszéd {
 	private int kopenyVastagsag;
 	private List<Teleportkapu> kapuk;
@@ -87,7 +80,6 @@ public class Aszteroida extends Szomszéd {
 	 *@return Nincs visszatérési értéke.
 	 */
 	public void Befogad(Entitás a) {
-		//Main.printer.inc();
 		Main.printer.print("["+this+".Befogad("+a+")]");
 		entitasok.add(a);
 	}
@@ -115,7 +107,6 @@ public class Aszteroida extends Szomszéd {
 			}
 		}
 		Main.printer.dec();
-		// in.close();
 	}
 
 	
@@ -186,7 +177,6 @@ public class Aszteroida extends Szomszéd {
 			}
 			Main.printer.print(">Nem lehet tovabb furni");
 		}
-		//Main.printer.dec();
 	}
 
 	
@@ -211,10 +201,10 @@ public class Aszteroida extends Szomszéd {
 	/**
 	 * Az Aszteroida kiválasztja véletlenszerûen egy Szomszédját, amit visszaad.
 	 * @param Nincs átadott paramétere.
-	 * @return Nincs visszatérési értéke.
+	 * @return Az aaszteroida által kiválasztott szomszédot adja vissza.
 	 */
-	public Szomszéd SzomszedotAd() { // random szomszédot ad
-		Random rand = new Random(); // a szomszédok listából
+	public Szomszéd SzomszedotAd() { 
+		Random rand = new Random(); 
 		int randomNum = rand.nextInt(szomszedok.size());
 		Main.printer.print("[" + this + ".SzomszedotAd()]");
 		return szomszedok.get(randomNum);

@@ -40,7 +40,6 @@ public class napvihar {
 			jatekter.DoNapvihar();
 		else
 			Main.printer.print("Nem jott letre napvihar");
-		//in.close();
 	}
 	
 }

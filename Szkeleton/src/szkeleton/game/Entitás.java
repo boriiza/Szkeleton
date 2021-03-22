@@ -25,7 +25,6 @@ public abstract class Entitás {
 			Main.printer.print("Az aszteroida keregvastagsaga : " + aszteroida.GetKopeny());
 		}	
 		Main.printer.dec();
-		//Main.scanner.close();
 		
 	}
 	

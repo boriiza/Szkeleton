@@ -26,7 +26,7 @@ public class Útmutató {
 	 * Nyersanyaggal a paraméterként kapott Nyersanyag
 	 */
 	public boolean MindMegvan(Nyersanyag ny) {
-		Main.printer.print("[" + this + ".Mindmegvan(n)]");
+		Main.printer.print("[" + this + ".Mindmegvan(" + this + ")]");
 		Main.printer.inc();
 		boolean answer;
 		for(Nyersanyag n : hozzavalok) {

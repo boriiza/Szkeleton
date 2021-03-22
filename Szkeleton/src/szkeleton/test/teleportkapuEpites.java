@@ -1,15 +1,8 @@
 package szkeleton.test;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import szkeleton.game.Main;
-import szkeleton.game.Nyersanyag;
 import szkeleton.game.Telepes;
-import szkeleton.game.Urán;
-import szkeleton.game.Vas;
-import szkeleton.game.Vízjég;
-import szkeleton.game.Útmutató;
 
 public class teleportkapuEpites {
 	

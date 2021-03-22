@@ -37,11 +37,9 @@ public class banyaszas implements teszt{
 		System.out.println(">Milyen vastag az aszteroida kérge?");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
-		//in.close();
 		
 		System.out.println(">Mit bányászik a Telepes? (0 = vas, 1 = szén, 2 = vízjég, 3 = urán)");
 		int anyag = in.nextInt();
-		//in.close();
 		switch(anyag) {
 			case 0: Main.printer.inc(); vas = new Vas(); aszteroida.SetAnyag(vas); Main.printer.dec(); break;
 			case 1: Main.printer.inc(); szen = new Szén(); aszteroida.SetAnyag(szen); Main.printer.dec(); break;

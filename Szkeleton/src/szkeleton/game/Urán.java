@@ -6,9 +6,9 @@ public class Urán extends Nyersanyag {
 
 	public Urán() {
 		Main.printer.print("[" + this + ".Uran()]");
-		//Main.printer.dec();
 
 	}
+	
 	/**
 	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
 	 * jelen esetben az Uránt.

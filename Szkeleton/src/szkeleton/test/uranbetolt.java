@@ -5,7 +5,7 @@ import java.util.Scanner;
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
-import szkeleton.game.UrÃ¡n;
+import szkeleton.game.Urán;
 
 public class uranbetolt implements teszt {
 	Aszteroida aszteroida;
@@ -25,41 +25,41 @@ public class uranbetolt implements teszt {
 	@Override
 	public void exec() {
 		Scanner in = new Scanner(System.in);
-		Main.printer.print("Ãœreges az aszteroida('i' = igen, 'n' = nem)");
+		Main.printer.print("Üreges az aszteroida('i' = igen, 'n' = nem)");
 		String answer = in.nextLine();
 		if(answer.equals("i")) 
 		{
-			Main.printer.print("Van urÃ¡n a telepesnÃ©l? ('i' = igen, 'n' = nem)");
+			Main.printer.print("Van urán a telepesnél? ('i' = igen, 'n' = nem)");
 			answer = in.nextLine();
 			if(answer.equals("i")) 
 			{
-				t.AddNyersanyag(new UrÃ¡n());
-				Main.printer.print("NapkÃ¶zelben van az aszteroida? ('i' = igen, 'n' = nem)");
+				t.AddNyersanyag(new Urán());
+				Main.printer.print("Napközelben van az aszteroida? ('i' = igen, 'n' = nem)");
 				answer = in.nextLine();
 				if(answer.equals("i"))
 					aszteroida.SetNapkozel(true);
 				Main.printer.inc();
 				t.Visszatolt();
 				if(aszteroida.AnyagKinyeres() != null)
-					Main.printer.print("Az aszteroida belsÃµ anyaga :"+ aszteroida.AnyagKinyeres().toString());
+					Main.printer.print("Az aszteroida belsõ anyaga :"+ aszteroida.AnyagKinyeres().toString());
 				else
-					Main.printer.print("Az aszteroida belsÃµ anyaga : Ã¼reges");
+					Main.printer.print("Az aszteroida belsõ anyaga : üreges");
 			}
 			else {
 				if(answer.equals("n")) {
-					Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre : A telepesnÃ©l nincs urÃ¡n");
+					Main.printer.print("Az akció nem hajtható végre : A telepesnél nincs urán");
 				}
 				else {
-					Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+					Main.printer.print("Érvénytelen válasz");
 				}
 			}
 		}
 		else {
 			if(answer.equals("n")) {
-				Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre : Az aszteroida nem Ã¼reges");
+				Main.printer.print("Az akció nem hajtható végre : Az aszteroida nem üreges");
 			}
 			else {
-				Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+				Main.printer.print("Érvénytelen válasz");
 			}
 		}
 	}

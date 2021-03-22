@@ -1,7 +1,5 @@
 package szkeleton.test;
 
-import java.util.Scanner;
-
 import szkeleton.game.*;
 
 public class vizjegfuras {
@@ -22,8 +20,6 @@ public class vizjegfuras {
 	}
 	public void exec() {
 		Main.printer.print("Exec");
-		//Main.printer.inc();
 		t.Furas();
-		//Main.printer.dec();
 	}
 }

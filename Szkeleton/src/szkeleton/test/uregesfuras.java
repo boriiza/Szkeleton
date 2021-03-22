@@ -2,8 +2,6 @@ package szkeleton.test;
 
 import szkeleton.game.Telepes;
 
-import java.util.Scanner;
-
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
 

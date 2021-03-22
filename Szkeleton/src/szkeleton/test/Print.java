@@ -21,14 +21,6 @@ public class Print {
 		System.out.println(s);
 	}
 	
-	public int getInc() {
-		return inc;
-	}
-	
-	public void setInc(int i) {
-		inc = i;
-	}
-	
 	public void inc() {
 		inc++;
 	}
@@ -65,8 +57,6 @@ public class Print {
 		System.out.println("\t18: Vas visszatoltes");
 		System.out.println("Utasitas sorszama ->");
 		int num = scan.nextInt();
-		//Main.scanner.close();
-		//in.close();
-return num;
+		return num;
 	}
 }

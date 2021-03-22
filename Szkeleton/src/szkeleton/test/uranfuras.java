@@ -1,7 +1,5 @@
 package szkeleton.test;
 
-import java.util.Scanner;
-
 import szkeleton.game.*;
 
 
@@ -31,8 +29,6 @@ public class uranfuras implements teszt {
 	
 	public void exec() {
 		Main.printer.print("Exec");
-		//Main.printer.inc();
 		t.Furas();
-		//Main.printer.dec();
 		}
 }

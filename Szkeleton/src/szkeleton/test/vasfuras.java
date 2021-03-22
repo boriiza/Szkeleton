@@ -1,5 +1,4 @@
 package szkeleton.test;
-import java.util.Scanner;
 
 import szkeleton.game.*;
 

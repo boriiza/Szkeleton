@@ -1,14 +1,11 @@
 package szkeleton.test;
-import java.util.List;
+
 import java.util.Scanner;
 
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Telepes;
 import szkeleton.game.Teleportkapu;
 import szkeleton.game.Main;
-
-import szkeleton.game.Szomszéd;
-
 
 
 public class telepesmozog implements teszt{
@@ -50,7 +47,6 @@ public class telepesmozog implements teszt{
 		Main.printer.print(">Hova lépjen a Telepes? (0 = aszteroidaB, 1 = aszteroidaC) "); 
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
-		//in.close();
 		
 		if(num == 0) {
 			telepes.Mozgas(aszteroidaB);		
@@ -61,9 +57,6 @@ public class telepesmozog implements teszt{
 		else {
 			Main.printer.print(">A Telepes nem lép."); 
 		}
-		
-		
-		// TODO Auto-generated method stub
 		
 	}
 

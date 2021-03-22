@@ -1,12 +1,8 @@
 package szkeleton.game;
 
-import java.util.List;
-import java.util.Random;
-
 public class Robot extends Entitás {
 	
 	public Robot() {
-		//Main.printer.print("["+this.toString()+"].[Robot()]");
 		Main.printer.print("[" + this + ".Robot()]");
 	}
 	/**
@@ -15,7 +11,6 @@ public class Robot extends Entitás {
 	 * @return Nincs visszatérési értéke.
 	 */
 	public void Mozgas(Szomszéd a) {
-		//Main.printer.inc();
 		Main.printer.print("["+this+".Mozgas("+a+")]");
 		Main.printer.inc();
 		aszteroida.Ledob(this);

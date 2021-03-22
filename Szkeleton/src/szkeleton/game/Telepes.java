@@ -2,12 +2,6 @@ package szkeleton.game;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
-/**
- * @author
- *
- */
 
 public class Telepes extends Entitás {
 	
@@ -31,6 +25,7 @@ public class Telepes extends Entitás {
 		Main.printer.dec();
 	
 	}
+	
 	/**
 	 * A Telepes mozgatásáért felelõs függvény. 
 	 * @param Az a szomszéd a paraméter, amelyre az Telepes mozogni fog.
@@ -39,7 +34,6 @@ public class Telepes extends Entitás {
 	public void Mozgas(Szomszéd a) {
 		Main.printer.print("["+this+".Mozgas(" + a + ")]");
 		Main.printer.inc();
-		//System.out.println(Main.printer.getInc());
 		aszteroida.Ledob(this);
 		Main.printer.dec();
 		Main.printer.inc();
@@ -66,6 +60,7 @@ public class Telepes extends Entitás {
 		nyersanyagok.remove(nyersanyagok.size()-1);
 		Main.printer.dec();
 	}
+	
 	/**
 	 * A robot megépítésére szolgáló függvény. A robotot a Telepes építi, ha minden nyersanyag nála van, ami kell.
 	 * A teszt során nem ellenõrzi a nyersanyagok típusát, ha 3 igen választ kap, az építés megtörténik
@@ -131,7 +126,6 @@ public class Telepes extends Entitás {
 	 */
 	public void KapuEpit() {
 		Main.printer.print("[" + this + ".KapuEpit()]");
-		//Main.printer.inc();
 		List<Nyersanyag> kell = new ArrayList<Nyersanyag>();
 		Main.printer.inc();
 		kell.add(new Urán());
@@ -140,7 +134,6 @@ public class Telepes extends Entitás {
 		kell.add(new Vízjég());
 		Útmutató tkapu = new Útmutató(kell);
 		Main.printer.print(">Hany Uran van a Telepesnel?");
-		//Scanner in = new Scanner(System.in);
 		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
 			if(nyersanyagok.size() < 10) {
@@ -175,9 +168,7 @@ public class Telepes extends Entitás {
 				count++;
 		}
 		if(count >= 4) {
-			//Main.printer.inc();
 			Teleportkapu k1 = new Teleportkapu();
-			//Main.printer.inc();
 			Teleportkapu k2 = new Teleportkapu();
 			kapuk.add(k1);
 			kapuk.add(k2);
@@ -213,7 +204,6 @@ public class Telepes extends Entitás {
 		Main.printer.print("[" + this + ".BazisEpit()]"); // TODO Nem lehet megcsinálni, ha az Útmutató nincs implementálva
 		Main.printer.inc();
 		Main.printer.print(">Hany Uran van a Telepesnel?");
-		//Scanner in = new Scanner(System.in);
 		int num = Main.scanner.nextInt();
 		for(int i = 0; i < num; i++) {
 			if(nyersanyagok.size() < 10) {
@@ -265,4 +255,9 @@ public class Telepes extends Entitás {
 	public String toString() { 
 		return "Telepes";
 	} 
+	
+	public void AddKapu(Teleportkapu tk) {
+		Main.printer.print("[" + this + ".AddNyersanyag("+tk+")");
+		kapuk.add(tk);
+	}
 }
