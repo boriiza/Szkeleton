@@ -18,6 +18,7 @@ public class Teleportkapu extends Szomszed {
 	 */
 	public Aszteroida ParHelye() {
 		Main.printer.print("[" + this + ".ParHelye()]");
+		Main.printer.print(">return: Aszteroida");
 		return parja.aszteroida;
 	}
 	

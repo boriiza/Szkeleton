@@ -29,6 +29,7 @@ public class Vizjeg extends Nyersanyag {
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
+		Main.printer.print(">return: " + answer);
 		if(answer.equals("i")) {
 			return true;
 		}

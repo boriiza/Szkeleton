@@ -27,6 +27,7 @@ public class Aszteroida extends Szomszed {
 	}
 
 	public int GetKopeny() {
+		Main.printer.print(">return: " + kopenyVastagsag);
 		return kopenyVastagsag;
 	}
 
@@ -34,9 +35,10 @@ public class Aszteroida extends Szomszed {
 		kopenyVastagsag = i;
 	}
 
+	/*
 	public List<Szomszed> GetSzomszedok() {
 		return this.szomszedok;
-	}
+	}*/
 
 	/**
 	 * A paraméterként kapott Entitást hozzáadja az entitások listájához, így az
@@ -60,6 +62,7 @@ public class Aszteroida extends Szomszed {
 	 * @return Az aszteroida belsejében lévõ Nyersanyag.
 	 */
 	public Nyersanyag AnyagKinyeres() {
+		Main.printer.print(">return: Nyersanyag");
 		return belsoAnyag;
 	}
 
@@ -207,6 +210,7 @@ public class Aszteroida extends Szomszed {
 		Random rand = new Random(); 
 		int randomNum = rand.nextInt(szomszedok.size());
 		Main.printer.print("[" + this + ".SzomszedotAd()]");
+		Main.printer.print(">return: Szomszed");
 		return szomszedok.get(randomNum);
 	}
 
@@ -249,6 +253,7 @@ public class Aszteroida extends Szomszed {
 
 	public Szomszed GetSzomszed(int n) {
 		Main.printer.print("[" + this + ".GetSzomszed(int n)]");
+		Main.printer.print(">return: Szomszed");
 		return szomszedok.get(n);
 	}
 
