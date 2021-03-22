@@ -23,6 +23,7 @@ public class vizjegfuras {
 		t.SetAszteroida(a);
 		
 	}
+	
 	public void exec() {
 		Main.printer.print("Exec");
 		t.Furas();
