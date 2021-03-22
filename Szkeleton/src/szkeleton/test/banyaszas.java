@@ -18,6 +18,11 @@ public class banyaszas implements teszt{
 	Vizjeg viz;
 	Uran uran;
 	
+	/**
+	 * Létrehoztunk egy Telepest és egy aszteroidát, a Telepes ezen az aszteroidán áll.
+	 * Az aszteroida belsejében lévõ nyersanyagot, amit a Telepes ki fog bányászni
+	 * a tesztelõ választja ki.
+	 */
 	@Override
 	public void init() {
 		Main.printer.print("Init");
@@ -29,7 +34,12 @@ public class banyaszas implements teszt{
 		
 		
 	}
-
+	/**
+	 * Amennyiben az aszteroida kérge nem 0, a Telepes nem tud bányászni. 
+	 * Ha nulla, akkor a tesztelõ eldöntheti, hogy mit szeretne kibányászni.
+	 * (Természetesen ez csak a tesztelés miatt, az igazi játékban
+	 * alapból benne van az aszteroidában)
+	 */
 	@Override
 	public void exec() {
 		Main.printer.print("Exec");
