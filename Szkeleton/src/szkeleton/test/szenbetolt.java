@@ -47,6 +47,7 @@ public class szenbetolt implements teszt {
 				t.AddNyersanyag(new Szen());
 				Main.printer.inc();
 				t.Visszatolt();
+				Main.printer.dec();
 				if(aszteroida.AnyagKinyeres() != null)
 					Main.printer.print("Az aszteroida belso anyaga :"+ aszteroida.AnyagKinyeres().toString());
 				else

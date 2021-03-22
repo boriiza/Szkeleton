@@ -44,6 +44,7 @@ public class vasbetolt implements teszt {
 				t.AddNyersanyag(new Vas());
 				Main.printer.inc();
 				t.Visszatolt();
+				Main.printer.dec();
 				if(aszteroida.AnyagKinyeres() != null)
 					Main.printer.print("Az aszteroida belso anyaga :"+ aszteroida.AnyagKinyeres().toString());
 				else

@@ -50,6 +50,7 @@ public class vizjegbetolt implements teszt {
 					aszteroida.SetNapkozel(true);
 				Main.printer.inc();
 				t.Visszatolt();
+				Main.printer.dec();
 				if(aszteroida.AnyagKinyeres() != null)
 					Main.printer.print("Az aszteroida belso anyaga :"+ aszteroida.AnyagKinyeres().toString());
 				else
