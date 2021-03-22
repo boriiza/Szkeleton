@@ -2,16 +2,18 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-public class Urán extends Nyersanyag {
+public class Szen extends Nyersanyag {
 
-	public Urán() {
-		Main.printer.print("[" + this + ".Uran()]");
-
+	/**
+	 * A Szén osztály konstruktora.
+	 */
+	public Szen() {
+		Main.printer.print("[" + this + ".Szen()]");
 	}
 	
 	/**
 	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
-	 * jelen esetben az Uránt.
+	 * jelen esetben a Szenet.
 	 * @param A Telepes, aki bányászik.
 	 * @return Nincs.
 	 */
@@ -20,20 +22,11 @@ public class Urán extends Nyersanyag {
 		a.AddNyersanyag(this);
 	}
 	
-
-	/**
-	 *Az urán viselkedését valósítja meg, ha az napközelbe kerül, tehát felrobbantja a paraméterként kapott aszteroidát
-	 *@param Aszteroida a: az az aszteroida, amelyen a robbanás megtörténik, ennek az aszteroidának a magja az adott urán.
-	 *@return visszatérési értékkel nem rendelkezik
-	 */
 	@Override
 	public void Napkozel(Aszteroida a) {
-		Main.printer.print("[" + this + "].Napkozel(a)");	
-		Main.printer.inc();
-		a.Robban();
-		Main.printer.dec();
+		Main.printer.print("[" + this + ".Napkozel(a)]");
 	}
-
+	
 	/**
 	 * A Nyersanyagok összehasonlítását végzõ függvény.
 	 * @param A Nyersanyag, amivel össze kell hasonlítania önmagát.
@@ -51,10 +44,10 @@ public class Urán extends Nyersanyag {
 			return false;
 		}
 	}
-	
-	@Override
+
+	@Override 
 	public String toString() {
-		return "Urán";
+		return "Szén";
 	}
-	
+
 }

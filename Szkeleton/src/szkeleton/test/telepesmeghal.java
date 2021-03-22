@@ -2,20 +2,20 @@ package szkeleton.test;
 
 import java.util.Scanner;
 
-import szkeleton.game.Játék;
+import szkeleton.game.Jatek;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
 
 public class telepesmeghal implements teszt {
 
 	Telepes t;
-	Játék j;
+	Jatek j;
 	
 	@Override
 	public void init() {
 		Main.printer.print("Init");
 		t = new Telepes();
-		j = new Játék();
+		j = new Jatek();
 	}
 	
 	@Override

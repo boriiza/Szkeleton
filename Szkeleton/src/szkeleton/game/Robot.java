@@ -1,6 +1,6 @@
 package szkeleton.game;
 
-public class Robot extends Entitás {
+public class Robot extends Entitas {
 	
 	public Robot() {
 		Main.printer.print("[" + this + ".Robot()]");
@@ -10,7 +10,7 @@ public class Robot extends Entitás {
 	 * @param Az a szomszéd a paraméter, amelyre az robot mozogni fog.
 	 * @return Nincs visszatérési értéke.
 	 */
-	public void Mozgas(Szomszéd a) {
+	public void Mozgas(Szomszed a) {
 		Main.printer.print("["+this+".Mozgas("+a+")]");
 		Main.printer.inc();
 		aszteroida.Ledob(this);
@@ -27,7 +27,7 @@ public class Robot extends Entitás {
 	public void Felrobban() {
 		Main.printer.print("["+this+".Felrobban()]");
 		Main.printer.inc();
-		Szomszéd a= aszteroida.SzomszedotAd();		//random szomszédot kér
+		Szomszed a= aszteroida.SzomszedotAd();		//random szomszédot kér
 		this.Mozgas(a);
 		Main.printer.dec();
 	}

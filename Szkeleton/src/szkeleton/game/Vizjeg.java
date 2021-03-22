@@ -2,29 +2,21 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-public class Szén extends Nyersanyag {
-
-	/**
-	 * A Szén osztály konstruktora.
-	 */
-	public Szén() {
-		Main.printer.print("[" + this + ".Szen()]");
+public class Vizjeg extends Nyersanyag {
+	
+	public Vizjeg() {
+		Main.printer.print("[" + this.toString() + ".Vizjeg()]");
 	}
 	
 	/**
 	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
-	 * jelen esetben a Szenet.
+	 * jelen esetben a Vízjeget.
 	 * @param A Telepes, aki bányászik.
 	 * @return Nincs.
 	 */
 	public void Betolt(Telepes a) {
 		Main.printer.print("[" + this + ".Betolt(a)]");
 		a.AddNyersanyag(this);
-	}
-	
-	@Override
-	public void Napkozel(Aszteroida a) {
-		Main.printer.print("[" + this + ".Napkozel(a)]");
 	}
 	
 	/**
@@ -45,9 +37,18 @@ public class Szén extends Nyersanyag {
 		}
 	}
 
-	@Override 
-	public String toString() {
-		return "Szén";
+	@Override
+	public void Napkozel(Aszteroida a) {
+		Main.printer.print("[" + this + ".Napkozel(a)]");
+		Main.printer.inc();
+		a.AnyagTorol();
+		Main.printer.dec();
 	}
 
+	@Override
+	public String toString() {
+		return "Vízjég";
+	}
+
+	
 }

@@ -2,13 +2,13 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-public abstract class Entitás {
-	private Aszteroidaöv jatekosok;
+public abstract class Entitas {
+	private Aszteroidaov jatekosok;
 	protected Aszteroida aszteroida;
 	
-	public abstract void Mozgas(Szomszéd a);
+	public abstract void Mozgas(Szomszed a);
 	
-	public Entitás() {
+	public Entitas() {
 		Main.printer.print("[" + this + ".Entitas()]");
 	}
 	

@@ -3,7 +3,7 @@ package szkeleton.test;
 import java.util.Scanner;
 
 import szkeleton.game.Aszteroida;
-import szkeleton.game.Játék;
+import szkeleton.game.Jatek;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
 
@@ -12,7 +12,7 @@ public class bazisepites implements teszt {
 	Telepes t1;
 	Telepes t2;
 	Aszteroida a;
-	Játék j;
+	Jatek j;
 
 	@Override
 	public void init() {
@@ -24,7 +24,7 @@ public class bazisepites implements teszt {
 		a.AddEntitas(t2);
 		t1.SetAszteroida(a);
 		t2.SetAszteroida(a);
-		j = new Játék();
+		j = new Jatek();
 	}
 
 	@Override

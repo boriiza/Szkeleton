@@ -1,11 +1,11 @@
 package szkeleton.game;
 
-public class Játék {
-	private Aszteroidaöv jatekter;
+public class Jatek {
+	private Aszteroidaov jatekter;
 	
-	public Játék() {
+	public Jatek() {
 		Main.printer.print("[" + this + ".Játék()]");
-		jatekter = new Aszteroidaöv();
+		jatekter = new Aszteroidaov();
 	}
 	
 	public void Start() {

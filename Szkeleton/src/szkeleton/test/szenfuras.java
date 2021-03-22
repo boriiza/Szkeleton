@@ -10,7 +10,7 @@ public class szenfuras {
 	public void init() {
 		Main.printer.print("Init");
 		aszteroida= new Aszteroida();
-		Szén s= new Szén();
+		Szen s= new Szen();
 		aszteroida.SetAnyag(s);
 		t= new Telepes();
 		t.SetAszteroida(aszteroida);

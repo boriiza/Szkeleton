@@ -3,21 +3,21 @@ package szkeleton.test;
 import java.util.Scanner;
 
 import szkeleton.game.Aszteroida;
-import szkeleton.game.Aszteroidaöv;
+import szkeleton.game.Aszteroidaov;
 import szkeleton.game.Main;
 import szkeleton.game.Robot;
 import szkeleton.game.Telepes;
 
 public class napvihar {
 	
-	private Aszteroidaöv jatekter;
+	private Aszteroidaov jatekter;
 	private Aszteroida a;
 	private Telepes t;
 	private Robot r;
 	
 	public void init() {
 		Main.printer.print("Init");
-		jatekter = new Aszteroidaöv();
+		jatekter = new Aszteroidaov();
 		a = new Aszteroida();
 		t = new Telepes();
 		r = new Robot();

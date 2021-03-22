@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
-import szkeleton.game.Szén;
+import szkeleton.game.Szen;
 import szkeleton.game.Telepes;
 
 public class szenbetolt implements teszt {
@@ -32,7 +32,7 @@ public class szenbetolt implements teszt {
 			Main.printer.print("Van szén a telepesnél? ('i' = igen, 'n' = nem)");
 			answer = Main.scanner.nextLine();
 			if(answer.equals("i")) {
-				t.AddNyersanyag(new Szén());
+				t.AddNyersanyag(new Szen());
 				Main.printer.inc();
 				t.Visszatolt();
 				if(aszteroida.AnyagKinyeres() != null)

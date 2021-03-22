@@ -2,7 +2,7 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-public class Teleportkapu extends Szomszéd {
+public class Teleportkapu extends Szomszed {
 	private Aszteroida aszteroida;
 	private Teleportkapu parja;
 	private Telepes kapuk;
@@ -30,10 +30,10 @@ public class Teleportkapu extends Szomszéd {
 	 *Az entitás mozgása során hívódik meg, feladata, hogy a kiválasztott kapun átlépve
 	 * eljuttassa az entitást az azon keresztül elérhetõ aszteroidára.
 	 * Amennyiben a kapu párja nem aktív, az entitás az aktuális aszteroidán marad.
-	 * @param Entitás a: az az Entitás, akit el kell szállítani a megfelelõ aszteroidára.
+	 * @param Entitas a: az az Entitás, akit el kell szállítani a megfelelõ aszteroidára.
 	 * @return visszatérési értékkel nem rendelkezik
 	 */
-	public void Befogad(Entitás a) {
+	public void Befogad(Entitas a) {
 		Main.printer.print("[" + this + ".Befogad()]");
 		Main.printer.print(">Aktív a kapu? (0 = nem, 1 = igen)");
 		Scanner in = new Scanner(System.in);

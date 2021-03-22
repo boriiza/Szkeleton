@@ -5,7 +5,7 @@ import java.util.Scanner;
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
-import szkeleton.game.Vízjég;
+import szkeleton.game.Vizjeg;
 
 public class vizjegbetolt implements teszt {
 
@@ -34,7 +34,7 @@ public class vizjegbetolt implements teszt {
 			answer = in.nextLine();
 			if(answer.equals("i"))
 				{
-				t.AddNyersanyag(new Vízjég());
+				t.AddNyersanyag(new Vizjeg());
 				Main.printer.print("Napközelben van az aszteroida? ('i' = igen, 'n' = nem)");
 				answer = in.nextLine();
 				if(answer.equals("i"))

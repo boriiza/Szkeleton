@@ -5,19 +5,19 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Aszteroida extends Szomszéd {
+public class Aszteroida extends Szomszed {
 	private int kopenyVastagsag;
 	private List<Teleportkapu> kapuk;
-	private List<Entitás> entitasok;
-	private List<Szomszéd> szomszedok;
+	private List<Entitas> entitasok;
+	private List<Szomszed> szomszedok;
 	private Nyersanyag belsoAnyag;
 	private boolean napkozel;
 
 	public Aszteroida() {
 		Main.printer.print("[" + this + ".Aszteroida()]");
 		kapuk = new ArrayList<Teleportkapu>();
-		entitasok = new ArrayList<Entitás>();
-		szomszedok = new ArrayList<Szomszéd>();
+		entitasok = new ArrayList<Entitas>();
+		szomszedok = new ArrayList<Szomszed>();
 		napkozel = false;
 	}
 
@@ -34,7 +34,7 @@ public class Aszteroida extends Szomszéd {
 		kopenyVastagsag = i;
 	}
 
-	public List<Szomszéd> GetSzomszedok() {
+	public List<Szomszed> GetSzomszedok() {
 		return this.szomszedok;
 	}
 
@@ -45,7 +45,7 @@ public class Aszteroida extends Szomszéd {
 	 * @param Egy Entitás, amit hozzá kell adnia az Entitások listájához.
 	 * @return Nincs visszatérési értéke.
 	 */
-	public void AddEntitas(Entitás e) {
+	public void AddEntitas(Entitas e) {
 		Main.printer.print("[" + this + ".AddEntitas(" + e + ")]");
 		entitasok.add(e);
 	}
@@ -69,7 +69,7 @@ public class Aszteroida extends Szomszéd {
 	 * @param a - Az Aszteroidát elhagyó Entitás.
 	 * @return Nincs visszatérési értéke.
 	 */
-	public void Ledob(Entitás a) {
+	public void Ledob(Entitas a) {
 		Main.printer.print("["+this+".Ledob("+a+")]");
 	}
 
@@ -79,7 +79,7 @@ public class Aszteroida extends Szomszéd {
 	 *@param nincs átadott paramétere.
 	 *@return Nincs visszatérési értéke.
 	 */
-	public void Befogad(Entitás a) {
+	public void Befogad(Entitas a) {
 		Main.printer.print("["+this+".Befogad("+a+")]");
 		entitasok.add(a);
 	}
@@ -101,7 +101,7 @@ public class Aszteroida extends Szomszéd {
 		if (answer.equals("i")) {
 			Main.printer.print(">A Telepesek es a Robotok el tudtak bujni");
 		} else {
-			for (Entitás e : entitasok) {
+			for (Entitas e : entitasok) {
 				Main.printer.inc();
 				e.Halal();
 			}
@@ -115,7 +115,7 @@ public class Aszteroida extends Szomszéd {
 	 * @param a - Egy szomszéd, amit törölni kell a szomszédok listából.
 	 * @return Nincs visszatérési értéke.
 	 */
-	public void SzomszedTorol(Szomszéd a) {
+	public void SzomszedTorol(Szomszed a) {
 		Main.printer.print("[" + this + ".SzomszedTorol()]");
 		szomszedok.remove(a);
 
@@ -127,23 +127,23 @@ public class Aszteroida extends Szomszéd {
 		List<Nyersanyag> kell = new ArrayList<Nyersanyag>();
 		Main.printer.inc();
 		
-		kell.add(new Urán());
-		kell.add(new Urán());
-		kell.add(new Urán());
+		kell.add(new Uran());
+		kell.add(new Uran());
+		kell.add(new Uran());
 		
 		kell.add(new Vas());
 		kell.add(new Vas());
 		kell.add(new Vas());
 		
-		kell.add(new Vízjég());
-		kell.add(new Vízjég());
-		kell.add(new Vízjég());
+		kell.add(new Vizjeg());
+		kell.add(new Vizjeg());
+		kell.add(new Vizjeg());
 		
-		kell.add(new Szén());
-		kell.add(new Szén());
-		kell.add(new Szén());
+		kell.add(new Szen());
+		kell.add(new Szen());
+		kell.add(new Szen());
 		
-		Útmutató tkapu = new Útmutató(kell);
+		Utmutato tkapu = new Utmutato(kell);
 		
 		for (int j = 0; j < entitasok.size(); j++) {
 			entitasok.get(j).BazisEpit();
@@ -189,7 +189,7 @@ public class Aszteroida extends Szomszéd {
 	public void Robban() {
 		Main.printer.print("[" + this + ".Robban()]");
 		Main.printer.inc();
-		for (Entitás e : entitasok) {
+		for (Entitas e : entitasok) {
 			e.Felrobban();
 		}
 		AnyagTorol();
@@ -203,7 +203,7 @@ public class Aszteroida extends Szomszéd {
 	 * @param Nincs átadott paramétere.
 	 * @return Az aaszteroida által kiválasztott szomszédot adja vissza.
 	 */
-	public Szomszéd SzomszedotAd() { 
+	public Szomszed SzomszedotAd() { 
 		Random rand = new Random(); 
 		int randomNum = rand.nextInt(szomszedok.size());
 		Main.printer.print("[" + this + ".SzomszedotAd()]");
@@ -237,7 +237,7 @@ public class Aszteroida extends Szomszéd {
 		belsoAnyag = null;
 	}
 
-	public void SetSzomszed(Szomszéd a) {
+	public void SetSzomszed(Szomszed a) {
 		Main.printer.print("[" + this + ".SetSzomszéd(Szomszéd a)]");
 		szomszedok.add(a);
 	}
@@ -247,7 +247,7 @@ public class Aszteroida extends Szomszéd {
 		kapuk.add(t);
 	}
 
-	public Szomszéd GetSzomszed(int n) {
+	public Szomszed GetSzomszed(int n) {
 		Main.printer.print("[" + this + ".GetSzomszed(int n)]");
 		return szomszedok.get(n);
 	}

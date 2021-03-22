@@ -3,12 +3,12 @@ package szkeleton.game;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Útmutató {
+public class Utmutato {
 	
 	private List<Nyersanyag> hozzavalok;
 	private List<Nyersanyag> megvanLista;
 	
-	public Útmutató(List<Nyersanyag> kellenek) {
+	public Utmutato(List<Nyersanyag> kellenek) {
 		Main.printer.print("["+this.toString()+ ".Útmutató()]");
 		hozzavalok = new ArrayList<Nyersanyag>();
 		for(Nyersanyag n : kellenek) {

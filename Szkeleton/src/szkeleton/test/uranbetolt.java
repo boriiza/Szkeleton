@@ -5,7 +5,7 @@ import java.util.Scanner;
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
-import szkeleton.game.Urán;
+import szkeleton.game.Uran;
 
 public class uranbetolt implements teszt {
 	Aszteroida aszteroida;
@@ -33,7 +33,7 @@ public class uranbetolt implements teszt {
 			answer = in.nextLine();
 			if(answer.equals("i")) 
 			{
-				t.AddNyersanyag(new Urán());
+				t.AddNyersanyag(new Uran());
 				Main.printer.print("Napközelben van az aszteroida? ('i' = igen, 'n' = nem)");
 				answer = in.nextLine();
 				if(answer.equals("i"))

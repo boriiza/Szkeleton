@@ -12,7 +12,7 @@ public class vizjegfuras {
 		Main.printer.print("Init");
 		a= new Aszteroida();
 		t= new Telepes();
-		belsoAnyag= new Vízjég();
+		belsoAnyag= new Vizjeg();
 		a.AddEntitas(t);
 		a.SetAnyag(belsoAnyag);
 		t.SetAszteroida(a);

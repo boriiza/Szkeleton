@@ -16,7 +16,7 @@ public class uranfuras implements teszt {
 		szomszed=new Aszteroida();
 		t= new Telepes();
 		r=new Robot();
-		Urán u= new Urán();
+		Uran u= new Uran();
 		t.SetAszteroida(aszteroida);
 		r.SetAszteroida(aszteroida);
 		aszteroida.SetAnyag(u);
