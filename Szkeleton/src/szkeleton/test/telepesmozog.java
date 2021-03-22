@@ -16,7 +16,12 @@ public class telepesmozog implements teszt{
 	Teleportkapu kapu1;
 	Teleportkapu kapu2;
 	
-	
+	/**
+	 * Létrehoztunk egy Telepest. A Telepes az aszteroidaA-n áll. 
+	 * Az aszteroidaA közvetlen szomszédja az aszteroidaB.
+	 * Az aszteroidaA-ról a Telepes elérheti az aszteroidaC-t teleportkapun keresztül.
+	 * Az aszteroidaA teleportkapuja a kapu1, az aszteroidaC teleportkapuja a kapu2.
+	 */
 	@Override
 	public void init() {
 		Main.printer.print("Init");
@@ -40,7 +45,11 @@ public class telepesmozog implements teszt{
 		
 		
 	}
-
+	/**
+	 * A tesztelõ választhat, hogy az aszteroidaA melyik szomszédjára kíván elmenni.
+	 * Az aszteroidaC esetén teleportkapukon keresztül fog utazni.
+	 * Amennyiben nem 0-t vagy 1-t ír a tesztelõ a Telepes nem tud elmenni.
+	 */
 	@Override
 	public void exec() {
 		Main.printer.print("Exec");

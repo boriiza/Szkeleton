@@ -12,6 +12,10 @@ public class vizjegbetolt implements teszt {
 	Aszteroida aszteroida;
 	Telepes t;
 	
+	/**
+	 *A betöltés szempontjából fontos objektumok létrejönnek és összekapcsoljuk õket:
+	 *A 0 köpenyû aszteroida és a rajta álló telepes.
+	 */
 	@Override
 	public void init() {
 		Main.printer.print("Init:");
@@ -23,6 +27,11 @@ public class vizjegbetolt implements teszt {
 		aszteroida.AddEntitas(t);
 	}
 	
+	/**
+	 *A betöltés szempontjából fontos feltételeket megkérdezi a tesztelõtõl:
+	 *Üreges-e az aszteroida, van-e a betölteni kívánt nyersanyagból a telepesnél, napközelben van-e az aszteroida.
+	 *Majd ezek beállítása után meghívja a Visszatöltés függvényt.
+	 */
 	@Override
 	public void exec() {
 		Scanner in = new Scanner(System.in);

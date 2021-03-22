@@ -7,6 +7,10 @@ public class szenfuras {
 	Telepes t;
 	
 	
+	/**
+	 * A szén belsejû aszteroida fúrásának teszteléséhez létrehozunk egy aszteroidát, egy szenet,
+	 *  amelyet beállítunk az aszteroida magjaként, valamint egy telepest, aki az aszteroidán tartózkodik és aki a fúrást fogja végezni
+	 */
 	public void init() {
 		Main.printer.print("Init");
 		aszteroida= new Aszteroida();
