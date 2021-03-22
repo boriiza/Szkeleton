@@ -19,8 +19,6 @@ public class napvihar {
 	 * A tesztesethez szükséges pálya beállítása, létrehoz egy Aszteroidaövet, egy 
 	 * Telepest, egy Aszteroidát és egy Robotot. Az Aszteroidaövhöz hozzáadja az entitásokat és az aszteroidát.
 	 * Beállítja az entitások és az aszteroidák kapcsolatát.
-	 * @param Nincs átadott paramétere.
-	 * @return Nincs visszatérési értéke.
 	 */
 	public void init() {
 		Main.printer.print("Init");
@@ -41,8 +39,6 @@ public class napvihar {
 	/**
 	 * Megkérdezi a tesztelõt, hogy legyen-e napvihar. Ha igaz, akkor meghívódik az aszteroidövön a DoNapvihar() függvény,
 	 * és végrehajtódik a npavihar. Ha hamis, akkor nem történik semmi.
-	 * @param Nincs átadott paramétere.
-	 * @return Nincs visszatérési értéke.
 	 */
 	public void exec() {
 		Main.printer.print("Exec");

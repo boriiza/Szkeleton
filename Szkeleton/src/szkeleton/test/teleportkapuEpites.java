@@ -10,8 +10,6 @@ public class teleportkapuEpites {
 	
 	/**
 	 * Létrehozza a Telepest, aki megépíti a Teleportkaput.
-	 * @param Nincs étadott paramétere.
-	 * @return Nincs visszatérési értéke.
 	 */
 	public void init() {
 		Main.printer.print("Init");

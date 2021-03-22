@@ -12,8 +12,6 @@ public class uregesfuras implements teszt{
 	
 	/**
 	 * Létrehozza a tesztesethez szükséges, Telepest és Aszteroidát, és beállítja a köztük lévõ kapcsolatot.
-	 * @param Nincs étadott paramétere.
-	 * @return Nincs visszatérési értéke.
 	 */
 	public void init() {
 		Main.printer.print("Init");
