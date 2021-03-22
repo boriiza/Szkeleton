@@ -7,6 +7,13 @@ import szkeleton.game.Main;
 import szkeleton.game.Telepes;
 import szkeleton.game.Teleportkapu;
 
+/**
+ * Teleportkapu lerakását szimuláló teszteset.
+ * Szükséges attribútumok: egy telepes és egy aszteroida.
+ * Inicializálás: Az attribútumok létrejönnek, a telepes "rááll" az aszteroidára
+ * Végrehajtás: A telepeshez hozzárendelünk egy kapupárt, ha a tesztelõ ezt választja, majd megkíséreljük lerakni egy kaput.
+ */
+
 public class kapulerak implements teszt{
 	
 	Telepes t;

@@ -1,7 +1,6 @@
 package szkeleton.test;
 
 import java.util.Scanner;
-
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Jatek;
 import szkeleton.game.Main;

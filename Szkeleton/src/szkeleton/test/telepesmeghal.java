@@ -6,6 +6,13 @@ import szkeleton.game.Jatek;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
 
+/**
+ * Telepes halálát szimuláló teszteset.
+ * Szükséges attribútumok: egy telepes és egy játék.
+ * Inicializálás: Az attribútumok létrejönnek, egymástól a teszt szempontjából függetlenek.
+ * Végrehajtás: Felrobbantjuk a telepest, majd a tesztelõ válasza alapján vagy vereséggel zárjuk a játékot, vagy nem csinálunk semmit.
+ */
+
 public class telepesmeghal implements teszt {
 
 	Telepes t;
