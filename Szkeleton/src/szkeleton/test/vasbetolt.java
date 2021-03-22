@@ -51,10 +51,10 @@ public class vasbetolt implements teszt {
 		}
 		else {
 			if(answer.equals("n")) {
-				Main.printer.print("Az akciÃ³ nem hajthatÃ³ vÃ©gre: Nem Ã¼reges az aszteroida");
+				Main.printer.print("Az akció nem hajtható végre: Nem üreges az aszteroida");
 				}
 				else {
-					Main.printer.print("Ã‰rvÃ©nytelen vÃ¡lasz");
+					Main.printer.print("Érvénytelen válasz");
 				}
 		}
 	}
