@@ -1,10 +1,7 @@
 package szkeleton.test;
 
-
-
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Robot;
-import szkeleton.game.Telepes;
 import szkeleton.game.Teleportkapu;
 import szkeleton.game.Main;
 
@@ -43,9 +40,7 @@ public class robotmozog implements teszt{
 	@Override
 	public void exec() {
 		Main.printer.print("Exec");
-		robot.Mozgas(aszteroidaA.SzomszedotAd());
-		// TODO Auto-generated method stub
-		
+		robot.Mozgas(aszteroidaA.SzomszedotAd());		
 	}
 
 }

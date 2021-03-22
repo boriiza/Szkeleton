@@ -2,15 +2,16 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-public class Vízjég extends Nyersanyag {
-	
-	public Vízjég() {
-		Main.printer.print("[" + this.toString() + ".Vizjeg()]");
-		//Main.printer.dec();
+public class Uran extends Nyersanyag {
+
+	public Uran() {
+		Main.printer.print("[" + this + ".Uran()]");
+
 	}
+	
 	/**
 	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
-	 * jelen esetben a Vízjeget.
+	 * jelen esetben az Uránt.
 	 * @param A Telepes, aki bányászik.
 	 * @return Nincs.
 	 */
@@ -19,6 +20,20 @@ public class Vízjég extends Nyersanyag {
 		a.AddNyersanyag(this);
 	}
 	
+
+	/**
+	 *Az urán viselkedését valósítja meg, ha az napközelbe kerül, tehát felrobbantja a paraméterként kapott aszteroidát
+	 *@param Aszteroida a: az az aszteroida, amelyen a robbanás megtörténik, ennek az aszteroidának a magja az adott urán.
+	 *@return visszatérési értékkel nem rendelkezik
+	 */
+	@Override
+	public void Napkozel(Aszteroida a) {
+		Main.printer.print("[" + this + "].Napkozel(a)");	
+		Main.printer.inc();
+		a.Robban();
+		Main.printer.dec();
+	}
+
 	/**
 	 * A Nyersanyagok összehasonlítását végzõ függvény.
 	 * @param A Nyersanyag, amivel össze kell hasonlítania önmagát.
@@ -29,6 +44,7 @@ public class Vízjég extends Nyersanyag {
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
+		Main.printer.print(">return: " + answer);
 		if(answer.equals("i")) {
 			return true;
 		}
@@ -36,20 +52,10 @@ public class Vízjég extends Nyersanyag {
 			return false;
 		}
 	}
-
-	@Override
-	public void Napkozel(Aszteroida a) {
-		Main.printer.print("[" + this + ".Napkozel(a)]");
-		Main.printer.inc();
-		a.AnyagTorol();
-		Main.printer.dec();
-		//Main.printer.dec();
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Vízjég";
+		return "Uran";
 	}
-
 	
 }

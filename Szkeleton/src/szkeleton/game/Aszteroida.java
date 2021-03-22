@@ -5,26 +5,19 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import szkeleton.game.Main;
-
-/**
- * @author
- *
- */
-
-public class Aszteroida extends Szomszéd {
+public class Aszteroida extends Szomszed {
 	private int kopenyVastagsag;
 	private List<Teleportkapu> kapuk;
-	private List<Entitás> entitasok;
-	private List<Szomszéd> szomszedok;
+	private List<Entitas> entitasok;
+	private List<Szomszed> szomszedok;
 	private Nyersanyag belsoAnyag;
 	private boolean napkozel;
 
 	public Aszteroida() {
 		Main.printer.print("[" + this + ".Aszteroida()]");
 		kapuk = new ArrayList<Teleportkapu>();
-		entitasok = new ArrayList<Entitás>();
-		szomszedok = new ArrayList<Szomszéd>();
+		entitasok = new ArrayList<Entitas>();
+		szomszedok = new ArrayList<Szomszed>();
 		napkozel = false;
 	}
 
@@ -34,6 +27,7 @@ public class Aszteroida extends Szomszéd {
 	}
 
 	public int GetKopeny() {
+		Main.printer.print(">return: " + kopenyVastagsag);
 		return kopenyVastagsag;
 	}
 
@@ -41,9 +35,10 @@ public class Aszteroida extends Szomszéd {
 		kopenyVastagsag = i;
 	}
 
-	public List<Szomszéd> GetSzomszedok() {
+	/*
+	public List<Szomszed> GetSzomszedok() {
 		return this.szomszedok;
-	}
+	}*/
 
 	/**
 	 * A paraméterként kapott Entitást hozzáadja az entitások listájához, így az
@@ -52,7 +47,7 @@ public class Aszteroida extends Szomszéd {
 	 * @param Egy Entitás, amit hozzá kell adnia az Entitások listájához.
 	 * @return Nincs visszatérési értéke.
 	 */
-	public void AddEntitas(Entitás e) {
+	public void AddEntitas(Entitas e) {
 		Main.printer.print("[" + this + ".AddEntitas(" + e + ")]");
 		entitasok.add(e);
 	}
@@ -67,6 +62,7 @@ public class Aszteroida extends Szomszéd {
 	 * @return Az aszteroida belsejében lévõ Nyersanyag.
 	 */
 	public Nyersanyag AnyagKinyeres() {
+		Main.printer.print(">return: Nyersanyag");
 		return belsoAnyag;
 	}
 
@@ -76,7 +72,7 @@ public class Aszteroida extends Szomszéd {
 	 * @param a - Az Aszteroidát elhagyó Entitás.
 	 * @return Nincs visszatérési értéke.
 	 */
-	public void Ledob(Entitás a) {
+	public void Ledob(Entitas a) {
 		Main.printer.print("["+this+".Ledob("+a+")]");
 	}
 
@@ -86,8 +82,7 @@ public class Aszteroida extends Szomszéd {
 	 *@param nincs átadott paramétere.
 	 *@return Nincs visszatérési értéke.
 	 */
-	public void Befogad(Entitás a) {
-		//Main.printer.inc();
+	public void Befogad(Entitas a) {
 		Main.printer.print("["+this+".Befogad("+a+")]");
 		entitasok.add(a);
 	}
@@ -109,13 +104,12 @@ public class Aszteroida extends Szomszéd {
 		if (answer.equals("i")) {
 			Main.printer.print(">A Telepesek es a Robotok el tudtak bujni");
 		} else {
-			for (Entitás e : entitasok) {
+			for (Entitas e : entitasok) {
 				Main.printer.inc();
 				e.Halal();
 			}
 		}
 		Main.printer.dec();
-		// in.close();
 	}
 
 	
@@ -124,44 +118,46 @@ public class Aszteroida extends Szomszéd {
 	 * @param a - Egy szomszéd, amit törölni kell a szomszédok listából.
 	 * @return Nincs visszatérési értéke.
 	 */
-	public void SzomszedTorol(Szomszéd a) {
+	public void SzomszedTorol(Szomszed a) {
 		Main.printer.print("[" + this + ".SzomszedTorol()]");
 		szomszedok.remove(a);
 
 	}
 
+	
+	/**
+	 * Létrehozza a Bázis megépítéséhez szükséges Útmutatót, és meghívja a rajta lévõ 
+	 * Entitásokon a BazisEpit() függvényüket. Ezzel elindítja a bázis építést.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void BazisEpit() {
 		Main.printer.print("[" + this + ".BazisEpit()]");
 		
 		List<Nyersanyag> kell = new ArrayList<Nyersanyag>();
 		Main.printer.inc();
 		
-		kell.add(new Urán());
-		kell.add(new Urán());
-		kell.add(new Urán());
+		kell.add(new Uran());
+		kell.add(new Uran());
+		kell.add(new Uran());
 		
 		kell.add(new Vas());
 		kell.add(new Vas());
 		kell.add(new Vas());
 		
-		kell.add(new Vízjég());
-		kell.add(new Vízjég());
-		kell.add(new Vízjég());
+		kell.add(new Vizjeg());
+		kell.add(new Vizjeg());
+		kell.add(new Vizjeg());
 		
-		kell.add(new Szén());
-		kell.add(new Szén());
-		kell.add(new Szén());
+		kell.add(new Szen());
+		kell.add(new Szen());
+		kell.add(new Szen());
 		
-		Útmutató tkapu = new Útmutató(kell);
+		Utmutato tkapu = new Utmutato(kell);
 		
 		for (int j = 0; j < entitasok.size(); j++) {
 			entitasok.get(j).BazisEpit();
 		}
-		
-		
-		
-		
-		
 		Main.printer.dec();
 	}
 
@@ -186,7 +182,6 @@ public class Aszteroida extends Szomszéd {
 			}
 			Main.printer.print(">Nem lehet tovabb furni");
 		}
-		//Main.printer.dec();
 	}
 
 	
@@ -199,7 +194,7 @@ public class Aszteroida extends Szomszéd {
 	public void Robban() {
 		Main.printer.print("[" + this + ".Robban()]");
 		Main.printer.inc();
-		for (Entitás e : entitasok) {
+		for (Entitas e : entitasok) {
 			e.Felrobban();
 		}
 		AnyagTorol();
@@ -211,12 +206,13 @@ public class Aszteroida extends Szomszéd {
 	/**
 	 * Az Aszteroida kiválasztja véletlenszerûen egy Szomszédját, amit visszaad.
 	 * @param Nincs átadott paramétere.
-	 * @return Nincs visszatérési értéke.
+	 * @return Az aaszteroida által kiválasztott szomszédot adja vissza.
 	 */
-	public Szomszéd SzomszedotAd() { // random szomszédot ad
-		Random rand = new Random(); // a szomszédok listából
+	public Szomszed SzomszedotAd() { 
+		Random rand = new Random(); 
 		int randomNum = rand.nextInt(szomszedok.size());
 		Main.printer.print("[" + this + ".SzomszedotAd()]");
+		Main.printer.print(">return: Szomszed");
 		return szomszedok.get(randomNum);
 	}
 
@@ -247,8 +243,8 @@ public class Aszteroida extends Szomszéd {
 		belsoAnyag = null;
 	}
 
-	public void SetSzomszed(Szomszéd a) {
-		Main.printer.print("[" + this + ".SetSzomszéd(Szomszéd a)]");
+	public void SetSzomszed(Szomszed a) {
+		Main.printer.print("[" + this + ".SetSzomszed(Szomszed a)]");
 		szomszedok.add(a);
 	}
 
@@ -257,8 +253,9 @@ public class Aszteroida extends Szomszéd {
 		kapuk.add(t);
 	}
 
-	public Szomszéd GetSzomszed(int n) {
+	public Szomszed GetSzomszed(int n) {
 		Main.printer.print("[" + this + ".GetSzomszed(int n)]");
+		Main.printer.print(">return: Szomszed");
 		return szomszedok.get(n);
 	}
 

@@ -3,14 +3,13 @@ package szkeleton.game;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-public class Aszteroidaöv {
+public class Aszteroidaov {
 	private List<Aszteroida> aszteroidak;
-	private List<Entitás> jatekosok;
+	private List<Entitas> jatekosok;
 	
-	public Aszteroidaöv() {
-		Main.printer.print("[" + this + ".Aszteroidaöv()]");
+	public Aszteroidaov() {
+		Main.printer.print("[" + this + ".Aszteroidaov()]");
 		aszteroidak = new ArrayList<Aszteroida>();
 		jatekosok = new ArrayList<>();
 	}
@@ -34,13 +33,13 @@ public class Aszteroidaöv {
 		aszteroidak.add(a);
 	}
 	
-	public void AddJatekos(Entitás e) {
+	public void AddJatekos(Entitas e) {
 		Main.printer.print("[" + this + ".AddJatekos(" + e + ")]");
 		jatekosok.add(e);
 	}
 	
 	@Override
 	public String toString() { 
-		return "Aszteroidaöv";
+		return "Aszteroidaov";
 	} 
 }

@@ -3,13 +3,13 @@ package szkeleton.game;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Útmutató {
+public class Utmutato {
 	
 	private List<Nyersanyag> hozzavalok;
 	private List<Nyersanyag> megvanLista;
 	
-	public Útmutató(List<Nyersanyag> kellenek) {
-		Main.printer.print("["+this.toString()+ ".Útmutató()]");
+	public Utmutato(List<Nyersanyag> kellenek) {
+		Main.printer.print("["+this.toString()+ ".Utmutato()]");
 		hozzavalok = new ArrayList<Nyersanyag>();
 		for(Nyersanyag n : kellenek) {
 			hozzavalok.add(n);
@@ -26,7 +26,7 @@ public class Útmutató {
 	 * Nyersanyaggal a paraméterként kapott Nyersanyag
 	 */
 	public boolean MindMegvan(Nyersanyag ny) {
-		Main.printer.print("[" + this + ".Mindmegvan(n)]");
+		Main.printer.print("[" + this + ".Mindmegvan(" + this + ")]");
 		Main.printer.inc();
 		boolean answer;
 		for(Nyersanyag n : hozzavalok) {
@@ -40,7 +40,7 @@ public class Útmutató {
 		return false;
 	}
 	public String toString() { 
-		return "Útmutató";
+		return "Utmutato";
 	}
 
 }

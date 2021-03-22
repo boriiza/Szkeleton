@@ -2,19 +2,13 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-/**
- * @author 
- *
- */
-
-public class Teleportkapu extends Szomszéd {
+public class Teleportkapu extends Szomszed {
 	private Aszteroida aszteroida;
 	private Teleportkapu parja;
 	private Telepes kapuk;
 	
 	public Teleportkapu() {
 		Main.printer.print("[" + this + ".Teleportkapu()]");
-		//Main.printer.dec();
 	}
 	
 	/**
@@ -24,24 +18,31 @@ public class Teleportkapu extends Szomszéd {
 	 */
 	public Aszteroida ParHelye() {
 		Main.printer.print("[" + this + ".ParHelye()]");
+		Main.printer.print(">return: Aszteroida");
 		return parja.aszteroida;
 	}
 	
+	/**
+	 * A teleportkapu robbanását végzõ függvény, beállítja null-ra a oárját,
+	 * így az aktuális kapu már nem használható.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke.
+	 */
 	public void Robban() {
 		Main.printer.print("["+this+".Robban()]");
 		parja.SetParja(null);
 	}
 	
 	/**
-	 *Az entitás mozgása során hívódik meg, feladata, hogy a kiválasztott kapun átlépve
+	 * Az entitás mozgása során hívódik meg, feladata, hogy a kiválasztott kapun átlépve
 	 * eljuttassa az entitást az azon keresztül elérhetõ aszteroidára.
 	 * Amennyiben a kapu párja nem aktív, az entitás az aktuális aszteroidán marad.
-	 * @param Entitás a: az az Entitás, akit el kell szállítani a megfelelõ aszteroidára.
+	 * @param Entitas a: az az Entitás, akit el kell szállítani a megfelelõ aszteroidára.
 	 * @return visszatérési értékkel nem rendelkezik
 	 */
-	public void Befogad(Entitás a) {
+	public void Befogad(Entitas a) {
 		Main.printer.print("[" + this + ".Befogad()]");
-		Main.printer.print(">Aktív a kapu? (0 = nem, 1 = igen)");
+		Main.printer.print(">Aktiv a kapu? (0 = nem, 1 = igen)");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		
@@ -66,13 +67,13 @@ public class Teleportkapu extends Szomszéd {
 	public void SetParja(Teleportkapu tk) {
 		Main.printer.print("[" + this + ".SetParja(" + this + ")]");
 		parja = tk;
-		//Main.printer.dec();
 	}
+	
 	public void SetAszteroida(Aszteroida a) {
 		Main.printer.print("[" + this + ".SetAszteroida(" + this + ")]");
 		aszteroida = a;
-		//Main.printer.dec();
 	}
+	
 	@Override
 	public String toString() { 
 		return "Teleportkapu";

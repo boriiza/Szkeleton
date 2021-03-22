@@ -5,6 +5,7 @@ import java.util.Scanner;
 import szkeleton.game.Aszteroida;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
+import szkeleton.game.Teleportkapu;
 
 public class kapulerak implements teszt{
 	
@@ -22,17 +23,20 @@ public class kapulerak implements teszt{
 	public void exec() {
 		Main.printer.print("Exec");
 		
-		Main.printer.print(">A Telepesnél van teleportkapu? (‘i’ = igaz, ‘h’ = hamis)");
+		Main.printer.print(">A Telepesnel van teleportkapu? (‘i’ = igaz, ‘h’ = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
 		
 		if (answer.equals("i")) {
-			t.KapuEpit();
+			Teleportkapu tk = new Teleportkapu();
+			Teleportkapu k2 = new Teleportkapu();
+			t.AddKapu(tk);
+			t.AddKapu(k2);
+			tk.SetParja(k2);
+			k2.SetParja(tk);
+			
 		}
 		t.KapuLerak();
-		
-		
-		
 
 	}
 }

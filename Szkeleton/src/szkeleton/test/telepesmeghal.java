@@ -2,20 +2,20 @@ package szkeleton.test;
 
 import java.util.Scanner;
 
-import szkeleton.game.Játék;
+import szkeleton.game.Jatek;
 import szkeleton.game.Main;
 import szkeleton.game.Telepes;
 
 public class telepesmeghal implements teszt {
 
 	Telepes t;
-	Játék j;
+	Jatek j;
 	
 	@Override
 	public void init() {
 		Main.printer.print("Init");
 		t = new Telepes();
-		j = new Játék();
+		j = new Jatek();
 	}
 	
 	@Override
@@ -23,7 +23,7 @@ public class telepesmeghal implements teszt {
 		Main.printer.print("Exec");
 		t.Felrobban();
 		
-		System.out.println(">Van más telepes is az aszteroidaövben? (‘i’ = igaz, ‘h’ = hamis)");
+		System.out.println(">Van mas telepes is az aszteroidaovben? (‘i’ = igaz, ‘h’ = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
 		

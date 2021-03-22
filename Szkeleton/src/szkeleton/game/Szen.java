@@ -2,14 +2,13 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-public class Szén extends Nyersanyag {
+public class Szen extends Nyersanyag {
 
 	/**
 	 * A Szén osztály konstruktora.
 	 */
-	public Szén() {
+	public Szen() {
 		Main.printer.print("[" + this + ".Szen()]");
-		//Main.printer.dec();
 	}
 	
 	/**
@@ -26,7 +25,6 @@ public class Szén extends Nyersanyag {
 	@Override
 	public void Napkozel(Aszteroida a) {
 		Main.printer.print("[" + this + ".Napkozel(a)]");
-		//Main.printer.dec();
 	}
 	
 	/**
@@ -39,7 +37,7 @@ public class Szén extends Nyersanyag {
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
-		//in.close();
+		Main.printer.print(">return: " + answer);
 		if(answer.equals("i")) {
 			return true;
 		}
@@ -50,7 +48,7 @@ public class Szén extends Nyersanyag {
 
 	@Override 
 	public String toString() {
-		return "Szén";
+		return "Szen";
 	}
 
 }

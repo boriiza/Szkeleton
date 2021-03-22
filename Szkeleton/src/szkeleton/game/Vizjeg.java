@@ -2,16 +2,15 @@ package szkeleton.game;
 
 import java.util.Scanner;
 
-public class Urán extends Nyersanyag {
-
-	public Urán() {
-		Main.printer.print("[" + this + ".Uran()]");
-		//Main.printer.dec();
-
+public class Vizjeg extends Nyersanyag {
+	
+	public Vizjeg() {
+		Main.printer.print("[" + this.toString() + ".Vizjeg()]");
 	}
+	
 	/**
 	 * A Nyersanyag tulajdonba vételérõl szóló függvény. A Telepes itt veszi magához a kibányászott nyersanyagot,
-	 * jelen esetben az Uránt.
+	 * jelen esetben a Vízjeget.
 	 * @param A Telepes, aki bányászik.
 	 * @return Nincs.
 	 */
@@ -20,20 +19,6 @@ public class Urán extends Nyersanyag {
 		a.AddNyersanyag(this);
 	}
 	
-
-	/**
-	 *Az urán viselkedését valósítja meg, ha az napközelbe kerül, tehát felrobbantja a paraméterként kapott aszteroidát
-	 *@param Aszteroida a: az az aszteroida, amelyen a robbanás megtörténik, ennek az aszteroidának a magja az adott urán.
-	 *@return visszatérési értékkel nem rendelkezik
-	 */
-	@Override
-	public void Napkozel(Aszteroida a) {
-		Main.printer.print("[" + this + "].Napkozel(a)");	
-		Main.printer.inc();
-		a.Robban();
-		Main.printer.dec();
-	}
-
 	/**
 	 * A Nyersanyagok összehasonlítását végzõ függvény.
 	 * @param A Nyersanyag, amivel össze kell hasonlítania önmagát.
@@ -44,6 +29,7 @@ public class Urán extends Nyersanyag {
 		Main.printer.print(">Megfelel a nyersanyag? ('i' = igaz, 'h' = hamis)");
 		Scanner in = new Scanner(System.in);
 		String answer = in.nextLine();
+		Main.printer.print(">return: " + answer);
 		if(answer.equals("i")) {
 			return true;
 		}
@@ -52,9 +38,24 @@ public class Urán extends Nyersanyag {
 		}
 	}
 	
+	/**
+	 * A vízjég nöpkezlebn való viselkedését valósítja meg, kitörli a paraméterként kapott 
+	 * aszteroida belsõ anyagát.
+	 * @param Nincs átadott paramétere.
+	 * @return Nincs visszatérési értéke. 
+	 */
+	@Override
+	public void Napkozel(Aszteroida a) {
+		Main.printer.print("[" + this + ".Napkozel(a)]");
+		Main.printer.inc();
+		a.AnyagTorol();
+		Main.printer.dec();
+	}
+
 	@Override
 	public String toString() {
-		return "Urán";
+		return "Vizjeg";
 	}
+
 	
 }
